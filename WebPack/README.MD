@@ -478,3 +478,26 @@ Como estos videos se incluiran dentro de `./dist/video` necesitaremos especifica
 en la nueva version de WP (webpack >= v4.0.0) ya no hace falta configurar un nuevo loader para `json-loader` pero si que es necesario instalarlo
 
 `yarn add --dev json-loader`
+
+## Class 18 Configurar React.js
+
+simplemente añadimos los paquetes
+
+`yarn add --dev babel-preset-react`
+
+`yarn add react react-dom`
+
+y en nuestro `*.config.js` dentro del `loader` de babel, añadimos  el `preset` de `react`
+
+```js
+{
+  test: /\.js$/,
+  exclude: /(node_modules)/,
+  use: {
+    loader: 'babel-loader',
+    options: {
+      presets: ['es2015', 'react' ]
+    }
+  }
+},
+```

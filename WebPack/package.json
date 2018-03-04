@@ -17,7 +17,8 @@
     "build:img": "webpack --config ./url-loader-img/webpack.config.js --mode development",
     "build:fonts": "webpack --config ./url-loader-fonts/webpack.config.js --mode development",
     "build:videos": "webpack --config ./url-loader-videos/*.config.js --mode development",
-    "build:json": "webpack --config ./json-loader/*.config.js --mode development"
+    "build:json": "webpack --config ./json-loader/*.config.js --mode development",
+    "build:react": "webpack --config ./react/*.config.js --mode development"
   },
   "author": "Victor Gamez <victor.gamez1596@gmail.com>",
   "license": "ISC",
@@ -26,6 +27,7 @@
     "babel-loader": "7.1.3",
     "babel-preset-es2015": "6.24.1",
     "babel-preset-es2016": "6.24.1",
+    "babel-preset-react": "^6.24.1",
     "css-loader": "0.28.10",
     "extract-text-webpack-plugin": "4.0.0-beta.0",
     "file-loader": "^1.1.11",
@@ -35,5 +37,9 @@
     "webpack": "4.0.1",
     "webpack-cli": "2.0.10",
     "webpack-dev-server": "3.1.0"
+  },
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
   }
 }
