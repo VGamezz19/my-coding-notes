@@ -1,3 +1,3 @@
-module.exports = function renderToDOM(element) {
+export default function renderToDOM(element) {
   document.body.append(element);
 }
