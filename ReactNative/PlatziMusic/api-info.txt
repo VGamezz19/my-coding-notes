@@ -1,0 +1,8 @@
+Application name	platziMusic
+API key	234b2147382f45eb3116d623fbf5cdb8
+Shared secret	aca931acb6c54f1eed26783983b956d0
+Registered to	vgamez96
+
+//Top ARTIST
+
+http://ws.audioscrobbler.com/2.0/?method=geo.gettopartists&country=spain&api_key=234b2147382f45eb3116d623fbf5cdb8&format=json

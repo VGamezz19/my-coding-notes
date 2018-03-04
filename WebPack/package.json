@@ -1,0 +1,27 @@
+{
+  "name": "curso-de-webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack js/index.js -o js/bundle.js --mode development",
+    "build:local": "webpack",
+    "build:external": "webpack --config ./external/*.config.js",
+    "build:css": "webpack --config ./css-style-loader/*.config.js",
+    "build:extract:css": "webpack --config ./plugin-extract-text/*.config.js",
+    "build:multiples:entry": "webpack --config ./multiples-entry-points/*.config.js",
+    "_build:dev": "webpack --config ./webpack-dev-server/*.config.js --watch",
+    "build:dev": "webpack-dev-server --config ./webpack-dev-server/webpack.config.js"
+  },
+  "author": "Victor Gamez <victor.gamez1596@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^0.28.10",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "style-loader": "^0.20.2",
+    "webpack": "^4.0.1",
+    "webpack-cli": "^2.0.10",
+    "webpack-dev-server": "^3.1.0"
+  }
+}
