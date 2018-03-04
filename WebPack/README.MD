@@ -345,3 +345,35 @@ module.exports = {
 ```
 
 ## 12 - Soporte de Ecmascript
+
+Podemos escribir cualquier tipo de JS y que lo soporte cualquier navegador gracias a WP y bable-loader.
+
+[babel-loader](https://github.com/babel/babel-loader)
+
+`yarn add babel-loader babel-core babel-preset-es2015 babel-preset-es2016 --dev`
+
+Despues de instalarnos el paquete, dentro de la configuracion de nuestro `webpack`, especificamos un nuevo loader, que trara con `js`.
+
+Cuando se trata de un `Loader` un poco más especifico y más concreto, añadimos la `key` **loader** y especificamos el loader que va a utilizar, en este caso `babel-loader`.
+
+```js
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['es2015']
+          }
+        }
+      },
+      {
+        test: /\.css$/,
+        use: ExtractTextPlugin.extract({
+          use: "css-loader"
+        })
+      }
+    ]
+  },
+```
