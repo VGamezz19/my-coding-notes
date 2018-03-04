@@ -475,4 +475,6 @@ Como estos videos se incluiran dentro de `./dist/video` necesitaremos especifica
 
 ## Class 17 Soporta Json
 
+en la nueva version de WP (webpack >= v4.0.0) ya no hace falta configurar un nuevo loader para `json-loader` pero si que es necesario instalarlo
+
 `yarn add --dev json-loader`

@@ -16,7 +16,8 @@
     "build:babel": "webpack --config ./babel-loader/webpack.config.js",
     "build:img": "webpack --config ./url-loader-img/webpack.config.js --mode development",
     "build:fonts": "webpack --config ./url-loader-fonts/webpack.config.js --mode development",
-    "build:videos": "webpack --config ./url-loader-videos/*.config.js --mode development"
+    "build:videos": "webpack --config ./url-loader-videos/*.config.js --mode development",
+    "build:json": "webpack --config ./json-loader/*.config.js --mode development"
   },
   "author": "Victor Gamez <victor.gamez1596@gmail.com>",
   "license": "ISC",
