@@ -377,3 +377,31 @@ Cuando se trata de un `Loader` un poco más especifico y más concreto, añadimo
     ]
   },
 ```
+
+## 14- Soporte de Imágenes en Webpack
+
+[url-loader](https://github.com/webpack-contrib/url-loader)
+
+Loads files as `base64` encoded URL
+
+Evitar hacer una petición http request, solo hazlo si la imagen es pequeña porque la imagen sigue pesando lo mismo, en tu bundle o fuera de él
+
+`yarn add  --dev url-loader`
+
+```js
+module: {
+    rules: [
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 1000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+```
