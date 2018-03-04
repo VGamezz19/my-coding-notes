@@ -266,7 +266,7 @@ Incluye un certificado digital auto-firmado para atender los requests.
 
 indicar las rutas de ubicación de los archivos del certificado
 
-### Opciones que aplican al archivo webpack.config.js:
+### Opciones que aplican al archivo webpack.config.js
 
 `noInfo`
 
@@ -428,7 +428,7 @@ use: [
 
 Si sus fuentes pesan más de lo que tienen especificado en el url-loader tienen que instalar `file-loader` y listo. Más adelante vamos a aprender a usarlos en conjunto con un par de configuraciones extra.
 
-## Class 16 Soport Videos
+## Class 16 Soporte Videos
 
 Seguiremos usando el loader `url-loader` pero con una configuracion distinta:
 
@@ -472,3 +472,7 @@ Como estos videos se incluiran dentro de `./dist/video` necesitaremos especifica
     publicPath: "./dist/",
   }
 ```
+
+## Class 17 Soporta Json
+
+`yarn add --dev json-loader`
