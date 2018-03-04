@@ -405,3 +405,25 @@ module: {
     ]
   }
 ```
+
+## 15- Soporte de fuentes en Webpack
+
+[font squirl](https://www.fontsquirrel.com/)
+
+Simplemente podemos usar el mismo loader de `url-loader` y especificar el formato en `test`
+
+```js
+{
+test: /\.(png|jpg|gif|woff|eot|ttf|svg)$/,
+use: [
+    {
+      loader: 'url-loader',
+      options: {
+        limit: 10000000
+      }
+    }
+  ]
+},
+```
+
+Si sus fuentes pesan más de lo que tienen especificado en el url-loader tienen que instalar `file-loader` y listo. Más adelante vamos a aprender a usarlos en conjunto con un par de configuraciones extra
