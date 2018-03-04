@@ -426,4 +426,49 @@ use: [
 },
 ```
 
-Si sus fuentes pesan más de lo que tienen especificado en el url-loader tienen que instalar `file-loader` y listo. Más adelante vamos a aprender a usarlos en conjunto con un par de configuraciones extra
+Si sus fuentes pesan más de lo que tienen especificado en el url-loader tienen que instalar `file-loader` y listo. Más adelante vamos a aprender a usarlos en conjunto con un par de configuraciones extra.
+
+## Class 16 Soport Videos
+
+Seguiremos usando el loader `url-loader` pero con una configuracion distinta:
+
+```js
+{
+  test: /\.(mp4)$/,
+  use: [
+    {
+      loader: 'url-loader',
+      options: {
+        limit: 10000,
+        mimetype: "video/mp4",
+        name: 'videos/[name].[hash].[ext]'
+      }
+    }
+  ]
+},
+```
+
+`name` especificaremos donde se almacenara el video.
+
+- [name]
+
+es el nombre de entrada
+
+- [hash]
+
+añadira un hash para que el navegador siempre lo carge
+
+- [ext]
+
+la extension del video
+
+Como estos videos se incluiran dentro de `./dist/video` necesitaremos especificarle a la configuracion de `webpack` que el fichero public por defecto sera `dist`
+
+```js
+  entry: path.resolve(__dirname, 'src/js/index.js'),
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'js/bundle.js',
+    publicPath: "./dist/",
+  }
+```
