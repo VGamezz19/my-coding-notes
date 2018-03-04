@@ -6,7 +6,7 @@ const   gulp = require('gulp'),
         browserify = require('browserify')
         source = require('vinyl-source-stream'),
         watchify = require ('watchify')
-
+ 
     gulp.task('styles',  () =>{
         gulp
             .src('./scss/app.scss')
