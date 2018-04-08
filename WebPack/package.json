@@ -18,7 +18,8 @@
     "build:fonts": "webpack --config ./url-loader-fonts/webpack.config.js --mode development",
     "build:videos": "webpack --config ./url-loader-videos/*.config.js --mode development",
     "build:json": "webpack --config ./json-loader/*.config.js --mode development",
-    "build:react": "webpack --config ./react/*.config.js --mode development"
+    "build:react": "webpack --config ./react/*.config.js --mode development",
+    "build:prevent": "webpack --config ./prevent-duplication/*.config.js --mode development"
   },
   "author": "Victor Gamez <victor.gamez1596@gmail.com>",
   "license": "ISC",
