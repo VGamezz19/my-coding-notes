@@ -2,7 +2,7 @@
 
 ## [JavaScript-fundamentos](https://github.com/VGamezz19/platzi-course-notes/tree/master/JavaScript-fundamentos)
 
-## [JavaScript-Avanzado](https://github.com/VGamezz19/platzi-course-notes/tree/master/JavaScript-Avanzado)
+## [JavaScript-avanzado](https://github.com/VGamezz19/platzi-course-notes/tree/master/JavaScript-Avanzado)
 
 ## [NodeJs](https://github.com/VGamezz19/platzi-course-notes/tree/master/NodeJs)
 
