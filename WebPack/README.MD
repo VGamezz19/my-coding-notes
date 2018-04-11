@@ -384,7 +384,7 @@ Cuando se trata de un `Loader` un poco más especifico y más concreto, añadimo
 
 Loads files as `base64` encoded URL
 
-Evitar hacer una petición http request, solo hazlo si la imagen es pequeña porque la imagen sigue pesando lo mismo, en tu bundle o fuera de él
+Evitar hacer una petición http request, solo hazlo si la imagen es pequeña porque la imagen sigue pesando lo mismo, en tu bundle o fuera de él.
 
 `yarn add  --dev url-loader`
 
