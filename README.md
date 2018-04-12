@@ -1,4 +1,4 @@
-# platzi-course-notes
+# platzi-course-note
 
 ## [JavaScript-fundamentos](https://github.com/VGamezz19/platzi-course-notes/tree/master/JavaScript-fundamentos)
 
