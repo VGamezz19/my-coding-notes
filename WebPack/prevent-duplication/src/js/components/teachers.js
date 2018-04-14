@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 import Teacher from './teacher.js';
+import '../../css/teachers.scss';
+
 
 class Teachers extends Component {
   render() {
     return (
-      <ul className="teachers">
-        {
-          this.props.data.map((teacherData) => {
-            return <Teacher {...teacherData} key={teacherData.twitter}/>
-          })
+      <ul className="Teachers">
+        {this.props.data.teachers.map((teacherData) => {
+          return <Teacher {...teacherData}/>
+        })
         }
       </ul>
     )
   }
 }
 
-export default Teachers;
+export default Teachers

@@ -1,7 +1,9 @@
+// module.exports =
+
 function makeMessage(msg) {
-  const message = document.createElement('p');
-  message.textContent = msg;
-  return message;
+  const element = document.createElement('p')
+  element.textContent = msg;
+  return element
 }
 
-export default makeMessage;
+export default makeMessage
