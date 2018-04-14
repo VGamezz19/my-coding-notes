@@ -501,3 +501,5 @@ y en nuestro `*.config.js` dentro del `loader` de babel, añadimos  el `preset` 
   }
 },
 ```
+
+## Class 24 Prevenir codigo duplicado
