@@ -15,3 +15,23 @@ __Angular 4__: El primer update mayor de Angular 2.
 ¿Y __Angular 3__?
 
 No lo pusieron porque Igor Minar líder del equipo de Angular en Google explicó que se saltó de la versión 2 a la 4 porque el módulo de Angular Router (El que permite las SPA’S) tenía versión 3.3.0 y los demás módulos de Angular el 2.3.0. Entonces eso podría o generaba errores. Por lo cual decidieron alinearlo todo con la versión 4.
+
+## TypeScript
+
+Es un Superset de JavaScript. Esto quiere decir que esta escrito en JavaScript.
+
+Es un agregado a JavaScript, no lo reemplaza. Habrá algunas tareas que TypeScript no pueda hacer entonces JavaScript se encargará de ello.
+
+__Agrega nuevas características como:__
+
+- Tipos.
+
+- Clases.
+
+- Interfaces.
+
+__TypeScript es transpilado (Lo traduce y lo compila) a Javascript.__
+Esto es porque la mayoría de los navegadores no entiende TypeScript. Pero sí JavaScript. Por lo cual el navegador recibirá JavaScript. El transpilado se hace de forma automática.
+
+Es el lenguaje en el que programaremos para Angular 4.
+
