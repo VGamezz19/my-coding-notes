@@ -1,5 +1,0 @@
-C:\Users\vgamez\source\personal\platzi-course-notes\CSharp\ConsoleApp1\ConsoleApp1\bin\Debug\HelloWorldConsoleApp.exe
-C:\Users\vgamez\source\personal\platzi-course-notes\CSharp\ConsoleApp1\ConsoleApp1\bin\Debug\HelloWorldConsoleApp.pdb
-C:\Users\vgamez\source\personal\platzi-course-notes\CSharp\ConsoleApp1\ConsoleApp1\obj\Debug\HelloWorldConsoleApp.csproj.CoreCompileInputs.cache
-C:\Users\vgamez\source\personal\platzi-course-notes\CSharp\ConsoleApp1\ConsoleApp1\obj\Debug\HelloWorldConsoleApp.exe
-C:\Users\vgamez\source\personal\platzi-course-notes\CSharp\ConsoleApp1\ConsoleApp1\obj\Debug\HelloWorldConsoleApp.pdb
