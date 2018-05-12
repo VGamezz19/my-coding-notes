@@ -7,8 +7,8 @@ namespace institution.Models
     class Student: Person
     {
 		public string Email { get; set; }
-
 		private int Ausents { get; set; }
+		public string NickName { get; set; }
 
 		public string TestProtected() {
 
@@ -20,11 +20,17 @@ namespace institution.Models
 			return Ausents.ToString();
 		}
 
-		public Student(string name, string lastname)
-		{
+		/**
+		 * Constructor
+		 */
+		public Student(string name, string lastname) {
+
 			Name = name;
 			Lastname = lastname;
 		}
 
+		public override string BuildResum() => $"{FullName}, {NickName}, {Phone}";
+
+		public override string FullName => base.FullName.ToUpper();
 	}
 }

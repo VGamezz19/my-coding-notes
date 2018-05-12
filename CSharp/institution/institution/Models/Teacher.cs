@@ -4,8 +4,12 @@ using System.Text;
 
 namespace institution.Models
 {
-   class Teacher: Person
-    {
+	class Teacher: Person {
 		public string Knowledge { get; set; }
+
+		public override string BuildResum() {
+
+			return $"{FullName}, {Knowledge}, {Years}";
+		}
 	}
 }

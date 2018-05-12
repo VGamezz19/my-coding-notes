@@ -9,16 +9,18 @@ namespace institution
         {
             Console.WriteLine("Gestion de institucion");
 
-			var student1 = new Student("Victor", "Gamez") {
+			Person[] list = new Person[3];
+
+			list[0]=  new Student("Victor", "Gamez") {
 				Id =1,
 				Years =21,
 				Phone ="673414332",
 				Email="pictor.games30@gmail.com"
 			};
 
-			var teacher1 = new Teacher()
+			list[1] = new Teacher()
 			{
-				Id = 1,
+				Id = 2,
 				Name = "Pepe",
 				Lastname = "Rmos",
 				Years = 35,
@@ -26,15 +28,24 @@ namespace institution
 				Knowledge="Programacion"
 			};
 
-			Person a = teacher1;
-
-			Person b = student1;
-			// private
-			//  student1.Aus;
-			// protected
-			// student1.Title;
+			list[2] = new Teacher()
+			{
+				Id = 3,
+				Name = "Juan",
+				Lastname = "Ram",
+				Years = 56,
+				Phone = "6742213",
+				Knowledge = "Mathe"
+			};
 
 			Console.WriteLine(Person.CountPersons);
+			Console.WriteLine("Resomes");
+
+			foreach (Person p in list)
+			{
+				Console.WriteLine(p.GetType());
+				Console.WriteLine(p.BuildResum());
+			}
 
 			Console.ReadLine();
         }

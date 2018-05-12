@@ -4,8 +4,8 @@ using System.Text;
 
 namespace institution.Models
 {
-     public class Person
-    {
+     public abstract class Person: IEnteInstitution
+	{
 		public static int CountPersons = 0;
 
 		public int Id { get; set; }
@@ -15,7 +15,7 @@ namespace institution.Models
 		public string Phone { get; set; }
 		protected string Title { get; set; }
 
-		public string FullName {
+		public virtual string FullName {
 			get {
 
 				// return Name + " " + Lastname;
@@ -23,7 +23,9 @@ namespace institution.Models
 				return $"{Name} {Lastname}";
 			}
 		}
-		
+
+		public string InternalCode { get; set; }
+
 		// ctor Constructor;
 		// Public CTOR - se ejecutara cadavez que creemos una persona
 		// Static CTOR - Solo se ejecutara una vez.
@@ -39,5 +41,14 @@ namespace institution.Models
 		// una propiedad privada. (y su padre igual)
 		// Static --> afecta al conjunto de la Clase, no a la instancia de ella.
 		// Public sealed class Person --> al añadir sealed, estamos sellando la clase, y no podremos heredarla.
+
+		public abstract string BuildResum();
+
+		public string ConstructSecretKey(string name)
+		{
+			var rnd = new Random();
+
+			return rnd.Next(1, 99999).ToString();
+		}
 	}
 }
