@@ -1,0 +1,1 @@
+C:\Users\vgamez\source\personal\platzi-course-notes\CSharp\HelloWorldBackEnd\WinApp\WinApp.csproj;x86
