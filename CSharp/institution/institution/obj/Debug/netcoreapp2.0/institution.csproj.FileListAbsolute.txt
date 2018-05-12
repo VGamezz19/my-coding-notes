@@ -1,0 +1,11 @@
+C:\Users\vgamez\source\personal\platzi-course-notes\CSharp\institution\institution\bin\Debug\netcoreapp2.0\institution.deps.json
+C:\Users\vgamez\source\personal\platzi-course-notes\CSharp\institution\institution\bin\Debug\netcoreapp2.0\institution.runtimeconfig.json
+C:\Users\vgamez\source\personal\platzi-course-notes\CSharp\institution\institution\bin\Debug\netcoreapp2.0\institution.runtimeconfig.dev.json
+C:\Users\vgamez\source\personal\platzi-course-notes\CSharp\institution\institution\bin\Debug\netcoreapp2.0\institution.dll
+C:\Users\vgamez\source\personal\platzi-course-notes\CSharp\institution\institution\bin\Debug\netcoreapp2.0\institution.pdb
+C:\Users\vgamez\source\personal\platzi-course-notes\CSharp\institution\institution\obj\Debug\netcoreapp2.0\institution.csprojResolveAssemblyReference.cache
+C:\Users\vgamez\source\personal\platzi-course-notes\CSharp\institution\institution\obj\Debug\netcoreapp2.0\institution.csproj.CoreCompileInputs.cache
+C:\Users\vgamez\source\personal\platzi-course-notes\CSharp\institution\institution\obj\Debug\netcoreapp2.0\institution.AssemblyInfoInputs.cache
+C:\Users\vgamez\source\personal\platzi-course-notes\CSharp\institution\institution\obj\Debug\netcoreapp2.0\institution.AssemblyInfo.cs
+C:\Users\vgamez\source\personal\platzi-course-notes\CSharp\institution\institution\obj\Debug\netcoreapp2.0\institution.dll
+C:\Users\vgamez\source\personal\platzi-course-notes\CSharp\institution\institution\obj\Debug\netcoreapp2.0\institution.pdb
