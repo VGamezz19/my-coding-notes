@@ -7,7 +7,7 @@ namespace institution.Models
      public abstract class Person: IEnteInstitution
 	{
 		public static int CountPersons = 0;
-
+		
 		public int Id { get; set; }
 		public string Name { get; set; }
 		public string Lastname { get; set; }
@@ -47,6 +47,11 @@ namespace institution.Models
 		public string ConstructSecretKey(string name)
 		{
 			var rnd = new Random();
+
+			if (rnd.GetType() == typeof(Random))
+			{
+
+			}
 
 			return rnd.Next(1, 99999).ToString();
 		}

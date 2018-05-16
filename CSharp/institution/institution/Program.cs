@@ -1,5 +1,6 @@
 ﻿using institution.Models;
 using System;
+using System.Collections;
 
 namespace institution
 {
@@ -89,6 +90,12 @@ namespace institution
 			float f = 2.35f;
 			Console.WriteLine(f); // 2.35
 			i = (int)f;
+
+			if (int.TryParse("15", out var result))
+			{
+				Console.WriteLine(result);
+			}
+
 			Console.WriteLine(i); // 2
 
 			Person[] arrayPerson = new Person[5];
@@ -109,6 +116,26 @@ namespace institution
 				if (arrayPerson[x] is Student)
 				{
 					var al = arrayPerson[x];
+					Console.WriteLine(al.FullName);
+				}
+			}
+
+			string testString = "Pedro";
+			string Name = "Pedro";
+
+
+			ArrayList listPersons = new ArrayList();
+
+			listPersons.Add(new Student("CC", "G"));
+			listPersons.Add(new Student("CC", "G"));
+			listPersons.Add(new Student("CC", "G"));
+			listPersons.Add(new Student("CC", "G"));
+			listPersons.Add(new Student("CC", "G"));
+
+			for (int x = 0; x < listPersons.Count; x++)
+			{
+				if (listPersons[i] is Student al)
+				{
 					Console.WriteLine(al.FullName);
 				}
 			}
