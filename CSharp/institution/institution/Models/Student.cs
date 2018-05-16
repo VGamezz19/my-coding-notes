@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace institution.Models
-{
+{	
     class Student: Person
-    {
+    {	
+		public StudentStatus Status { get; set; }
 		public string Email { get; set; }
 		private int Ausents { get; set; }
 		public string NickName { get; set; }

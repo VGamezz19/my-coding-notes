@@ -47,6 +47,29 @@ namespace institution
 				Console.WriteLine(p.BuildResum());
 			}
 
+			Console.WriteLine("E N U M S");
+
+			var studenState = new Student("Pedro", "Gamez")
+			{
+				Id = 1,
+				Years = 21,
+				Phone = "673414332",
+				Email = "pictor.games30@gmail.com",
+
+				Status = StudentStatus.Egresado
+				//Casting, nos permite convertir de un tipo a otro, cuando el tipo es compatible y tenemos la certeza que se puede hacer la conversion
+				//Status = (StudentStatus) 98
+			};
+
+			Console.WriteLine($"Estado del Alumno {studenState.Status}");
+			Console.WriteLine($"Type { typeof(StudentStatus)}");
+			Console.WriteLine($"Type { typeof(Int32)}");
+			Console.WriteLine($"Type { studenState.GetType()}");
+			Console.WriteLine($"Nombre { nameof(Student)}");
+			Console.WriteLine($"Tamaño { sizeof(int)}");
+
+
+
 			Console.ReadLine();
         }
     }
