@@ -68,9 +68,52 @@ namespace institution
 			Console.WriteLine($"Nombre { nameof(Student)}");
 			Console.WriteLine($"Tamaño { sizeof(int)}");
 
+			Console.WriteLine("C A S T");
 
+			//-32.000 + 32.000
+			short s = 32000;
+			int i = 33000;
+
+			//El compilador lanza un error, ya que el tipo Short no puede tener más de 32000.
+			//s = i;
+			//
+			//Pero podemos "forzar" que C# ejecute el tipo de dato, añadiendole el casting.
+			Console.WriteLine(i); // 33000
+			s = (short)i;
+			Console.WriteLine(s); // - 32536
+
+			// Sale un valor totalmente diferente porque perdimos informacion. Esta perdida de informacion
+			// para el tipo Short se representa en negativo.
+			// pudimos hacer la igualacion, porque "forzamos" la ejecucion
+
+			float f = 2.35f;
+			Console.WriteLine(f); // 2.35
+			i = (int)f;
+			Console.WriteLine(i); // 2
+
+			Person[] arrayPerson = new Person[5];
+
+			var tam = arrayPerson.Length;
+
+			arrayPerson[0] = new Student("V", "G");
+			arrayPerson[1] = new Teacher() { Name = "P", Lastname = "L" };
+			arrayPerson[2] = new Student("V3", "G3");
+			arrayPerson[3] = new Teacher() { Name = "P2", Lastname = "L1" };
+			arrayPerson[4] = new Student("Vaaa", "Gsss");
+
+
+			//arrayPerson[5] = new Teacher() { Name = "Pddddd", Lastname = "Lsss" };
+
+			for (int x = 0; x < tam; x++)
+			{
+				if (arrayPerson[x] is Student)
+				{
+					var al = arrayPerson[x];
+					Console.WriteLine(al.FullName);
+				}
+			}
 
 			Console.ReadLine();
-        }
-    }
+		}
+	}
 }
