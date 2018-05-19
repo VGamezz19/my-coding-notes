@@ -36,3 +36,5 @@ cada vez que cambia el estado, VueJS genera un binding, entre un modelo y una vi
 - ### [v-if | template | v-show](https://github.com/VGamezz19/platzi-course-notes/blob/master/Vue/doc/1-template-If-Show.MD)
 
 - ### [Filters](https://github.com/VGamezz19/platzi-course-notes/blob/master/Vue/doc/2-filters.MD)
+
+- ### [Eventos](https://github.com/VGamezz19/platzi-course-notes/blob/master/Vue/doc/3-eventos.MD)
