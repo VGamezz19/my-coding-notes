@@ -16,6 +16,7 @@
         <!-- The same -->
         <a :href="url"> Ir a {{ pagina }}</a>
     </div>
+
     <div id="show">
 
         <!-- Incorrecto, repeticion de codigo -->
@@ -48,6 +49,13 @@
         </div>
 
     </div>
+
+    <div id="filters">
+        <h1>{{ titulo | uppercase }}</h1>
+        <h2>{{ substitulo | lowercase | capitalize}}</h2>
+
+
+    </div>
     <!-- development version, includes helpful console warnings -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script type="text/javascript">
@@ -67,6 +75,19 @@
                 url: 'https://google.com',
                 pagina: 'Google',
                 mostrar: true,
+            }
+        });
+
+        let filters = new Vue({
+            el: '#filters',
+            data: {
+                titulo: 'Estas en Platzi',
+                substitulo: 'Estas viendo el curso de Vue.js',
+            },
+            filters: {
+                uppercase: (str) => str.toUpperCase() ,
+                lowercase: (str) => str.toLowerCase(),
+                capitalize: (str) => str[0].toUpperCase() + str.slice(1)
             }
         });
     </script>
