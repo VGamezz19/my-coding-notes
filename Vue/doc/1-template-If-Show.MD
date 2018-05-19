@@ -1,4 +1,4 @@
-# [← |](https://github.com/VGamezz19/skylab-boot-notes) v-if | template | v-show
+# [← |](https://github.com/VGamezz19/platzi-course-notes/tree/master/Vue) v-if | template | v-show
 
 Para poder esconder y condicionar nuestras vistas segun nuestras logica, tendremos que usar `v-if` y `v-show`. La gran diferencua entre estos dos conceptos son:
 

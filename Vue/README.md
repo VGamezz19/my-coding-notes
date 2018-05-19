@@ -31,6 +31,6 @@ cada vez que cambia el estado, VueJS genera un binding, entre un modelo y una vi
 
 # INDEX
 
-- ### [Hello World + Conceptos](https://github.com/VGamezz19/skylab-boot-notes/tree/master/semana08)
+- ### [Hello World + Conceptos](https://github.com/VGamezz19/platzi-course-notes/blob/master/Vue/doc/0-helloWorl.MD)
 
-- #### [ v-if | template | v-show](https://github.com/VGamezz19/skylab-boot-notes/tree/master/semana08)
+- #### [ v-if | template | v-show](https://github.com/VGamezz19/platzi-course-notes/blob/master/Vue/doc/1-template-If-Show.MD)

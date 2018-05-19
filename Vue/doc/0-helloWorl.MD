@@ -1,4 +1,4 @@
-# [← |](https://github.com/VGamezz19/skylab-boot-notes) Hello World
+# [← |](https://github.com/VGamezz19/platzi-course-notes/tree/master/Vue) Hello World
 
 para que VueJs identifique un elemento HTML, tendremos que instanciarlo de esta forma:
 
