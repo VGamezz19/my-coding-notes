@@ -8,7 +8,7 @@
 
 - MV (Modelo Vista)
 
-- Aplicacion Reactiva. 
+- Aplicacion Reactiva.  
 
 - VueJs --> UI
 
@@ -23,7 +23,7 @@
 
 cada vez que cambia el estado, VueJS genera un binding, entre un modelo y una vista, y sera reactivo con los eventos de la pagina.
 
-### VueJs vs React
+### VueJS vs React
 
 - Los dos utilian un virtual DOM
 
