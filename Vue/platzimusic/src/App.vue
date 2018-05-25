@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld/index.vue'
+import HelloWorld from './components/HelloWorld'
 import Some from './components/Spliting'
 export default {
   name: 'app',
