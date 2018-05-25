@@ -2,15 +2,17 @@
   #app
     img(src='./assets/logo.png')
     HelloWorld(msg='Welcome to Your Vue.js App')
+    Some
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld/index.vue'
-
+import Some from './components/Spliting'
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    HelloWorld,
+    Some
   }
 }
 </script>
