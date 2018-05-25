@@ -100,6 +100,8 @@ Aparte, a la hora de capturar el evento de un formulario, existe del event.preve
 
 ## Key  Modifiers
 
+[https://vuejs.org/v2/guide/events.html#Key-Modifiers](https://vuejs.org/v2/guide/events.html#Key-Modifiers)
+
 Vue tambien ha añadido algunos key modifiers por defecto dentro de la scope VirtualDOM.
 
 ```html
