@@ -1,7 +1,7 @@
 <template lang="pug">
   #app
     img(src='./assets/logo.png')
-    HelloWorld(msg='Welcome to Your Vue.js App')
+    HelloWorld(artists=[{name:"hello"}])
     Some
 </template>
 
