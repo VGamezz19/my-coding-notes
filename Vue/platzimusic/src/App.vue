@@ -1,18 +1,26 @@
 <template lang="pug">
   #app
     img(src='./assets/logo.png')
-    HelloWorld(artists=[{name:"hello"}])
-    Some
+    h1 PlatziMusic
+    ul
+      li(v-for="artist in artists") {{ artist.name }}
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
-import Some from './components/Spliting'
+import getArtists from './api'
+
 export default {
   name: 'app',
-  components: {
-    HelloWorld,
-    Some
+  data () {
+    return {
+      artists: []
+    }
+  },
+  mounted: function () {
+    getArtists()
+      .then((artists) => {
+        this.artists = artists
+      })
   }
 }
 </script>
