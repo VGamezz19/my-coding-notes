@@ -4,6 +4,9 @@
     h1 PlatziMusic
     select(v-model="selectedCountry")
       option(v-for="country in countries" v-bind:value="country.value") {{ country.name }}
+
+    Spinner(v-show="loading")
+
     ul
       Artist(v-for="artist in artists" v-bind:artist='artist' v-bind::key="artist.mbid")
 </template>
@@ -11,6 +14,7 @@
 <script>
 import getArtists from "./api";
 import Artist from "./components/Artists.vue";
+import Spinner from "./components/Spinner.vue";
 
 export default {
   name: "app",
@@ -22,14 +26,18 @@ export default {
         { name: "Colombia", value: "colombia" },
         { name: "España", value: "spain" }
       ],
-      selectedCountry: "argentina"
+      selectedCountry: "argentina",
+      loading: true
     };
   },
-  components: { Artist },
+  components: { Artist, Spinner },
   methods: {
     refreshArtist(currentCountrySelected) {
       //self = this;
-      getArtists(currentCountrySelected).then((artists) => {
+      this.loading = true;
+      this.artists = [];
+      getArtists(currentCountrySelected).then(artists => {
+        this.loading = false;
         this.artists = artists;
       });
     }
@@ -38,7 +46,7 @@ export default {
     this.refreshArtist(this.selectedCountry);
   },
   watch: {
-    selectedCountry () {
+    selectedCountry() {
       this.refreshArtist(this.selectedCountry);
     }
   }
