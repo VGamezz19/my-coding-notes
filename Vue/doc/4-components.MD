@@ -1,4 +1,4 @@
-# Components
+# [← |](https://github.com/VGamezz19/platzi-course-notes/tree/master/Vue) Components
 
 En Vue podemos crear componentes hijos, que adoptaran informacion (si es necesario) del padre e emitiran informacion.
 

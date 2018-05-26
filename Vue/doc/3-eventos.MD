@@ -1,4 +1,4 @@
-# Eventos 
+# [← |](https://github.com/VGamezz19/platzi-course-notes/tree/master/Vue) Eventos 
 
 Podemos definir y capturar eventos en Vue, añadiendo la palabra clave en el html `v-on:` o el simbolo `@` y el nombre del evento.
 
