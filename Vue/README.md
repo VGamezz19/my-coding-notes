@@ -45,4 +45,4 @@ cada vez que cambia el estado, VueJS genera un binding, entre un modelo y una vi
 
 ---
 
-- ### [Cconceptos avanzados](https://github.com/VGamezz19/platzi-course-notes/blob/master/Vue/doc/6-conceptosAvanzados.MD) 
+- ### [Conceptos avanzados](https://github.com/VGamezz19/platzi-course-notes/blob/master/Vue/doc/6-conceptosAvanzados.MD) 
