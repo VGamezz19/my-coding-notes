@@ -43,6 +43,13 @@ cada vez que cambia el estado, VueJS genera un binding, entre un modelo y una vi
 
 - ### [lifecycle](https://github.com/VGamezz19/platzi-course-notes/blob/master/Vue/doc/5-lifecycle.MD)
 
+---
+
+- ### [Cconceptos avanzados](https://github.com/VGamezz19/platzi-course-notes/blob/master/Vue/doc/6-conceptosAvanzados.MD) 
+
+
+
+
 
 
 framework web progresivo, se basa en las vistas. es reactivo (que puedes tener enlazado el codigo con la bista, y tendra un enlace virtual, y desde los dos lados podre obtener informacion)
