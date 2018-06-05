@@ -18,7 +18,6 @@
 
 - VueJs + Herramientas + Librerias, podemos crear una SPA muy buena
 
-
 ### State en Vue
 
 cada vez que cambia el estado, VueJS genera un binding, entre un modelo y una vista, y sera reactivo con los eventos de la pagina.
@@ -45,4 +44,4 @@ cada vez que cambia el estado, VueJS genera un binding, entre un modelo y una vi
 
 ---
 
-- ### [Conceptos avanzados](https://github.com/VGamezz19/platzi-course-notes/blob/master/Vue/doc/6-conceptosAvanzados.MD) 
+- ### [Conceptos avanzados](https://github.com/VGamezz19/platzi-course-notes/blob/master/Vue/doc/6-conceptosAvanzados.MD)
