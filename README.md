@@ -11,3 +11,15 @@
 ## [WebPack](https://github.com/VGamezz19/platzi-course-notes/tree/master/WebPack)
 
 ## [VueJS](https://github.com/VGamezz19/platzi-course-notes/tree/master/Vue)
+
+# Interesting Posts
+
+# Legend
+
+1.  Read (📄) 
+1.  Watch (🎥)
+1.  Listen (🎼)
+
+## Webpack
+
+ - [ 11/06/2018 - (📄) Webpack — The Confusing Parts](https://medium.com/@rajaraodv/webpack-the-confusing-parts-58712f8fcad9)
