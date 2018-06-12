@@ -20,6 +20,9 @@
 1.  Watch (🎥)
 1.  Listen (🎼)
 
+## ES6
+
+ - [12/06/2018] - (📄) ES6 - Hipster Hack - Spread Operator ](https://hackernoon.com/javascript-hacks-for-es6-hipsters-67d633ce8ace)
 ## Webpack
 
  - [ 11/06/2018 - (📄) Webpack — The Confusing Parts](https://medium.com/@rajaraodv/webpack-the-confusing-parts-58712f8fcad9)
