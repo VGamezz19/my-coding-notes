@@ -23,6 +23,7 @@
 ## ES6
 
  - [12/06/2018 - (📄) ES6 - Hipster Hack - Spread Operator](https://hackernoon.com/javascript-hacks-for-es6-hipsters-67d633ce8ace)
+ 
  -[13/06/2018 - (📄) ES6 - Symbols](http://exploringjs.com/es6/ch_symbols.html)
  
 ## Webpack
