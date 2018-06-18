@@ -29,3 +29,7 @@
 ## Webpack
 
  - [11/06/2018 - (📄) Webpack — The Confusing Parts](https://medium.com/@rajaraodv/webpack-the-confusing-parts-58712f8fcad9)
+ 
+ ## Vue
+ 
+  - [18/06/2018 - (📄) Vue — Build Vue Components](https://blog.bitsrc.io/how-to-build-vue-components-like-a-pro-fd89fd4d524d)
