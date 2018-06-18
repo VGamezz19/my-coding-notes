@@ -26,10 +26,12 @@
  
  - [13/06/2018 - (📄) ES6 - Symbols](http://exploringjs.com/es6/ch_symbols.html)
  
+ - [18/06/2018 - (📄) ES6 - Write lees, do more](https://medium.freecodecamp.org/write-less-do-more-with-javascript-es6-5fd4a8e50ee2)
+ 
 ## Webpack
 
- - [11/06/2018 - (📄) Webpack — The Confusing Parts](https://medium.com/@rajaraodv/webpack-the-confusing-parts-58712f8fcad9)
+ - [11/06/2018 - (📄) Webpack - The Confusing Parts](https://medium.com/@rajaraodv/webpack-the-confusing-parts-58712f8fcad9)
  
  ## Vue
  
-  - [18/06/2018 - (📄) Vue — Build Vue Components](https://blog.bitsrc.io/how-to-build-vue-components-like-a-pro-fd89fd4d524d)
+  - [18/06/2018 - (📄) Vue - Build Vue Components](https://blog.bitsrc.io/how-to-build-vue-components-like-a-pro-fd89fd4d524d)
