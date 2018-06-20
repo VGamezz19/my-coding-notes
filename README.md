@@ -22,7 +22,7 @@
 
 ## JavaScript
 
- - [18/06/2018 - (📄) JavaScript - Console API](https://medium.freecodecamp.org/working-with-the-devtools-console-and-console-api-an-overview-13cff6dc3db4)
+ - [20/06/2018 - (📄) JavaScript - Console API](https://medium.freecodecamp.org/working-with-the-devtools-console-and-console-api-an-overview-13cff6dc3db4)
  
 ## ES6
 
@@ -34,7 +34,7 @@
  
 ## ReactJS
 
- - [13/06/2018 - (📄) React - Container pattern](https://medium.com/@learnreact/container-components-c0e67432e005)
+ - [20/06/2018 - (📄) React - Container pattern](https://medium.com/@learnreact/container-components-c0e67432e005)
 
  ## Vue
  
