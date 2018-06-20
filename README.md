@@ -20,6 +20,10 @@
 1.  Watch (🎥)
 1.  Listen (🎼)
 
+## JavaScript
+
+ - [18/06/2018 - (📄) JavaScript - Console API](https://medium.freecodecamp.org/working-with-the-devtools-console-and-console-api-an-overview-13cff6dc3db4)
+
 ## NodeJS
 
  - [18/06/2018 - (📄) Node - About NodeJS](https://medium.freecodecamp.org/what-exactly-is-node-js-ae36e97449f5)
