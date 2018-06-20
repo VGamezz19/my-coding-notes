@@ -36,6 +36,10 @@
  
  - [18/06/2018 - (📄) ES6 - Write lees, do more](https://medium.freecodecamp.org/write-less-do-more-with-javascript-es6-5fd4a8e50ee2)
  
+## ReactJS
+
+ - [13/06/2018 - (📄) React - Container pattern](https://medium.com/@learnreact/container-components-c0e67432e005)
+ 
 ## Webpack
 
  - [11/06/2018 - (📄) Webpack - The Confusing Parts](https://medium.com/@rajaraodv/webpack-the-confusing-parts-58712f8fcad9)
