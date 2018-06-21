@@ -20,6 +20,9 @@
 1.  Watch (🎥)
 1.  Listen (🎼)
 
+## Knowledge
+ - [21/06/2018 - (📄) TDD - Console API](https://codurance.com/2018/06/17/frontend-outside-in/)
+
 ## JavaScript
 
  - [20/06/2018 - (📄) JavaScript - Console API](https://medium.freecodecamp.org/working-with-the-devtools-console-and-console-api-an-overview-13cff6dc3db4)
