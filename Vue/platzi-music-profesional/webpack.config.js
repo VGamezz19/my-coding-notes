@@ -15,7 +15,13 @@ module.exports = {
         loader: 'eslint-loader',
         // Forzamos a WP que ejecute primero esta rule
         enforce: 'pre',
-        include: [path.resolve(__dirname, './src')]
+        include: [path.resolve(__dirname, './src')],
+        options: {
+          emitError: true,
+          formatter: require('eslint-friendly-formatter'),
+          failOnWarning: true,
+          failOnError: true,
+        }
       },
       {
         test: /\.css$/,
