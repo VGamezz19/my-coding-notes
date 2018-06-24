@@ -62,6 +62,13 @@ export default {
     age () {
       return new Date().getFullYear() - this.year
     }
+  },
+  // No son propiedades. Se enlazan directamente con una variable del view model. asique SE HAN DE LLAMAR IGUAL
+  // Son funciones
+  watch: {
+    name (newVal, OldVal) {
+      console.log(newVal, OldVal)
+    }
   }
 }
 </script>
