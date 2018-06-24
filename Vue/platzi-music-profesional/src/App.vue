@@ -12,6 +12,18 @@
     ul
       li(v-for="link in ecosystemLinks") 
         a(href="link.url") {{link.name}}
+
+  h3 Insert Name and last Name
+  input(v-model="name")
+  input(v-model="lastName")
+
+  p computed name {{ fullName }}
+
+  h3 Insert year
+
+  input(v-model="year")
+  p conputed year  {{ age }}
+  
 </template> 
 
 <script>
@@ -35,7 +47,20 @@ export default {
       person: {
         name: 'Victor'
       },
+      name: '',
+      lastName: '',
+      year: '',
       showValue: true
+    }
+  },
+  // Una transformacion de los datos, añadindole una funcionalidad de visualizacion.
+  computed: {
+    fullName () {
+      return `${this.name} ${this.lastName}`
+    },
+
+    age () {
+      return new Date().getFullYear() - this.year
     }
   }
 }
