@@ -15,7 +15,7 @@
       each link in ecosystemLinks
         li
           a(href=link.url)= link.name
-</template>
+</template> 
 
 <script>
 export default {
