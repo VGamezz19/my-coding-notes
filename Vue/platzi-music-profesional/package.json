@@ -10,6 +10,7 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
+    "bulma": "^0.7.1",
     "eslint": "^5.0.0",
     "vue": "^2.5.11"
   },
@@ -25,7 +26,7 @@
     "babel-preset-stage-3": "^6.24.1",
     "cross-env": "^5.0.5",
     "css-loader": "^0.28.7",
-    "eslint-config-standard": "^11.0.0",
+    "eslint-config-standard": "^12.0.0-alpha.0",
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-loader": "^2.0.0",
     "eslint-plugin-html": "^4.0.5",
