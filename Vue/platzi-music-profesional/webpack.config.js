@@ -20,7 +20,7 @@ module.exports = {
           emitError: true,
           formatter: require('eslint-friendly-formatter'),
           failOnWarning: true,
-          failOnError: true,
+          failOnError: true
         }
       },
       {
