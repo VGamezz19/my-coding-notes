@@ -11,11 +11,18 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(js|vue)$/,
+        loader: 'eslint-loader',
+        // Forzamos a WP que ejecute primero esta rule
+        enforce: 'pre',
+        include: [path.resolve(__dirname, './src')]
+      },
+      {
         test: /\.css$/,
         use: [
           'vue-style-loader',
           'css-loader'
-        ],
+        ]
       },
       {
         test: /\.scss$/,
@@ -23,7 +30,7 @@ module.exports = {
           'vue-style-loader',
           'css-loader',
           'sass-loader'
-        ],
+        ]
       },
       {
         test: /\.sass$/,
@@ -31,7 +38,7 @@ module.exports = {
           'vue-style-loader',
           'css-loader',
           'sass-loader?indentedSyntax'
-        ],
+        ]
       },
       {
         test: /\.vue$/,
@@ -77,12 +84,13 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
-    noInfo: true,
+    noInfo: false,
     overlay: true
   },
   performance: {
     hints: false
   },
+  // para poder mapear nuestro codigo y que pueda ser debugeado
   devtool: '#eval-source-map'
 }
 
