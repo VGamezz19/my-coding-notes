@@ -20,9 +20,12 @@
 1.  Watch (🎥)
 1.  Listen (🎼)
 
+[study path](https://github.com/joebew42/study-path)
+
 ## Knowledge
  - [21/06/2018 - (📄) TDD - Console API](https://codurance.com/2018/06/17/frontend-outside-in/)
  - [22/06/2018 - (📄) Pattern - GameLoop](http://gameprogrammingpatterns.com/game-loop.html)
+ 
 
 ## JavaScript
 
