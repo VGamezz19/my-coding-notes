@@ -1,0 +1,3 @@
+# [← |](https://github.com/VGamezz19/platzi-course-notes/tree/master/Vue) Computed vs Watched
+
+## Computed
