@@ -16,9 +16,5 @@ npm run build
 ```
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
-
-
-READ!! 
+ 
 Todo Clas Events
-
-https://stackoverflow.com/questions/44350862/method-vs-computed-in-vue
