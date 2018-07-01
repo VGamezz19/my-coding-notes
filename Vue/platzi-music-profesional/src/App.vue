@@ -16,6 +16,10 @@
   h3 Insert Name and last Name
   input(v-model="name")
   input(v-model="lastName")
+  button(v-on:click="format") Format
+  // button(@:click="format") Format
+
+  p {{ formattedName }}
 
   p computed name {{ fullName }}
 
@@ -50,6 +54,7 @@ export default {
       name: '',
       lastName: '',
       year: '',
+      formattedName: '',
       showValue: true
     }
   },
@@ -68,6 +73,13 @@ export default {
   watch: {
     name (newVal, OldVal) {
       console.log(newVal, OldVal)
+    }
+  },
+  // Para definir los eventos... pero no especificamentem un metodo esta enlazado a un Evento, tambien puede ser ejecutado dentro
+  // de un watcher o computed propertie.
+  methods: {
+    format () {
+      this.formattedName = this.name.split() + this.lastName.split()
     }
   }
 }
