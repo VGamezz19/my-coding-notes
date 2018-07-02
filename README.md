@@ -62,3 +62,7 @@
 ## CSS Styles
 
  - [**/**/2018 - (📄) BEM - Introduction](http://getbem.com/introduction/)
+
+ - [**/**/2018 - (📄) BEM - Bem Methodology](https://webdesign.tutsplus.com/es/articles/an-introduction-to-the-bem-methodology--cms-19403)
+
+ - [**/**/2018 - (📄) BEM - Estructura los componentes](http://blog.ckgrafico.com/tomando-decisiones-estructurar-los-componentes-css/)
