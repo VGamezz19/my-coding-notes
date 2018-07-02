@@ -24,8 +24,8 @@
 
 ## Knowledge
 
- - [21/06/2018 - (📄) TDD - Codurance](https://codurance.com/2018/06/17/frontend-outside-in/)
- - [22/06/2018 - (📄) Pattern - GameLoop](http://gameprogrammingpatterns.com/game-loop.html)
+ - [**/**/2018 - (📄) TDD - Codurance](https://codurance.com/2018/06/17/frontend-outside-in/)
+ - [**/**/2018 - (📄) Pattern - GameLoop](http://gameprogrammingpatterns.com/game-loop.html)
  
 
 ## JavaScript
@@ -58,3 +58,7 @@
 
  - [11/06/2018 - (📄) Webpack - The Confusing Parts](https://medium.com/@rajaraodv/webpack-the-confusing-parts-58712f8fcad9)
  
+
+## CSS Styles
+
+ - [**/**/2018 - (📄) BEM - Introduction](http://getbem.com/introduction/)
