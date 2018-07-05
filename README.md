@@ -24,8 +24,8 @@
 
 ## Knowledge
 
- - [**/**/2018 - (📄) TDD - Codurance](https://codurance.com/2018/06/17/frontend-outside-in/)
- - [**/**/2018 - (📄) Pattern - GameLoop](http://gameprogrammingpatterns.com/game-loop.html)
+ - [^^/^^/2018 - (📄) TDD - Codurance](https://codurance.com/2018/06/17/frontend-outside-in/)
+ - [^^/^^/2018 - (📄) Pattern - GameLoop](http://gameprogrammingpatterns.com/game-loop.html)
  
 
 ## JavaScript
@@ -39,6 +39,9 @@
  - [13/06/2018 - (📄) ES6 - Symbols](http://exploringjs.com/es6/ch_symbols.html)
  
  - [18/06/2018 - (📄) ES6 - Write lees, do more](https://medium.freecodecamp.org/write-less-do-more-with-javascript-es6-5fd4a8e50ee2)
+ 
+ - [18/06/2018 - (📄) ES6 - JavaScript Symbols, Iterators, Generators, Async/Await, and Async Iterators](https://medium.freecodecamp.org/some-of-javascripts-most-useful-features-can-be-tricky-let-me-explain-them-4003d7bbed32)
+ 
  
 ## ReactJS
 
@@ -61,8 +64,8 @@
 
 ## CSS Styles
 
- - [**/**/2018 - (📄) BEM - Introduction](http://getbem.com/introduction/)
+ - [^^/^^/2018 - (📄) BEM - Introduction](http://getbem.com/introduction/)
 
- - [**/**/2018 - (📄) BEM - Bem Methodology](https://webdesign.tutsplus.com/es/articles/an-introduction-to-the-bem-methodology--cms-19403)
+ - [^^/^^/2018 - (📄) BEM - Bem Methodology](https://webdesign.tutsplus.com/es/articles/an-introduction-to-the-bem-methodology--cms-19403)
 
- - [**/**/2018 - (📄) BEM - Estructura los componentes](http://blog.ckgrafico.com/tomando-decisiones-estructurar-los-componentes-css/)
+ - [^^/^^/2018 - (📄) BEM - Estructura los componentes](http://blog.ckgrafico.com/tomando-decisiones-estructurar-los-componentes-css/)
