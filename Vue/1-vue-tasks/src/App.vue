@@ -3,7 +3,6 @@
     section.app-section.section
       nav.app-nav.nav
         h1.app-nav_title Welcome to Task Managmen {{ showestatusUser }}
-      
       .app-wrapper
         .container
           .columns
@@ -16,7 +15,7 @@
                   v-for = "(task,index) in tasks"
                   :key = "index"
                 ) {{task.name}} - {{task.time}}
-            .form.column
+            form.form.column
               input.input.is-large.form-input.form-input_task-name(
                 type="text",
                 placeholder="Add new task to do"
@@ -27,6 +26,12 @@
                 placeholder="Add time to task"
                 v-model="taskTime"
               )
+              .form-wrapper.columns
+                .form-wrapper-submits.column
+                  a.button.is-info.is-large(@click="addTask") Add
+                .form-wrapper-submits.column
+                  a.button.is-danger.is-large(@click="refreshForm") &times;
+
               
               
     
@@ -52,6 +57,12 @@ export default {
     }
   },
   methods: {
+    addTask () {
+      console.log('add task')
+    },
+    refreshForm () {
+      console.log('refresh form')
+    }
   }
 }
 </script>
