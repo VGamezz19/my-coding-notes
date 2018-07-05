@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <button @click="sumar">@@ Sumar 1</button>
+        <button @click="restar">@@ Restar 1</button>
+
+        <button v-on:click="sumar">Sumar 1</button>
+        <button v-on:click="restar">Restar 1</button>
+
+        <button @click="counter++">withOut Sumar 1</button>
+        <button @click="counter--">withOut Restar 1</button>
+
+        <h1>El counter esta en {{ counter }} </h1>
+
+        <input 
+            type="text" 
+            v-model:value="name" 
+            ame="name" 
+            id="insert-name" 
+            placeholder="insert your name" />
+        <p>Your name is {{ name | uppercase }}</p>
+
+        <form v-on:submit.prevent="submit">
+            <h2>Tus cursos favoritos</h2>
+            <input v-model="cursosCheck" type="checkbox" id="vue" value="vue" />
+            <label for="vue">Curso de Vue.js</label>
+
+            <input v-model="cursosCheck" type="checkbox" id="SEO" value="SEO" />
+            <label for="SEO">Curso de SEO.js</label>
+
+            <input v-model="cursosCheck" type="checkbox" id="Ract" value="Ract" />
+            <label for="Ract">Curso de Ract.js</label>
+
+            <input v-model="cursosCheck" type="checkbox" id="Growth" value="Growth" />
+            <label for="Growth">Curso de Growth.js</label>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript">
+        let app = new Vue({
+            el: '#app',
+            data: {
+                counter: 0,
+                cursosCheck: []
+            },
+            filters: {
+                uppercase(str) {
+                    return str.toUpperCase()
+                }
+            },
+            methods: {
+                submit() {
+                    console.log("Ejecuta la funcion submit")
+                    console.log(this.cursosCheck)
+                },
+                sumar() {
+                    this.counter++
+                },
+                restar() {
+                    this.counter--
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
