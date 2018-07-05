@@ -1,48 +1,57 @@
 <template lang="pug">
-  #app
-    section.section
-      nav.nav.has-shadow
+  #app.app
+    section.app-section.section
+      nav.app-nav.nav
+        h1.app-nav_title Welcome to Task Managmen {{ showestatusUser }}
+      
+      .app-wrapper
         .container
-          input.input.is-large(
-            type="text",
-            placeholder="Buscar canciones",
-            v-model="searchQuery"
-          )
-          a.button.is-info.is-large(@click="search") Buscar
-          a.button.is-danger.is-large &times;
-          p
-            small {{ searchMessage }}
+          .columns
+            .tasks.column
+              ul.tasks-list
+                li.tasks-list_li.tasks-list--no-data(v-show = "!tasks.length")
+                  small no data found
+                li.tasks-list_li(
+                  v-if = "tasks.length"
+                  v-for = "(task,index) in tasks"
+                  :key = "index"
+                ) {{task.name}} - {{task.time}}
+            .form.column
+              input.input.is-large.form-input.form-input_task-name(
+                type="text",
+                placeholder="Add new task to do"
+                v-model="taskName"
+              )
+              input.input.is-large.form-input.form-input_task-time(
+                type="text",
+                placeholder="Add time to task"
+                v-model="taskTime"
+              )
+              
+              
+    
 
-      .container.results
-        .columns
-          .column(v-for="t in tracks") {{ t.name }} - {{ t.artist}}
 
 </template>
 
 <script>
-const tracks = [
-  {name: 'Muchacha', artist: 'Luis Albert Spinetta'},
-  {name: 'Hoy aca en el baile', artist: 'El Pepo'},
-  {name: 'I was made for loving you', artist: 'Kiss'}
-]
+
 export default {
   name: 'app',
   data () {
     return {
-      searchQuery: '',
-      tracks: []
+      tasks: [],
+      taskName: '',
+      taskTime: '',
+      estatusUser: 'Take it easy'
     }
   },
   computed: {
-    searchMessage () {
-      return `Encontrados: ${this.tracks.length}`
+    showestatusUser () {
+      return `-  ${this.estatusUser}`
     }
   },
   methods: {
-    search () {
-      console.log(this.searchQuery)
-      this.tracks = tracks
-    }
   }
 }
 </script>
@@ -50,16 +59,28 @@ export default {
 <style lang="scss">
 @import "./scss/main.scss";
 
-#app {
+$border-bottom-s : .2rem;
+$primary-color-gray: gray;
+$font-sinze-xl: 2rem;
+
+.app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  // color: #2c3e50;
-  margin-top: 60px;
+
+  &-nav {
+    border-bottom: $border-bottom-s solid $primary-color-gray;
+
+    &_title {
+      font-size: $font-sinze-xl;
+    }
+  }
+
+  &-wrapper {
+    margin-top: 2rem;
+  }
+
 }
 
-.results {
-  margin-top: 1rem;
-}
 </style>
