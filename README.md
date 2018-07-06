@@ -40,7 +40,7 @@
  
  - [18/06/2018 - (📄) ES6 - Write lees, do more](https://medium.freecodecamp.org/write-less-do-more-with-javascript-es6-5fd4a8e50ee2)
  
- - [/^^/2018 - (📄) ES6 - JavaScript Symbols, Iterators, Generators, Async/Await, and Async Iterators](https://medium.freecodecamp.org/some-of-javascripts-most-useful-features-can-be-tricky-let-me-explain-them-4003d7bbed32)
+ - [^^/^^/2018 - (📄) ES6 - JavaScript Symbols, Iterators, Generators, Async/Await, and Async Iterators](https://medium.freecodecamp.org/some-of-javascripts-most-useful-features-can-be-tricky-let-me-explain-them-4003d7bbed32)
  
  
 ## ReactJS
