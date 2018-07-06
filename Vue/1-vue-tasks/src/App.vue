@@ -15,7 +15,7 @@
                   v-for = "(task,index) in tasks"
                   :key = "index"
                 ) {{task.name}} - {{task.time}}
-            form.form.column
+            form.form.column(@submit.prevent="addTask")
               input.input.is-large.form-input.form-input_task-name(
                 type="text",
                 placeholder="Add new task to do"
@@ -28,15 +28,9 @@
               )
               .form-wrapper.columns
                 .form-wrapper-submits.column
-                  a.button.is-info.is-large(@click="addTask") Add
+                  button.button.is-info.is-large Add
                 .form-wrapper-submits.column
                   a.button.is-danger.is-large(@click="refreshForm") &times;
-
-              
-              
-    
-
-
 </template>
 
 <script>
@@ -58,10 +52,22 @@ export default {
   },
   methods: {
     addTask () {
-      console.log('add task')
+      const { taskName: name, taskTime: time } = this
+
+      this.tasks.push({name, time})
+      this.refreshForm()
     },
     refreshForm () {
-      console.log('refresh form')
+      this.taskName = ''
+      this.taskTime = ''
+    }
+  },
+  watch: {
+    taskName () {
+      this.estatusUser = 'Adding Task'
+    },
+    taskTime () {
+      this.estatusUser = 'Adding Time'
     }
   }
 }
