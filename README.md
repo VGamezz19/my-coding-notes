@@ -61,6 +61,9 @@
 
  - [11/06/2018 - (📄) Webpack - The Confusing Parts](https://medium.com/@rajaraodv/webpack-the-confusing-parts-58712f8fcad9)
  
+## GraphQL
+
+[^^/^^/2018 - GraphQL - about queries](https://medium.freecodecamp.org/graphql-front-end-queries-made-easy-68e9d9ded283)
 
 ## CSS Styles
 
