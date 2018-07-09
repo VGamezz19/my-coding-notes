@@ -2,7 +2,7 @@
   #app.app
     section.app-section.section
       nav.app-nav.nav
-        h1.app-nav__title Welcome to Task Managmen {{ showestatusUser }}
+        h1.app-nav__title Welcome to Task Managmen {{ showStatusUser }}
       .app-wrapper
         .container
           .columns
@@ -26,32 +26,28 @@ export default {
   data () {
     return {
       tasks: [{name: 'test', time: 2, id: 0}],
-      estatusUser: 'Take it easy'
+      statusUser: 'Take it easy'
     }
   },
   computed: {
-    showestatusUser () {
-      return `-  ${this.estatusUser}`
+    showStatusUser () {
+      return `-  ${this.statusUser}`
     }
   },
   methods: {
     addTask (name, time) {
       const id = this.tasks.length
-
       this.tasks.push({name, time, id})
+
+      this.statusUser = 'Adding Task'
     },
     removeTask (id) {
-      console.log(id)
+      const indexTask = this.tasks.findIndex(task => task.id === id)
+      this.tasks.splice(indexTask, 1)
+
+      this.statusUser = 'Removing Task'
     }
   }
-  // watch: {
-  //   taskName () {
-  //     this.estatusUser = 'Adding Task'
-  //   },
-  //   taskTime () {
-  //     this.estatusUser = 'Adding Time'
-  //   }
-  // }
 }
 </script>
 
