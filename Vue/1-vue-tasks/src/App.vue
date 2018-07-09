@@ -7,7 +7,9 @@
         .container
           .columns
             .column
-              tasks-component(:tasks="tasks")
+              tasks-component(
+                :tasks="tasks"
+                @removeTask="removeTask")
             .column
               form-component(@addTask="addTask")
 </template>
@@ -23,7 +25,7 @@ export default {
   },
   data () {
     return {
-      tasks: [{name: 'test', time: 2}],
+      tasks: [{name: 'test', time: 2, id: 0}],
       estatusUser: 'Take it easy'
     }
   },
@@ -34,7 +36,12 @@ export default {
   },
   methods: {
     addTask (name, time) {
-      this.tasks.push({name, time})
+      const id = this.tasks.length
+
+      this.tasks.push({name, time, id})
+    },
+    removeTask (id) {
+      console.log(id)
     }
   }
   // watch: {

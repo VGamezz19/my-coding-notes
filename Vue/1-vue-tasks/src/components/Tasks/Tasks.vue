@@ -5,10 +5,12 @@
       small no data found
     task-component(
       v-if = "tasks.length"
-      v-for = "(task,index) in tasks"
-      :key = "index"
+      v-for = "(task) in tasks"
+      :key = "task.id"
       :name="task.name"
       :time="task.time"
+      :id="task.id"
+      @remove="$emit('removeTask', task.id)"
     )
 </template>
 

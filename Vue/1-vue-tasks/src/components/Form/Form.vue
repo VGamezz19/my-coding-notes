@@ -30,7 +30,7 @@
     },
     methods: {
       add () {
-        this.$emit('addTask', this.name, this.time)
+        this.$emit('addTask', this.name, parseInt(this.time))
         this.refresh()
       },
       refresh () {

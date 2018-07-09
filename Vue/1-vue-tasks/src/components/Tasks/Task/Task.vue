@@ -10,6 +10,7 @@
         input.button.is-danger.task__input.task__input--delete(
           type="submit"
           value="delete"
+          @click="$emit('remove')"
         )
 </template>
 
@@ -18,29 +19,8 @@
     name: 'task-component',
     props: {
       name: String,
-      time: Number
-    },
-    // data () {
-    //   return {
-    //     // name: '',
-    //     // time: null
-    //   }
-    // },
-    methods: {
-      remove () {
-        console.log('remove')
-      },
-      update () {
-        console.log('update')
-      }
-      // add () {
-      //   this.$emit('addTask', this.name, this.time)
-      //   this.refresh()
-      // },
-      // refresh () {
-      //   this.name = ''
-      //   this.time = null
-      // }
+      time: Number,
+      id: Number
     }
   }
 </script>
