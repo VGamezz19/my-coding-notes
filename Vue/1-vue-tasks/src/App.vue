@@ -49,8 +49,14 @@ export default {
 
       this.statusUser = 'Removing Task'
     },
-    updateTask (id, name, time) {
-      console.log(id, name, time)
+    updateTask ({ id, name, time }) {
+      this.tasks = this.tasks.map(task => {
+        if (task.id === id) {
+          task = { id, name, time }
+        }
+
+        return task
+      })
     }
   }
 }

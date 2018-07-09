@@ -13,13 +13,18 @@
           value="delete"
           @click="$emit('remove')"
         )
-    form.columns(
-      v-show="toEdit"
-      @submit.prevent="update"
-    )
+    form.columns(v-show="toEdit" @submit.prevent="update")
       .column.task-desc
-        input.input.is-large(:value="name" placeholder="updating task name")
-        input.input.is-large(:value="time" placeholder="updating task time")
+        input.input.is-large(
+          type="text"
+          placeholder="updating task name"
+          v-model="mutableName"
+        )
+        input.input.is-large(
+          type="number"
+          placeholder="updating task time"
+          v-model="mutableTime"
+        )
       .column.task-wrapper
         input.button.is-info.task__input.task__input--update(
           type="submit"
@@ -38,9 +43,15 @@
       time: Number,
       id: Number
     },
+    created () {
+      this.mutableName = this.name
+      this.mutableTime = this.time
+    },
     data () {
       return {
-        toEdit: false
+        toEdit: false,
+        mutableName: '',
+        mutableTime: null
       }
     },
     methods: {
@@ -48,7 +59,11 @@
         this.toEdit = !this.toEdit
       },
       update () {
-        this.$emit('update', this.id, this.name, this.time)
+        const { id, mutableName: name, mutableTime: time } = this
+        const task = { id, name, time: parseInt(time) }
+
+        this.$emit('update', task)
+        this.handlerToEdit()
       }
     }
   }

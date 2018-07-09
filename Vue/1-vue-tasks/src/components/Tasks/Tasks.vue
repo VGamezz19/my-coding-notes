@@ -11,7 +11,7 @@
       :time="task.time"
       :id="task.id"
       @remove="$emit('removeTask', task.id)"
-      @update="updateTask"
+      @update="update"
     )
 </template>
 
@@ -26,8 +26,8 @@
       tasks: Array
     },
     methods: {
-      updateTask (id, name, time) {
-        this.$emit('updateTask', id, name, time)
+      update (task) {
+        this.$emit('updateTask', task)
       }
     }
   }
