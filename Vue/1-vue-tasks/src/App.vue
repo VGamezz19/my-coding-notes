@@ -2,41 +2,32 @@
   #app.app
     section.app-section.section
       nav.app-nav.nav
-        h1.app-nav_title Welcome to Task Managmen {{ showestatusUser }}
+        h1.app-nav__title Welcome to Task Managmen {{ showestatusUser }}
       .app-wrapper
         .container
           .columns
-            .tasks.column
-              ul.tasks-list
-                li.tasks-list_li.tasks-list--no-data(v-show = "!tasks.length")
-                  small no data found
-                li.tasks-list_li(
-                  v-if = "tasks.length"
-                  v-for = "(task,index) in tasks"
-                  :key = "index"
-                ) {{task.name}} - {{task.time}}
-            form.form.column(@submit.prevent="addTask")
-              input.input.is-large.form-input.form-input_task-name(
-                type="text",
-                placeholder="Add new task to do"
-                v-model="taskName"
-              )
-              input.input.is-large.form-input.form-input_task-time(
-                type="text",
-                placeholder="Add time to task"
-                v-model="taskTime"
-              )
-              .form-wrapper.columns
-                .form-wrapper-submits.column
-                  button.button.is-info.is-large Add
-                .form-wrapper-submits.column
-                  a.button.is-danger.is-large(@click="refreshForm") &times;
+            .column
+              .tasks
+                ul.tasks-list
+                  li.tasks-list__li.tasks-list--no-data(v-show = "!tasks.length")
+                    small no data found
+                  li.tasks-list__li(
+                    v-if = "tasks.length"
+                    v-for = "(task,index) in tasks"
+                    :key = "index"
+                  ) {{task.name}} - {{task.time}}
+            .column
+              form-component(@addTask="addTask")
 </template>
 
 <script>
+import { FormComponent } from './components/Form'
 
 export default {
   name: 'app',
+  components: {
+    FormComponent
+  },
   data () {
     return {
       tasks: [],
@@ -51,8 +42,8 @@ export default {
     }
   },
   methods: {
-    addTask () {
-      const { taskName: name, taskTime: time } = this
+    addTask (name, time) {
+      // const { taskName: name, taskTime: time } = this
 
       this.tasks.push({name, time})
       this.refreshForm()
@@ -75,29 +66,25 @@ export default {
 
 <style lang="scss">
 @import "./scss/main.scss";
-
-$border-bottom-s : .2rem;
-$primary-color-gray: gray;
-$font-sinze-xl: 2rem;
+@import "./scss/variables.scss";
 
 .app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  font-size: 16px;
 
   &-nav {
     border-bottom: $border-bottom-s solid $primary-color-gray;
 
-    &_title {
+    &__title {
       font-size: $font-sinze-xl;
     }
   }
 
   &-wrapper {
-    margin-top: 2rem;
+    margin-top: $main-font-sinze;
   }
-
 }
-
 </style>
