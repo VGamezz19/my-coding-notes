@@ -4,11 +4,13 @@
       type="text",
       placeholder="Add new task to do"
       v-model="name"
+      required
     )
     input.input.is-large.form-input.form-input__task-time(
       type="number",
       placeholder="Add time to task"
       v-model="time"
+      required
     )
     .form-wrapper.columns
       .form-wrapper-submits.column
@@ -33,7 +35,7 @@
       },
       refresh () {
         this.name = ''
-        this.time = ''
+        this.time = null
       }
     }
   }

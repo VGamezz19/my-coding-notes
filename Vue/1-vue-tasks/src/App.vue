@@ -7,32 +7,23 @@
         .container
           .columns
             .column
-              .tasks
-                ul.tasks-list
-                  li.tasks-list__li.tasks-list--no-data(v-show = "!tasks.length")
-                    small no data found
-                  li.tasks-list__li(
-                    v-if = "tasks.length"
-                    v-for = "(task,index) in tasks"
-                    :key = "index"
-                  ) {{task.name}} - {{task.time}}
+              tasks-component(:tasks="tasks")
             .column
               form-component(@addTask="addTask")
 </template>
 
 <script>
-import { FormComponent } from './components/Form'
+import { FormComponent, TasksComponent } from './components'
 
 export default {
   name: 'app',
   components: {
-    FormComponent
+    FormComponent,
+    TasksComponent
   },
   data () {
     return {
-      tasks: [],
-      taskName: '',
-      taskTime: '',
+      tasks: [{name: 'test', time: 2}],
       estatusUser: 'Take it easy'
     }
   },
@@ -43,24 +34,17 @@ export default {
   },
   methods: {
     addTask (name, time) {
-      // const { taskName: name, taskTime: time } = this
-
       this.tasks.push({name, time})
-      this.refreshForm()
-    },
-    refreshForm () {
-      this.taskName = ''
-      this.taskTime = ''
-    }
-  },
-  watch: {
-    taskName () {
-      this.estatusUser = 'Adding Task'
-    },
-    taskTime () {
-      this.estatusUser = 'Adding Time'
     }
   }
+  // watch: {
+  //   taskName () {
+  //     this.estatusUser = 'Adding Task'
+  //   },
+  //   taskTime () {
+  //     this.estatusUser = 'Adding Time'
+  //   }
+  // }
 }
 </script>
 
