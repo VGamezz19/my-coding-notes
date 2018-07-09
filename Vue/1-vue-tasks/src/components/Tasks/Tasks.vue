@@ -11,6 +11,7 @@
       :time="task.time"
       :id="task.id"
       @remove="$emit('removeTask', task.id)"
+      @update="updateTask"
     )
 </template>
 
@@ -23,6 +24,11 @@
     },
     props: {
       tasks: Array
+    },
+    methods: {
+      updateTask (id, name, time) {
+        this.$emit('updateTask', id, name, time)
+      }
     }
   }
 </script>

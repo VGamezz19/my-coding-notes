@@ -9,7 +9,9 @@
             .column
               tasks-component(
                 :tasks="tasks"
-                @removeTask="removeTask")
+                @removeTask="removeTask"
+                @updateTask="updateTask"
+              )
             .column
               form-component(@addTask="addTask")
 </template>
@@ -46,6 +48,9 @@ export default {
       this.tasks.splice(indexTask, 1)
 
       this.statusUser = 'Removing Task'
+    },
+    updateTask (id, name, time) {
+      console.log(id, name, time)
     }
   }
 }
