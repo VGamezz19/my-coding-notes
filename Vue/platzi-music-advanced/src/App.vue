@@ -20,11 +20,8 @@
 </template>
 
 <script>
-const tracks = [
-  {name: 'Muchacha', artist: 'Luis Albert Spinetta'},
-  {name: 'Hoy aca en el baile', artist: 'El Pepo'},
-  {name: 'I was made for loving you', artist: 'Kiss'}
-]
+import { track } from './services'
+
 export default {
   name: 'app',
   data () {
@@ -39,9 +36,11 @@ export default {
     }
   },
   methods: {
-    search () {
-      console.log(this.searchQuery)
-      this.tracks = tracks
+    async search () {
+      if (!this.searchQuery) return
+      
+      this.tracks = await track.search(this.searchQuery)
+                            .then(res => res.tracks.items)
     }
   }
 }
