@@ -148,3 +148,67 @@ como podemos ver, a la funcion le entran 2 parametros, porque habiamos definido 
     </script>
 </body>
 ```
+
+## Global and Local Componentes
+
+Hay dos formas de especificar un componente, de forma global (y se podra compartir en toda mi aplicacion) o de forma local.
+
+por temas de performance de la aplicacion, hemos de tener cuidado a la hora de instancias componentes globales, pero a la vez necesarios si los usamos en toda la aplicacion.
+
+### Global Example 
+
+> component/globalComponent.vue
+```html
+<template>
+    <h1>Soy un componente Global</h1>
+</template>
+```
+> main.js
+```js
+import Vue from 'vue'
+import App from './App.vue'
+import globalComponent from 'component/globalComponent.vue'
+
+    // Accederemos al componente con el nombre 'global'
+Vue.component('global', globalComponent)
+
+new Vue({
+    el: '#app',
+    render: h => h(App)
+})
+```
+
+> **/**.vue
+```html
+<template>
+    <div>
+        <global/>
+        <span>Hola que tal</span>
+    </div>
+</template>
+```
+
+### Local Example
+
+> component/localComponent.vue
+```html
+<template>
+    <h1>Soy un componente Local</h1>
+</template>
+```
+
+> component/globalComponent.vue
+```html
+<template>
+    <h1>Soy un componente Global</h1>
+    <local-component/>
+</template>
+
+<script>
+import LocalComponent from './localComponent.vue'
+
+export {
+    components: { LocalComponent }
+}
+</script>
+```
