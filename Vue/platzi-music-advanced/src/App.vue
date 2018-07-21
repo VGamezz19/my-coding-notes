@@ -15,7 +15,7 @@
 
       .container.results
         .columns
-          .column(v-for="t in tracks") {{ t.name }} - {{ t.artist}}
+          .column(v-for="t in tracks") {{ t.name }} - {{ t.artists[0].name}}
 
 </template>
 
@@ -38,9 +38,9 @@ export default {
   methods: {
     async search () {
       if (!this.searchQuery) return
-      
+
       this.tracks = await track.search(this.searchQuery)
-                            .then(res => res.tracks.items)
+        .then(res => res.tracks.items)
     }
   }
 }

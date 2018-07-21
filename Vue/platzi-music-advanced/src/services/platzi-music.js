@@ -1,6 +1,6 @@
 import trae from 'trae'
-import { apiUrl } from './config'
-
-const platziMusicService = trae.create({ apiUrl })
+import {baseUrl} from './config'
+console.log(baseUrl)
+const platziMusicService = trae.create({ baseUrl })
 
 export default platziMusicService
