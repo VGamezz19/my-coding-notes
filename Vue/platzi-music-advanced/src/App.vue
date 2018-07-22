@@ -1,7 +1,9 @@
 <template lang="pug">
   #app
     pm-header
-    section.section
+
+    pm-loader(v-show="isLoading")
+    section.section(v-show="!isLoading")
       nav.nav.has-shadow
         .container
           input.input.is-large(
@@ -15,23 +17,27 @@
             small {{ searchMessage }}
 
       .container.results
-        .columns
-          .column(v-for="t in tracks") {{ t.name }} - {{ t.artists[0].name}}
+        .columns.is-multiline
+          .column.is-one-quarter(v-for="t in tracks") 
+            pm-track(:track="t")
     pm-footer
 </template>
 
 <script>
-import { track } from './services'
-import PmFooter from './components/layout/Footer.vue'
-import PmHeader from './components/layout/Header.vue'
+import { PmFooter, PmHeader } from '@/components/layout'
+import { PmLoader } from '@/components/shared'
+import { PmTrack } from '@/components'
+
+import { track } from '@/services'
 
 export default {
   name: 'app',
-  components: { PmFooter, PmHeader },
+  components: { PmFooter, PmHeader, PmTrack, PmLoader },
   data () {
     return {
       searchQuery: '',
-      tracks: []
+      tracks: [],
+      isLoading: false
     }
   },
   computed: {
@@ -43,8 +49,12 @@ export default {
     async search () {
       if (!this.searchQuery) return
 
+      this.isLoading = true
+
       this.tracks = await track.search(this.searchQuery)
         .then(res => res.tracks.items)
+
+      this.isLoading = false
     }
   }
 }
