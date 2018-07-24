@@ -1,3 +1,3 @@
 import PmLoader from './Loader'
-
-export { PmLoader }
+import PmNotification from './Notification'
+export { PmLoader, PmNotification }

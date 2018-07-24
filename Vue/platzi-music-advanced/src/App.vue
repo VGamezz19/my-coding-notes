@@ -3,6 +3,8 @@
     pm-header
 
     pm-loader(v-show="isLoading")
+    PmNotification(v-show="showNotification")
+      p(slot="body") No se encontraron resultados
     section.section(v-show="!isLoading")
       nav.nav.has-shadow
         .container
@@ -18,35 +20,43 @@
 
       .container.results
         .columns.is-multiline
-          .column.is-one-quarter(v-for="t in tracks") 
+          .column.is-one-quarter(v-for="t in tracks")
             pm-track(
               :class="{'is-active': t.id === selectedTrack}",
-              :track="t", 
+              :track="t",
               @select="setSelectedTrack")
     pm-footer
 </template>
 
 <script>
 import { PmFooter, PmHeader } from '@/components/layout'
-import { PmLoader } from '@/components/shared'
+import { PmLoader, PmNotification } from '@/components/shared'
 import { PmTrack } from '@/components'
 
 import { track } from '@/services'
 
 export default {
   name: 'app',
-  components: { PmFooter, PmHeader, PmTrack, PmLoader },
+  components: { PmFooter, PmHeader, PmTrack, PmLoader, PmNotification },
   data () {
     return {
       searchQuery: '',
       tracks: [],
       isLoading: false,
+      showNotification: false,
       selectedTrack: ''
     }
   },
   computed: {
     searchMessage () {
       return `Encontrados: ${this.tracks.length}`
+    }
+  },
+  watch: {
+    showNotification (current, prev) {
+      if (current) {
+        setTimeout(() => { this.showNotification = prev }, 3000)
+      }
     }
   },
   methods: {
@@ -56,7 +66,12 @@ export default {
       this.isLoading = true
 
       this.tracks = await track.search(this.searchQuery)
-        .then(res => res.tracks.items)
+        .then(res => {
+          const { total, items } = res.tracks
+
+          this.showNotification = !total
+          return items
+        })
 
       this.isLoading = false
     },
