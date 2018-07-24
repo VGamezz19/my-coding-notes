@@ -4,7 +4,9 @@
 
     pm-loader(v-show="isLoading")
     PmNotification(v-show="showNotification")
+      h1(slot="title") No se title slot test resultados
       p(slot="body") No se encontraron resultados
+
     section.section(v-show="!isLoading")
       nav.nav.has-shadow
         .container
