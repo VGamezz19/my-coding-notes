@@ -51,3 +51,5 @@ cada vez que cambia el estado, VueJS genera un binding, entre un modelo y una vi
 - ### [Computed vs Watched](https://github.com/VGamezz19/platzi-course-notes/blob/master/Vue/doc/8-computedVSWatched.MD)
 
 - ### [Reactividad & Virtual DOM](https://github.com/VGamezz19/platzi-course-notes/blob/master/Vue/doc/8-Reactividad&VirtualDom.MD)
+
+- ### [EventBug & Plugins](https://github.com/VGamezz19/platzi-course-notes/blob/master/Vue/doc/9-EventBus&Plugins.MD)
