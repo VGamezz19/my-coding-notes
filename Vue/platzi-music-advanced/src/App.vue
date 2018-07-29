@@ -3,9 +3,9 @@
     pm-header
 
     pm-loader(v-show="isLoading")
-    PmNotification(v-show="showNotification")
-      h1(slot="title") No se title slot test resultados
-      p(slot="body") No se encontraron resultados
+    PmNotification(v-show="showNotification", :error="textNotification.error")
+      h1(slot="title") {{ textNotification.title }}
+      p(slot="body") {{ textNotification.body }}
 
     section.section(v-show="!isLoading")
       nav.nav.has-shadow
@@ -46,6 +46,11 @@ export default {
       tracks: [],
       isLoading: false,
       showNotification: false,
+      textNotification: {
+        title: '',
+        body: '',
+        error: false
+      },
       selectedTrack: ''
     }
   },
@@ -71,11 +76,29 @@ export default {
         .then(res => {
           const { total, items } = res.tracks
 
-          this.showNotification = !total
+          this.setNotification(total)
+          this.showNotification = true
+
           return items
         })
 
       this.isLoading = false
+    },
+
+    setNotification (totalSearch) {
+      const body = `Encontrados: ${totalSearch}`
+
+      if (totalSearch) {
+        const title = 'Succed'
+        const error = false
+
+        this.textNotification = { title, body, error }
+      } else {
+        const title = 'Error'
+        const error = true
+
+        this.textNotification = { title, body, error }
+      }
     },
 
     setSelectedTrack (id) {
