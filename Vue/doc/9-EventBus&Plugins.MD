@@ -1,1 +1,1 @@
-# [← |](https://github.com/VGamezz19/platzi-course-notes/tree/master/Vue) EventBug & Plugins
+# [← |](https://github.com/VGamezz19/platzi-course-notes/tree/master/Vue) EventBus & Plugins
