@@ -55,6 +55,7 @@
  ## Vue
  
   - [18/06/2018 - (📄) Vue - Build Vue Components](https://blog.bitsrc.io/how-to-build-vue-components-like-a-pro-fd89fd4d524d)
+  - [30/07/2018 - (📄) Vue - Event Bus Pattern from Vue](https://alligator.io/vuejs/global-event-bus/)
  
 ## NodeJS
 
