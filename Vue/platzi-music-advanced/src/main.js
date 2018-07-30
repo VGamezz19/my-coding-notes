@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import App from '@/App'
 
-import EventBus from '@/plugin/event-bus'
+import { eventBusPlugin, objectPlugin } from '@/plugin'
 
-Vue.use(EventBus)
+Vue.use(eventBusPlugin)
+Vue.use(objectPlugin)
 
 new Vue({
   el: '#app',
