@@ -12,6 +12,8 @@
 
 ## [VueJS](https://github.com/VGamezz19/platzi-course-notes/tree/master/Vue)
 
+## [GIT](https://github.com/VGamezz19/platzi-course-notes/git.md)[✔︎]
+
 # Interesting Posts
 
 # Legend
