@@ -1,4 +1,4 @@
-## [← |](https://github.com/VGamezz19/skylab-boot-notes/tree/master/semana01/)   GIT
+## [← |](https://github.com/VGamezz19/platzi-course-notes)   GIT
 
 Nunca trabajaremos directamente sobre la rama `Master`, siempre tendremos que trabajar sobre una rama temporal paralela (dev/develop)
 ```
