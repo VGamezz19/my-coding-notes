@@ -26,7 +26,9 @@ git pull origin dev (en este caso), fijar y arreglar si hay algun comflicto
 y finalmente, pushear el merge.
 ````
 
-## **Fork** Es la forma de clonarte el repositorio de un `frameWork`, `libreria`, `modulo`, etc. Añadir alguna sugerencia/issue (problemas) y hacer un `pull request`
+## **Fork** 
+
+Es la forma de clonarte el repositorio de un `frameWork`, `libreria`, `modulo`, etc. Añadir alguna sugerencia/issue (problemas) y hacer un `pull request`
 
 ![Image](https://github.com/VGamezz19/skylab-boot-notes/blob/master/semana01/public/fork.jpg)
 
@@ -84,7 +86,7 @@ Para usarlo correctamente, seguir ordenadamente los pasos definidos a continuaci
 - do somthing about this/other branche/s (pull, merge, etc)
 - git stash pop
 
-## **Track bran**
+## **Track branch**
 
 Podemos pullearnos luna rama remota usano este commando:
 
