@@ -36,7 +36,7 @@
  
  - [^^/^^/2018 - (📄) JavaScript - Pensar asyncronamente](https://medium.com/@ulisesGascon/pensar-as%C3%ADncronamente-en-un-mundo-s%C3%ADncrono-8e25cfcafd83)
  
- - [^^/^^/2018 - (📄) JavaScript - Object.assing deep copy](https://medium.com/@tkssharma/objects-in-javascript-object-assign-deep-copy-64106c9aefab)
+ - [02/08/2018 - (📄) JavaScript - Object.assing deep copy](https://medium.com/@tkssharma/objects-in-javascript-object-assign-deep-copy-64106c9aefab)
 
  
 ## ES6
