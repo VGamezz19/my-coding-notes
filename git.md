@@ -84,7 +84,7 @@ Para usarlo correctamente, seguir ordenadamente los pasos definidos a continuaci
 - do somthing about this/other branche/s (pull, merge, etc)
 - git stash pop
 
-## ** Track bran**
+## **Track bran**
 
 Podemos pullearnos luna rama remota usano este commando:
 
