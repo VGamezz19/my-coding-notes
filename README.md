@@ -37,7 +37,9 @@
  - [04/08/2018 - (📄) JavaScript - S-O-L-I-D - basic](https://medium.com/@cramirez92/s-o-l-i-d-the-first-5-priciples-of-object-oriented-design-with-javascript-790f6ac9b9fa)
 
  - [04/04/2018 - (📄) JavaScript - S-O-L-I-D - Dor Tzur](https://thefullstack.xyz/solid-javascript/)
- 
+
+ - [04/04/2018 - (📄) JavaScript - Factory Function vs Constructor Function vs Clasess](https://medium.com/javascript-scene/javascript-factory-functions-vs-constructor-functions-vs-classes-2f22ceddf33e)
+
 ## ES6
 
  - [12/06/2018 - (📄) ES6 - Hipster Hack - Spread Operator](https://hackernoon.com/javascript-hacks-for-es6-hipsters-67d633ce8ace)
