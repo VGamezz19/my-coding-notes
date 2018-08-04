@@ -34,6 +34,9 @@
  
  - [^^/^^/2018 - (📄) JavaScript - Pensar asyncronamente](https://medium.com/@ulisesGascon/pensar-as%C3%ADncronamente-en-un-mundo-s%C3%ADncrono-8e25cfcafd83)
 
+ - [04/08/2018 - (📄) JavaScript - S-O-L-I-D - basic](https://medium.com/@cramirez92/s-o-l-i-d-the-first-5-priciples-of-object-oriented-design-with-javascript-790f6ac9b9fa)
+
+ - [04/04/2018 - (📄) JavaScript - S-O-L-I-D - Dor Tzur](https://thefullstack.xyz/solid-javascript/)
  
 ## ES6
 
