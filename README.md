@@ -38,7 +38,11 @@
 
  - [04/04/2018 - (📄) JavaScript - S-O-L-I-D - Dor Tzur](https://thefullstack.xyz/solid-javascript/)
 
- - [04/04/2018 - (📄) JavaScript - Factory Function vs Constructor Function vs Clasess](https://medium.com/javascript-scene/javascript-factory-functions-vs-constructor-functions-vs-classes-2f22ceddf33e)
+ - [^^/^^/2018 - (📄) JavaScript - Factory Function vs Constructor Function vs Clasess](https://medium.com/javascript-scene/javascript-factory-functions-vs-constructor-functions-vs-classes-2f22ceddf33e)
+
+ - [^^/^^/2018 - (🎥) JavaScript - Clean Code: SOLID](https://www.youtube.com/watch?v=XzdhzyAukMM)
+
+ - [^^/^^/2018 - (📄) JavaScript - Object Composition](https://medium.com/code-monkey/object-composition-in-javascript-2f9b9077b5e6)
 
 ## ES6
 
@@ -49,6 +53,10 @@
  - [18/06/2018 - (📄) ES6 - Write lees, do more](https://medium.freecodecamp.org/write-less-do-more-with-javascript-es6-5fd4a8e50ee2)
  
  - [16/07/2018 - (📄) ES6 - JavaScript Symbols, Iterators, Generators, Async/Await, and Async Iterators](https://medium.freecodecamp.org/some-of-javascripts-most-useful-features-can-be-tricky-let-me-explain-them-4003d7bbed32)
+
+ - [^^/^^/2018 - (📄) ES6 - Transform Class Properties](https://medium.com/@jacobworrel/babels-transform-class-properties-plugin-how-it-works-and-what-it-means-for-your-react-apps-6983539ffc22)
+
+
  
  
 ## ReactJS
