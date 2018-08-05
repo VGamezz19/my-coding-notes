@@ -12,6 +12,8 @@
 
 ## [VueJS](https://github.com/VGamezz19/platzi-course-notes/tree/master/Vue)
 
+## [GIT](https://github.com/VGamezz19/platzi-course-notes/blob/master/git.md)[✔︎]
+
 # Interesting Posts
 
 # Legend
@@ -33,6 +35,8 @@
  - [20/06/2018 - (📄) JavaScript - Console API](https://medium.freecodecamp.org/working-with-the-devtools-console-and-console-api-an-overview-13cff6dc3db4)
  
  - [^^/^^/2018 - (📄) JavaScript - Pensar asyncronamente](https://medium.com/@ulisesGascon/pensar-as%C3%ADncronamente-en-un-mundo-s%C3%ADncrono-8e25cfcafd83)
+ 
+ - [02/08/2018 - (📄) JavaScript - Object.assing deep copy](https://medium.com/@tkssharma/objects-in-javascript-object-assign-deep-copy-64106c9aefab)
 
  - [04/08/2018 - (📄) JavaScript - S-O-L-I-D - basic](https://medium.com/@cramirez92/s-o-l-i-d-the-first-5-priciples-of-object-oriented-design-with-javascript-790f6ac9b9fa)
 
@@ -56,9 +60,6 @@
 
  - [^^/^^/2018 - (📄) ES6 - Transform Class Properties](https://medium.com/@jacobworrel/babels-transform-class-properties-plugin-how-it-works-and-what-it-means-for-your-react-apps-6983539ffc22)
 
-
- 
- 
 ## ReactJS
 
  - [20/06/2018 - (📄) React - Container pattern](https://medium.com/@learnreact/container-components-c0e67432e005)
