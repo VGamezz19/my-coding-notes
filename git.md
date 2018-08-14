@@ -91,3 +91,9 @@ Para usarlo correctamente, seguir ordenadamente los pasos definidos a continuaci
 Podemos pullearnos luna rama remota usano este commando:
 
 `git checkout --track origin/daves_branch`
+
+## **Authenticate with GitHub using token**
+```sh
+git remote rm origin
+git remote add origin https://<USERNAME>:<MYTOKEN>@<URL-GIT>
+```
