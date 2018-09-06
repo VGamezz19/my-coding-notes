@@ -44,7 +44,7 @@
 
  - [^^/^^/2018 - (📄) JavaScript - Factory Function vs Constructor Function vs Clasess](https://medium.com/javascript-scene/javascript-factory-functions-vs-constructor-functions-vs-classes-2f22ceddf33e)
 
- - [^^/^^/2018 - (🎥) JavaScript - Clean Code: SOLID](https://www.youtube.com/watch?v=XzdhzyAukMM)
+ - [0609  /2018 - (🎥) JavaScript - Clean Code: SOLID](https://www.youtube.com/watch?v=XzdhzyAukMM)
 
  - [^^/^^/2018 - (📄) JavaScript - Object Composition](https://medium.com/code-monkey/object-composition-in-javascript-2f9b9077b5e6)
 
