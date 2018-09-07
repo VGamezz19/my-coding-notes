@@ -28,7 +28,6 @@
 
  - [^^/^^/2018 - (📄) TDD - Codurance](https://codurance.com/2018/06/17/frontend-outside-in/)
  - [^^/^^/2018 - (📄) Pattern - GameLoop](http://gameprogrammingpatterns.com/game-loop.html)
- 
 
 ## JavaScript
 
