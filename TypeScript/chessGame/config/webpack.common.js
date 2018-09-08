@@ -10,9 +10,6 @@ module.exports = {
     filename: '[name].js',
     chunkFilename: 'chunks/[id].[chunkhash].js',
   },
-  resolve: {
-    extensions: [ '.tsx', '.ts', '.js' ]
-  },
   module: {
     rules: [
         {
