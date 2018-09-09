@@ -1,8 +1,6 @@
 
-{   "_commnet":" // https://github.com/remy/nodemon/wiki/Events#states",
-    
+{   "_commnet":" // https://github.com/remy/nodemon/wiki/Events#states", 
     "events": {
-    "verbose": true,
         "start": "echo \"\\x1Bc\""
     }
 }

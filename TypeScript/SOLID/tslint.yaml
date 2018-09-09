@@ -5,18 +5,24 @@ rules:
     new-parens: true
     no-arg: true
     no-bitwise: true
+    interface-name: false
+    member-access: false;
     no-conditional-assignment: true
     no-consecutive-blank-lines: false
-    no-console: true
-    no-console:
-        severity: warning
-        options:
-            - debug
-            - info
-            - log
-            - time
-            - timeEnd
-            - trace
+    object-literal-sort-keys: false
+    no-console: false
+    quotemark:
+        - true
+        - single
+    # no-console:
+    #     severity: warning
+    #     options:
+    #         - debug
+    #         - info
+    #         - log
+    #         - time
+    #         - timeEnd
+    #         - trace
 jsRules:
     max-line-length:
         options: [120]

@@ -2,16 +2,18 @@
   "name": "solid",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/src/",
   "scripts": {
-    "start": "npm run build:watch",
-    "build:watch": "nodemon --exec ./node_modules/.bin/ts-node -- ./src/",
+    "start": "concurrently --kill-others \"npm run tsc:watch\" \"npm run node:watch\"",
+    "node:watch": "nodemon ./dist/src",
+    "tsc:watch": "tsc -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "VGamezz19 <victor.gamez1596@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^10.9.4",
+    "concurrently": "^4.0.1",
     "nodemon": "^1.18.4",
     "rimraf": "^2.6.2",
     "ts-node": "^7.0.1",

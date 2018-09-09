@@ -1,21 +1,32 @@
 import { Terminal } from '../api/console';
 
-class Person {
-    private name: string;
+// class Person {
+//     private name: string;
 
-    constructor(name:string) {
-        this.name = name;
-    }
+//     constructor(name:string) {
+//         this.name = name;
+//     }
 
-    public getName(): string {
-        return this.name;
-    }
-}
+//     public getName(): string {
+//         return this.name;
+//     }
+// }
 
-const Victor = new Person("Victor");
+// const Victor = new Person("Victor");
 
-Victor.getName();
+// Victor.getName();
 
-const TerminalVict:Terminal = new Terminal();
+// const TerminalVict:Terminal = new Terminal();
 
-TerminalVict.execute("Una Persona dice su nombre", Victor.getName);
+// TerminalVict.execute("Una Persona dice su nombre", Victor.getName);
+
+// console.log("Welcome To TS SOLID");
+
+
+const Terminal1 = new Terminal();
+
+Terminal1.execute('FirstExecition', () => [])
+    .mustBe([]);
+
+
+// const myMac = new Terminal();
