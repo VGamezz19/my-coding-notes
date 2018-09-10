@@ -2,8 +2,13 @@
 
 
 function typeOf(el: any): (string) {
-    const type = (el).constructor.name;
+    if (el === undefined) {
+        return 'Undefined';
+    } else if (el === null) {
+        return 'Null';
+    }
 
+    const type = (el).constructor.name;
     return type;
 }
 
@@ -26,6 +31,15 @@ interface SpectMethods {
     // shouldBeTypeOf(_?: any): any;
 }
 
+interface TerminalTypes {
+    string: string;
+    number: string;
+    array: string;
+    object: string;
+    null: string;
+    undefined: string;
+}
+
 interface LogOptions {
     withLine?: boolean;
     doubleLineBreak?: boolean;
@@ -36,7 +50,15 @@ import * as assert from 'assert';
 class Terminal {
     private static fnDescription = 'Ejecutamos el metodo: ';
     private static anonimus = 'funcion anonimca';
-    private static countTest: number;
+    private static countSpects: number = 0;
+    private static types: TerminalTypes = {
+        string: 'String',
+        number: 'Number',
+        array: 'Array',
+        object: 'Object',
+        null: 'Null',
+        undefined: 'Undefined',
+    };
     private currentValue: any;
 
     public execute(description: string, fn: ((_?: any) => any)): SpectMethods {
@@ -47,8 +69,8 @@ class Terminal {
         ]);
 
         return {
-            shouldBe: (e: any) => this.shouldBe.call(this, e),
-            mustBe: (e: any) => this.mustBe.call(this, e),
+            shouldBe: (e: any) => this.shouldBe.bind(this, e),
+            mustBe: (e: any) => this.mustBe(e),
         };
     }
 
@@ -61,12 +83,12 @@ class Terminal {
     }
 
     private shouldBe(e: any) {
-        Terminal.countTest++;
+        Terminal.countSpects += 1;
         assert.equal(this.currentValue, e);
     }
 
     private mustBe(compared: any) {
-        Terminal.countTest++;
+        Terminal.countSpects += 1;
         assert.strictEqual(this.currentValue, compared);
     }
 
@@ -81,13 +103,23 @@ class Terminal {
     private executeCalback(fn: ((_?: any) => any)): string | undefined {
         this.currentValue = fn();
         switch (typeOf(this.currentValue)) {
-            case 'Object':  return objectToString((this.currentValue as object));
-            case 'Array':   return arrayToString((this.currentValue as any[]));
-            case 'String':  return (this.currentValue as string);
-            case 'Number':  return numberToString((this.currentValue as number));
+            case Terminal.types.object:  return objectToString((this.currentValue as object));
+            case Terminal.types.array:   return arrayToString((this.currentValue as any[]));
+            case Terminal.types.string:  return (this.currentValue as string);
+            case Terminal.types.number:  return numberToString((this.currentValue as number));
+            case Terminal.types.undefined:  return (this.currentValue as string);
+            case Terminal.types.null:  return (this.currentValue as string);
           }
     }
 
 }
 
 export { Terminal };
+
+
+
+const termianl1 = new Terminal();
+
+function sum(num: any) {
+    return 1 + num;
+}
