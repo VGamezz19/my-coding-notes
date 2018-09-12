@@ -59,7 +59,7 @@
 
  - [^^/^^/2018 - (📄) ES6 - Transform Class Properties](https://medium.com/@jacobworrel/babels-transform-class-properties-plugin-how-it-works-and-what-it-means-for-your-react-apps-6983539ffc22)
  
- - [^^/^^/2018 - (📄) ES6 - Transform Class Properties not be as great as we thing] (https://medium.com/@charpeni/arrow-functions-in-class-properties-might-not-be-as-great-as-we-think-3b3551c440b1)
+ - [^^/^^/2018 - (📄) ES6 - Transform Class Properties not be as great as we thing](https://medium.com/@charpeni/arrow-functions-in-class-properties-might-not-be-as-great-as-we-think-3b3551c440b1)
 
 ## ReactJS
 
