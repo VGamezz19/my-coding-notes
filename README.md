@@ -29,6 +29,15 @@
 ## Knowledge
 
  - [^^/^^/2018 - (📄) TDD - Codurance](https://codurance.com/2018/06/17/frontend-outside-in/)
+
+ - [13/09/2018 - (📄) Agile - XP (by Kent Beck)](https://martinfowler.com/bliki/ExtremeProgramming.html)
+
+ - [13/09/2018 - (📄  **) TDD (by Kent Beck)](https://martinfowler.com/bliki/TestDrivenDevelopment.html)
+
+ - [^^/^^/2018 - (📄) Double Test (Moks, Spies, Dummies, Fakes, Stubs)]( http://techdencias.net/2014/12/29/double-tests-dummies-mocks-spies-fakes-y-stubs-en-javascript/)
+
+ - [13/09/2018 - (📄) Refactoring](https://refactoring.com/)
+
  - [^^/^^/2018 - (📄) Pattern - GameLoop](http://gameprogrammingpatterns.com/game-loop.html)
 
 ## JavaScript
