@@ -14,6 +14,8 @@
 
 ## [GIT](https://github.com/VGamezz19/platzi-course-notes/blob/master/git.md)[✔︎]
 
+## [about test](https://github.com/VGamezz19/platzi-course-notes/blob/master/test.md)
+
 # Interesting Posts
 
 # Legend
