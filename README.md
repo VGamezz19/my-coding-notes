@@ -14,15 +14,15 @@
 
 ## [GIT](https://github.com/VGamezz19/platzi-course-notes/blob/master/git.md)[✔︎]
 
-## [about test](https://github.com/VGamezz19/platzi-course-notes/blob/master/test.md)
+## [About test](https://github.com/VGamezz19/platzi-course-notes/blob/master/test.md)
 
 # Interesting Posts
 
 # Legend
 
-1.  Read (📄) 
-1.  Watch (🎥)
-1.  Listen (🎼)
+1. Read (📄)
+1. Watch (🎥)
+1. Listen (🎼)
 
 [MAX - study path](https://github.com/joebew42/study-path)
 
@@ -96,7 +96,7 @@
  
 ## GraphQL
 
-[^^/^^/2018 - GraphQL - about queries](https://medium.freecodecamp.org/graphql-front-end-queries-made-easy-68e9d9ded283)
+- [^^/^^/2018 - GraphQL - about queries](https://medium.freecodecamp.org/graphql-front-end-queries-made-easy-68e9d9ded283)
 
 ## CSS Styles
 

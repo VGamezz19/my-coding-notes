@@ -25,6 +25,7 @@ Antes de ponernos a testear, es importante tener en cuenta los siguientes factor
 Existen diversos conceptos de test unitarios: *dummy*, *moks*, *spy*, *stub*, *fake*, etc.
 
 > [Double Test](http://techdencias.net/2014/12/29/double-tests-dummies-mocks-spies-fakes-y-stubs-en-javascript/) Interesante articulo
+
 <!-- Realmente todos los test unitarios, se podrian englovar en `moks`: *Una clase o funcion que te proteje de la funcion real y es capaz de reproducirla*
 
 Todos son moks  una clase o funcion que te proteje de la funcion real, te la reproduce.
