@@ -60,6 +60,8 @@
  - [16/07/2018 - (📄) ES6 - JavaScript Symbols, Iterators, Generators, Async/Await, and Async Iterators](https://medium.freecodecamp.org/some-of-javascripts-most-useful-features-can-be-tricky-let-me-explain-them-4003d7bbed32)
 
  - [^^/^^/2018 - (📄) ES6 - Transform Class Properties](https://medium.com/@jacobworrel/babels-transform-class-properties-plugin-how-it-works-and-what-it-means-for-your-react-apps-6983539ffc22)
+ 
+ - [^^/^^/2018 - (📄) ES6 - Transform Class Properties not be as great as we thing](https://medium.com/@charpeni/arrow-functions-in-class-properties-might-not-be-as-great-as-we-think-3b3551c440b1)
 
 ## ReactJS
 
@@ -70,7 +72,10 @@
  ## Vue
  
   - [18/06/2018 - (📄) Vue - Build Vue Components](https://blog.bitsrc.io/how-to-build-vue-components-like-a-pro-fd89fd4d524d)
+  
   - [30/07/2018 - (📄) Vue - Event Bus Pattern from Vue](https://alligator.io/vuejs/global-event-bus/)
+  
+  - [^^/^^/2018 - (📄) VUEjs - Scoped Styles vs CSS Modules](https://www.netguru.co/codestories/vue.js-scoped-styles-vs-css-modules?utm_campaign=Codestories&utm_source=twitter&utm_medium=social)
  
 ## NodeJS
 
