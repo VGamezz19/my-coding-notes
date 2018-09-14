@@ -35,6 +35,8 @@
  - [13/09/2018 - (📄  **) TDD (by Kent Beck)](https://martinfowler.com/bliki/TestDrivenDevelopment.html)
 
  - [^^/^^/2018 - (📄) Double Test (Moks, Spies, Dummies, Fakes, Stubs)]( http://techdencias.net/2014/12/29/double-tests-dummies-mocks-spies-fakes-y-stubs-en-javascript/)
+ 
+ - [^^/^^/2018 - (📄) xUnit Patterns - Test Double]( http://xunitpatterns.com/Test%20Double%20Patterns.html)
 
  - [13/09/2018 - (📄) Refactoring](https://refactoring.com/)
 
