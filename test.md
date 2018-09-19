@@ -22,13 +22,30 @@ Antes de ponernos a testear, es importante tener en cuenta los siguientes factor
 
 ## Unitario
 
-Existen diversos conceptos de test unitarios: *dummy*, *moks*, *spy*, *stub*, *fake*, etc.
+Los `test unitarios` se pueden devidir en dos gran grupos. Los `dummy test` y los `double test`
 
-> [Double Test](http://techdencias.net/2014/12/29/double-tests-dummies-mocks-spies-fakes-y-stubs-en-javascript/) Interesante articulo
+- dummy test, son aquellos que no hace falta ninguna dependencia para hacerlos funcionar
+- doubles test, son lo que dependen de un segundo modulo, y has de recrearlo.
 
-<!-- Realmente todos los test unitarios, se podrian englovar en `moks`: *Una clase o funcion que te proteje de la funcion real y es capaz de reproducirla*
+### Test Double
+
+> [Double Test](http://xunitpatterns.com/Test%20Double.html) Read this to know more
+
+Existen diversos tipos de recreaciones: *moks*, *spy*, *stub*, *fake*.
 
 Todos son moks  una clase o funcion que te proteje de la funcion real, te la reproduce.
     - spy  te aseguras que has llamado un metodo.
     - stub  recuperar la informacion de la llamada de un metodo
-    - fake  imitacion del objeto real -->
+    - fake  imitacion del objeto real
+
+## Test de Integracion
+
+Todos los componentes juntos funcionando.
+    
+## E2E
+
+// Todo
+
+## Test de aceptacion
+
+// Todo
