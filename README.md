@@ -38,6 +38,8 @@
  
  - [^^/^^/2018 - (📄) xUnit Patterns - Test Double]( http://xunitpatterns.com/Test%20Double%20Patterns.html)
 
+ - [^^/^^/2018 - (📄) Object - Calisthenics](https://williamdurand.fr/2013/06/03/object-calisthenics/)
+
  - [13/09/2018 - (📄) Refactoring](https://refactoring.com/)
 
  - [^^/^^/2018 - (📄) Pattern - GameLoop](http://gameprogrammingpatterns.com/game-loop.html)
