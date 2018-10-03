@@ -43,6 +43,8 @@
  - [13/09/2018 - (📄) Refactoring](https://refactoring.com/)
 
  - [^^/^^/2018 - (📄) Pattern - GameLoop](http://gameprogrammingpatterns.com/game-loop.html)
+ 
+ - [^^/^^/2018 - (📄) Plain - Docker-NetCore](https://github.com/PlainConcepts/NetCore-Docker-Workshop)
 
 ## JavaScript
 
