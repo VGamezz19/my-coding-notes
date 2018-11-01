@@ -687,17 +687,17 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Volumes/Victor/platzi-course-notes/CSharp/C#.NetCore/C#.NetCore.csproj",
-      "projectName": "C#.NetCore",
-      "projectPath": "/Volumes/Victor/platzi-course-notes/CSharp/C#.NetCore/C#.NetCore.csproj",
+      "projectUniqueName": "/Volumes/Victor/platzi-course-notes/CSharp/c#.NetCore/HelloWorld/HelloWorld.csproj",
+      "projectName": "HelloWorld",
+      "projectPath": "/Volumes/Victor/platzi-course-notes/CSharp/c#.NetCore/HelloWorld/HelloWorld.csproj",
       "packagesPath": "/Users/victorgamez/.nuget/packages/",
-      "outputPath": "/Volumes/Victor/platzi-course-notes/CSharp/C#.NetCore/obj/",
+      "outputPath": "/Volumes/Victor/platzi-course-notes/CSharp/c#.NetCore/HelloWorld/obj",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/victorgamez/.nuget/NuGet/NuGet.Config"
+        "/Users/victorgamez/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
@@ -720,8 +720,9 @@
       "netcoreapp2.1": {
         "dependencies": {
           "Microsoft.NETCore.App": {
+            "suppressParent": "All",
             "target": "Package",
-            "version": "[2.1.0, )",
+            "version": "2.1",
             "autoReferenced": true
           }
         },

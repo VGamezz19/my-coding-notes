@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace C_.NetCore
+namespace HelloWorld
 {
     class Program
     {
