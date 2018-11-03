@@ -10,5 +10,3 @@ Una vez lo tengamos instalado probamos el comando `dotnet` para probar si efecti
 Este comando nos mostrara un listado de opciones, todas las opciones y voilerplates que nos proporciona Microsoft.
 
 Empezaremos con un `dotnet new console` para crear una aplicacion de consola
-
-

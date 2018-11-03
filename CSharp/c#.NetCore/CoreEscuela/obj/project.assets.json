@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Volumes/Victor/platzi-course-notes/CSharp/c#.NetCore/helloWorl/helloWorl.csproj",
-      "projectName": "helloWorl",
-      "projectPath": "/Volumes/Victor/platzi-course-notes/CSharp/c#.NetCore/helloWorl/helloWorl.csproj",
+      "projectUniqueName": "/Volumes/Victor/platzi-course-notes/CSharp/c#.NetCore/CoreEscuela/CoreEscuela.csproj",
+      "projectName": "CoreEscuela",
+      "projectPath": "/Volumes/Victor/platzi-course-notes/CSharp/c#.NetCore/CoreEscuela/CoreEscuela.csproj",
       "packagesPath": "/Users/victorgamez/.nuget/packages/",
-      "outputPath": "/Volumes/Victor/platzi-course-notes/CSharp/c#.NetCore/helloWorl/obj/",
+      "outputPath": "/Volumes/Victor/platzi-course-notes/CSharp/c#.NetCore/CoreEscuela/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

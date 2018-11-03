@@ -1,0 +1,11 @@
+/Volumes/Victor/platzi-course-notes/CSharp/c#.NetCore/CoreEscuela/bin/Debug/netcoreapp2.1/CoreEscuela.deps.json
+/Volumes/Victor/platzi-course-notes/CSharp/c#.NetCore/CoreEscuela/bin/Debug/netcoreapp2.1/CoreEscuela.runtimeconfig.json
+/Volumes/Victor/platzi-course-notes/CSharp/c#.NetCore/CoreEscuela/bin/Debug/netcoreapp2.1/CoreEscuela.runtimeconfig.dev.json
+/Volumes/Victor/platzi-course-notes/CSharp/c#.NetCore/CoreEscuela/bin/Debug/netcoreapp2.1/CoreEscuela.dll
+/Volumes/Victor/platzi-course-notes/CSharp/c#.NetCore/CoreEscuela/bin/Debug/netcoreapp2.1/CoreEscuela.pdb
+/Volumes/Victor/platzi-course-notes/CSharp/c#.NetCore/CoreEscuela/obj/Debug/netcoreapp2.1/CoreEscuela.csprojAssemblyReference.cache
+/Volumes/Victor/platzi-course-notes/CSharp/c#.NetCore/CoreEscuela/obj/Debug/netcoreapp2.1/CoreEscuela.csproj.CoreCompileInputs.cache
+/Volumes/Victor/platzi-course-notes/CSharp/c#.NetCore/CoreEscuela/obj/Debug/netcoreapp2.1/CoreEscuela.AssemblyInfoInputs.cache
+/Volumes/Victor/platzi-course-notes/CSharp/c#.NetCore/CoreEscuela/obj/Debug/netcoreapp2.1/CoreEscuela.AssemblyInfo.cs
+/Volumes/Victor/platzi-course-notes/CSharp/c#.NetCore/CoreEscuela/obj/Debug/netcoreapp2.1/CoreEscuela.dll
+/Volumes/Victor/platzi-course-notes/CSharp/c#.NetCore/CoreEscuela/obj/Debug/netcoreapp2.1/CoreEscuela.pdb
