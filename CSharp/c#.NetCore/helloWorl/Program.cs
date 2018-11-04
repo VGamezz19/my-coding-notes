@@ -14,6 +14,6 @@ namespace helloWorl
             
         }
 
-        public string penis { get; set; }
+        public double penis { get; set; }
     }
 }
