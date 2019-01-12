@@ -32,3 +32,14 @@ Toda la iformacion y plugins se almacenaran en `var/jenkins`.
 
 `docker ps` list los contenedores docker corriendo en tu maquina
 `docker inspect --format '{{ .NetworkSettings.IPAddress }}' <CONTAINER_ID>` mostrara la IP de tu contenedor.
+
+## Creacion de una tarea freestyle
+
+Jenkins siempre trabajara sobre tareas. Primero empezaremos con las de tipo `Project`.
+para hacer una pequeña prueba, vamos a crear una, con el nombre Hello, y iremos al apartado `Ejecutar` y seleccionaremos el `Shell`. Para hacer nuestra primera prueba, escribiremos `Echo "Hello"`.
+
+Apretamos a "Construir Ahora/Build now"
+
+[Imgur](https://i.imgur.com/1Q1fDYd.png)
+
+y veremos como la tarea se ejecuta correctamente, con el registro del usuario que lo ha ejecutado y mostrando en consola el "Hello" que hemos escrito
