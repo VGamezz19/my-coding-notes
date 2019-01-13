@@ -10,7 +10,10 @@ Vue.use(VueRouter)
 Vue.use(eventBusPlugin)
 Vue.use(objectPlugin)
 
-const router = new VueRouter({ routes })
+const router = new VueRouter({
+  routes,
+  mode: 'history'
+})
 
 new Vue({
   el: '#app',
