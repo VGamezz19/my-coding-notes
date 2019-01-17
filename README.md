@@ -47,6 +47,8 @@
  - [^^/^^/2018 - (📄) Pattern - GameLoop](http://gameprogrammingpatterns.com/game-loop.html)
  
  - [^^/^^/2018 - (📄) Plain - Docker-NetCore](https://github.com/PlainConcepts/NetCore-Docker-Workshop)
+ 
+ - [^^/^^/2019 - (📄) API - Best practices RESTUL API]( https://blog.mwaysolutions.com/2014/06/05/10-best-practices-for-better-restful-api/)
 
 ## JavaScript
 
