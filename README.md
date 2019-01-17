@@ -54,7 +54,7 @@
 
  - [20/06/2018 - (📄) JavaScript - Console API](https://medium.freecodecamp.org/working-with-the-devtools-console-and-console-api-an-overview-13cff6dc3db4)
  
- - [^^/^^/2018 - (📄) JavaScript - Pensar asyncronamente](https://medium.com/@ulisesGascon/pensar-as%C3%ADncronamente-en-un-mundo-s%C3%ADncrono-8e25cfcafd83)
+ - [17/01/2018 - (📄) JavaScript - Pensar asyncronamente](https://medium.com/@ulisesGascon/pensar-as%C3%ADncronamente-en-un-mundo-s%C3%ADncrono-8e25cfcafd83)
  
  - [02/08/2018 - (📄) JavaScript - Object.assing deep copy](https://medium.com/@tkssharma/objects-in-javascript-object-assign-deep-copy-64106c9aefab)
 
