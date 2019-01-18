@@ -88,7 +88,12 @@
  
  - [20/06/2018 - (📄) React - Presentational and Container Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0)
  
- - [20/06/2018 - (📄) React - Hooks](https://reactjs.org/docs/hooks-overview.html)
+ - [^^/^^/2018 - (📄) React - Hooks](https://reactjs.org/docs/hooks-overview.html)
+ 
+ - [^^/^^/2018 - (📄) React - Render Props](https://reactjs.org/docs/render-props.html)
+ 
+ 
+ 
 
  ## Vue
  
