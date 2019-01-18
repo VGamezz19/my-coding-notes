@@ -92,8 +92,7 @@
  
  - [^^/^^/2018 - (📄) React - Render Props](https://reactjs.org/docs/render-props.html)
  
- 
- 
+ - [^^/^^/2018 - (📄) React - Higher order components](https://reactjs.org/docs/higher-order-components.html)
 
  ## Vue
  
