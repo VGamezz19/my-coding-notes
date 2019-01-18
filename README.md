@@ -67,6 +67,8 @@
  - [0609  /2018 - (🎥) JavaScript - Clean Code: SOLID](https://www.youtube.com/watch?v=XzdhzyAukMM)
 
  - [^^/^^/2018 - (📄) JavaScript - Object Composition](https://medium.com/code-monkey/object-composition-in-javascript-2f9b9077b5e6)
+ 
+ - [^^/^^/2018 - (📄) JavaScript - Clean Code JS](https://github.com/ryanmcdermott/clean-code-javascript)
 
 ## ES6
 
