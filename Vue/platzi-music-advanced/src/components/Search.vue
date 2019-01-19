@@ -1,9 +1,12 @@
 <template lang="pug">
   main
-    pm-loader(v-show="isLoading")
-    PmNotification(v-show="showNotification", :error="textNotification.error")
-      h1(slot="title") {{ textNotification.title }}
-      p(slot="body") {{ textNotification.body }}
+    transition(name="move")
+      pm-loader(v-show="isLoading")
+    
+    transition(name="move")    
+      PmNotification(v-show="showNotification", :error="textNotification.error")
+        h1(slot="title") {{ textNotification.title }}
+        p(slot="body") {{ textNotification.body }}
 
     section.section(v-show="!isLoading")
       nav.nav.has-shadow
