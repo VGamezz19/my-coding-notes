@@ -127,6 +127,6 @@ Usamos el parametro `params` para pasarle la informacion.
 Es importante remarcar, que si definimos la routa con un parametro `:holaTest`, para poder acceder a el, tendremos que poner el mimos nombre `holaTest`, diamos que accederiamos de esta forma al pushearle un parametro:
 
 ```js
-      this.$router.push({ name: 'track', params: { holaTest: "Hello-World" } })
+      this.$router.push({ name: 'track', params: { holaTest: "Hello-World"  } })
 
 ```
