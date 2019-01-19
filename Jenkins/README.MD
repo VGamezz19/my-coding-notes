@@ -20,19 +20,6 @@ Podremos acceder al panel de control de jenkins, pero antes nos pedira la contra
 
 `cd /var/log/jenkins/jenkins.log`
 
-### In Docker
-
-Nos instalaremos Docker en nuestra maquina local. y despues instalaremos la imagen de jenkins con un `docker pull jenkins:jenkins`
-
-Despues crearemos el contenedor con un workspace de jenkins en `var/jenkins` con este comando:
-
-`docker run -p 8088:8088 -p 50000:50000 jenkins/jenkins:lts`
-
-Toda la iformacion y plugins se almacenaran en `var/jenkins`.
-
-`docker ps` list los contenedores docker corriendo en tu maquina
-`docker inspect --format '{{ .NetworkSettings.IPAddress }}' <CONTAINER_ID>` mostrara la IP de tu contenedor.
-
 ## Creacion de una tarea freestyle
 
 Jenkins siempre trabajara sobre tareas. Primero empezaremos con las de tipo `Project`.

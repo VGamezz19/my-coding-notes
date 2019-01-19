@@ -47,12 +47,14 @@
  - [^^/^^/2018 - (📄) Pattern - GameLoop](http://gameprogrammingpatterns.com/game-loop.html)
  
  - [^^/^^/2018 - (📄) Plain - Docker-NetCore](https://github.com/PlainConcepts/NetCore-Docker-Workshop)
+ 
+ - [17/01/2019 - (📄) API - Best practices RESTUL API]( https://blog.mwaysolutions.com/2014/06/05/10-best-practices-for-better-restful-api/)
 
 ## JavaScript
 
  - [20/06/2018 - (📄) JavaScript - Console API](https://medium.freecodecamp.org/working-with-the-devtools-console-and-console-api-an-overview-13cff6dc3db4)
  
- - [^^/^^/2018 - (📄) JavaScript - Pensar asyncronamente](https://medium.com/@ulisesGascon/pensar-as%C3%ADncronamente-en-un-mundo-s%C3%ADncrono-8e25cfcafd83)
+ - [17/01/2018 - (📄) JavaScript - Pensar asyncronamente](https://medium.com/@ulisesGascon/pensar-as%C3%ADncronamente-en-un-mundo-s%C3%ADncrono-8e25cfcafd83)
  
  - [02/08/2018 - (📄) JavaScript - Object.assing deep copy](https://medium.com/@tkssharma/objects-in-javascript-object-assign-deep-copy-64106c9aefab)
 
@@ -65,6 +67,8 @@
  - [0609  /2018 - (🎥) JavaScript - Clean Code: SOLID](https://www.youtube.com/watch?v=XzdhzyAukMM)
 
  - [^^/^^/2018 - (📄) JavaScript - Object Composition](https://medium.com/code-monkey/object-composition-in-javascript-2f9b9077b5e6)
+ 
+ - [^^/^^/2018 - (📄) JavaScript - Clean Code JS](https://github.com/ryanmcdermott/clean-code-javascript)
 
 ## ES6
 
@@ -85,6 +89,12 @@
  - [20/06/2018 - (📄) React - Container pattern](https://medium.com/@learnreact/container-components-c0e67432e005)
  
  - [20/06/2018 - (📄) React - Presentational and Container Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0)
+ 
+ - [^^/^^/2018 - (📄) React - Hooks](https://reactjs.org/docs/hooks-overview.html)
+ 
+ - [^^/^^/2018 - (📄) React - Render Props](https://reactjs.org/docs/render-props.html)
+ 
+ - [^^/^^/2018 - (📄) React - Higher order components](https://reactjs.org/docs/higher-order-components.html)
 
  ## Vue
  
