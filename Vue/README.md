@@ -55,3 +55,7 @@ cada vez que cambia el estado, VueJS genera un binding, entre un modelo y una vi
 - ### [VueRouter](https://github.com/VGamezz19/platzi-course-notes/blob/master/Vue/doc/10-VueRouter.MD)
 
 - ### [Modifiers](https://github.com/VGamezz19/platzi-course-notes/blob/master/Vue/doc/11-Modifiers.MD)
+
+- ### [Directives](https://github.com/VGamezz19/platzi-course-notes/blob/master/Vue/doc/12-Directives.MD)
+
+- ### [Mixins](https://github.com/VGamezz19/platzi-course-notes/blob/master/Vue/doc/13-Mixins.MD)
