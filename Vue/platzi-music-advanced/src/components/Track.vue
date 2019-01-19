@@ -18,9 +18,9 @@
         small {{ track.duration_ms | ms-to-mm }}
         nav.level
           .level-left
-            a.level-item
+            button.level-item.button.is-primary
               span.icon.is-small(@click="selectTrack") ▶️
-            a.level-item
+            button.level-item.button.is-warning
               span.icon.is-small(@click="goToTrack(track.id)") View Detail
 </template>
 
