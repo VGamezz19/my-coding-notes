@@ -154,6 +154,8 @@ export default {
 Podremos actualizar el stado con las mutations, Vuex no nos permitira modificar el estado directamente.
 Para poder acceder a las mutations definidas en el `storage.js` tendremos que acceder al metodo `commit` y añadir el nombre de la mutation, de esta forma
 
+Son metodos SINCRONOS
+
 > storage.js
 
 ```js
@@ -308,3 +310,66 @@ export default {
 }
 </script>
 ```
+
+## Actions
+
+Las actions existen porque las `mutations` son funciones sincronas, digamos que dentro de una mutation no puedo ejecutar una peticion HTTP. Vuex actualiza el State antes de que termine la llamada asyncrono.
+
+> store.js
+
+```js
+const store = new Vuex.Store({
+  // las propiedades, como si fuera data
+    state: {
+        count: 0
+    },
+    getters: {
+        getDouble(state) {
+            return state.count * 2;
+        }
+    },
+    mutations: {
+        increment(state, payLoad = {}) {
+            return state.count += payLoad.number || 1
+        },
+
+        decrement(state) {
+            state.count--
+        }
+    },
+
+    actions: {
+        incrementAsync(context, payLoad) {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    context.commit('increment', payLoad)
+                    resolve(context.state.count)
+                }, 2000)
+            })
+        }
+    }
+})
+```
+
+como primer parametro de nuestra action, tenemos el `context`, tenemos todo el contexto del storage, y normalmente lo usaremos para ejecutar una mutation, despues de que se ejecute el codigo asyncrono, ejecutar la mutation.
+
+> App.js
+
+```js
+export default {
+  methods: {
+    ... mapMutations(['decrement']),
+    increment(number) {
+      this.$store.commit('increment', {number});
+    },
+    incremenetAsync(number) {
+      this.$store.dispatch('incrementAsync', {number})
+        .then((res) => {
+          console.log('Accion terminada', res)  
+        })
+    }
+  }
+}
+```
+
+Con el `dispatch` accederemos a la action.

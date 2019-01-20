@@ -21,6 +21,18 @@ const store = new Vuex.Store({
     decrement(state) {
       state.count--
     }
+  },
+
+  actions: {
+    incrementAsync(context, payLoad) {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          context.commit('increment', payLoad)
+          resolve(context.state.count)
+        }, 2000)
+
+      })
+    } 
   }
 })
 

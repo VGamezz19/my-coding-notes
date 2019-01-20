@@ -8,6 +8,9 @@
       <div>
         <button @click="increment(10)"> + </button>
         <button @click="decrement"> - </button>
+
+        <button @click="incremenetAsync(10)"> + async </button>
+
       </div>
     </div>
     <child />
@@ -32,6 +35,12 @@ export default {
     ... mapMutations(['decrement']),
     increment(number) {
       this.$store.commit('increment', {number});
+    },
+    incremenetAsync(number) {
+      this.$store.dispatch('incrementAsync', {number})
+        .then((res) => {
+          console.log('Accion terminada', res)  
+        })
     }
   }
 }
