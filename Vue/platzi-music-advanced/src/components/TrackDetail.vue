@@ -3,7 +3,7 @@
   .columns
     .column.is-3.has-text-centered
       figure.media-left
-        p.image
+        p.image(v-show="track && track.album")
           img(:src="track.album.images[0].url")
         p
           a.button.is-primary.is-large
