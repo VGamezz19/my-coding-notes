@@ -8,6 +8,11 @@ const store = new Vuex.Store({
   state: {
     count: 0
   },
+  getters: {
+    getDouble(state) {
+      return state.count * 2;
+    }
+  },
   mutations: {
     increment(state, payLoad = {}) {
       return state.count += payLoad.number || 1

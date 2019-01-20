@@ -17,7 +17,6 @@ Las acciones son las que se encargan de fluir la informacion del `state` a la `v
 
 Principalmente usaremls este patron, cuando tengamos mucha interactuacion entre padres e hijos, o cuando dos componentes se han de comunicar si estar enlazados gerarquicamente, parecido al `event bus`
 
-
 ## State
 
 Toda nuestra informacion importante, o la que se comparte, estara alamacenada en nuestro estado.
@@ -256,3 +255,56 @@ export default {
 ```
 
 No podemos eliminar `increment`, porque mapMutation no permite poder pasar parametros, lo tendremos que definir como un method custom
+
+## Getters
+
+Si queremos añadir una forma de obtener la informacion del `state` custom, tendremos que añadir `getters`. Estos getters seran accesibles para todos los componentes que usen dicho store.
+
+Como dato importante, dentro de un mismo getter, puedo usar otros getters que ya he creado, pasando por parametro `getters`
+> store.js
+
+```js
+const store = new Vuex.Store({
+  // las propiedades, como si fuera data
+  state: {
+    count: 0
+  },
+  getters: {
+    getDouble(state, getters) {
+      return state.count * 2;
+    }
+  },
+  mutations: {
+    increment(state, payLoad = {}) {
+      return state.count += payLoad.number || 1
+    },
+
+    decrement(state) {
+      state.count--
+    }
+  }
+})
+```
+
+> App.js
+
+```html
+<script>
+import { mapState, mapMutations, mapGetters } from 'vuex'
+
+export default {
+  name: 'app',
+  computed: {
+    ... mapState(['count']),
+    double() {
+      return this.$store.getters.getDouble
+    }
+    // OR
+
+    ... mapGetters(['getDouble'])
+  },
+  
+  ...
+}
+</script>
+```

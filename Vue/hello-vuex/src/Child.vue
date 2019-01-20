@@ -1,6 +1,5 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+  <main>
     <div>
       <h2>Contador</h2>
       <p> {{count}}</p>
@@ -10,22 +9,16 @@
         <button @click="decrement"> - </button>
       </div>
     </div>
-    <child />
-  </div>
+  </main>
 </template>
 
 <script>
 import { mapState, mapMutations, mapGetters } from 'vuex'
-import Child from './Child.vue'
 
 export default {
-  name: 'app',
-  components: {Child},
+  name: 'child',
   computed: {
-    ... mapState(['count']),    
-    // double() {
-    //   return this.$store.getters.getDouble
-    // }
+    ... mapState(['count']),
     ... mapGetters({double: 'getDouble'})
   },
   methods: {
@@ -36,14 +29,3 @@ export default {
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
