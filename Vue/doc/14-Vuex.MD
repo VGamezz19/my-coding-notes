@@ -16,3 +16,119 @@ Cada vez que actualizo el `store`, todos los componentes que dependan de este st
 Las acciones son las que se encargan de fluir la informacion del `state` a la `view`.
 
 Principalmente usaremls este patron, cuando tengamos mucha interactuacion entre padres e hijos, o cuando dos componentes se han de comunicar si estar enlazados gerarquicamente, parecido al `event bus`
+
+
+## State
+
+Toda nuestra informacion importante, o la que se comparte, estara alamacenada en nuestro estado.
+Creamos un fichero `store.js` y iniziamos nuestra store.
+
+### instalarlo
+
+`npm i -D vuex`
+
+>store.js
+
+```js
+import Vue from 'vue'
+import Vuex from 'vuex'
+
+Vue.use(Vuex)
+
+const store = new Vuex.Store({
+  // las propiedades, como si fuera data
+  state: {
+    count: 0
+  },
+  mutations: {
+    increment(state) {
+      return state.count++
+    },
+
+    decrement(state) {
+      state.count--
+    }
+  }
+})
+
+export default store
+```
+
+el `state` es como si fuera nuestra `data` de los componentes de vue, añadiremos todas las propiedades que compondra el estado.
+Dentro de `mutations`, añadiremos los metodos que modificaran nuestro estado.
+
+### Usarlo
+
+>App.js
+
+```html
+<template>
+  <div id="app">
+    <img alt="Vue logo" src="./assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div>
+      <h2>Contador</h2>
+      <p> {{count}}</p>
+      <!-- <p> 0 </p> -->
+    </div>
+  </div>
+</template>
+
+<script>
+import HelloWorld from './components/HelloWorld.vue'
+
+export default {
+  name: 'app',
+  computed: {
+      count() {
+          return this.$store.state.count // 0
+      }
+  },
+  components: {
+    HelloWorld
+  }
+}
+</script>
+```
+
+Es mejor usar `computeds` para acceder a la informacion del state, asi, solo lo cargara cuando se aya modificado, no estara todo el rato pidiendo una informacion que no se ha actualizado.
+
+### MapState
+
+Existe otra forma de poder traerte algunos campos del estado, para no tener que estar definiendo muchos computed.
+el `mapState` es un modulo que nos lo proporcionara `vuex`, y nos peritira seleccionar que data queremos de dicho state, de una sencilla forma:
+
+> App.js
+
+```html
+<template>
+  <div id="app">
+    <img alt="Vue logo" src="./assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div>
+      <h2>Contador</h2>
+      <p> {{count}}</p>
+
+      <div>
+        <button @click="increment"> + </button>
+        <button @click="decrement"> - </button>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import { mapState } from 'vuex'
+import HelloWorld from './components/HelloWorld.vue'
+
+export default {
+  name: 'app',
+  computed: mapState(['count']), //this.count() -- 0
+  components: {
+    HelloWorld
+  }
+}
+</script>
+```
+
+Tenemos un problema, para poder añadir nuevos computed, que no sea dentro del mapState tendremos que añadir un plugin para usar el split operation
