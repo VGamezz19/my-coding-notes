@@ -34,11 +34,6 @@ export default {
   },
 
   methods: {
-    selectTrack () {
-      this.$emit('select', this.track.id)
-
-      this.$bus.$emit('set-track', this.track)
-    },
     goToTrack (id) {
       this.$router.push({ name: 'track', params: { id } })
     }
