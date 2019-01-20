@@ -9,8 +9,8 @@ const store = new Vuex.Store({
     count: 0
   },
   mutations: {
-    increment(state) {
-      return state.count++
+    increment(state, payLoad = {}) {
+      return state.count += payLoad.number || 1
     },
 
     decrement(state) {

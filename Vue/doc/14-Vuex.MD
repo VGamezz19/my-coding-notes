@@ -149,3 +149,110 @@ export default {
   }
 }
 ```
+
+## Mutations
+
+Podremos actualizar el stado con las mutations, Vuex no nos permitira modificar el estado directamente.
+Para poder acceder a las mutations definidas en el `storage.js` tendremos que acceder al metodo `commit` y añadir el nombre de la mutation, de esta forma
+
+> storage.js
+
+```js
+const store = new Vuex.Store({
+  // las propiedades, como si fuera data
+  state: {
+    count: 0
+  },
+  mutations: {
+    increment(state, payLoad = {}) {
+      return state.count += payLoad.number || 1
+    },
+
+    decrement(state) {
+      state.count--
+    }
+  }
+})
+```
+
+Usaremos `payLoad` como si fuera un objeto, para enviarle los parametros que necesita la mutacion.
+
+> App.js
+
+```html
+<template>
+  <div id="app">
+    <img alt="Vue logo" src="./assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div>
+      <h2>Contador</h2>
+      <p> {{count}}</p>
+      <p>{{stringTest}}</p>
+      <div>
+        <button @click="increment(10)"> + </button>
+        <button @click="decrement"> - </button>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import { mapState } from 'vuex'
+
+export default {
+  name: 'app',
+  data() {
+    return {
+      test: 'test'
+    }
+  },
+  computed: {
+    ... mapState(['count']),
+    stringTest() {
+      return this.test + this.count
+    }
+  },
+  methods: {
+    increment(number) {
+      this.$store.commit('increment', {number});
+    },
+    decrement() {
+      this.$store.commit('decrement');
+    }
+  }
+}
+</script>
+```
+
+Hemos de tener en cuenta, que cuando modifiquemos el estado, todos los componentes que estan accediendo a el, se modificaran instantaneamente.
+
+### MapMutation
+
+Al igual que `mapState`, existe `mapMutation` para mapear las mutacion que necesitaremos en el componente, para no tener que ir creando metodos para enlazarlos a dicho componente
+
+```js
+import { mapState, mapMutations } from 'vuex'
+
+export default {
+  name: 'app',
+  data() {
+    return {
+      test: 'test'
+    }
+  },
+  computed: {
+    ... mapState(['count']),
+    stringTest() {
+      return this.test + this.count
+    }
+  },
+  methods: {
+    ... mapMutations(['decrement']),
+    increment(number) {
+      this.$store.commit('increment', {number});
+    }
+  }
+}
+```
+
+No podemos eliminar `increment`, porque mapMutation no permite poder pasar parametros, lo tendremos que definir como un method custom

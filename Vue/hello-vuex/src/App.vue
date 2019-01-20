@@ -6,17 +6,16 @@
       <h2>Contador</h2>
       <p> {{count}}</p>
       <p>{{stringTest}}</p>
-      <!-- <div>
-        <button @click="increment"> + </button>
+      <div>
+        <button @click="increment(10)"> + </button>
         <button @click="decrement"> - </button>
-      </div> -->
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
-import HelloWorld from './components/HelloWorld.vue'
+import { mapState, mapMutations } from 'vuex'
 
 export default {
   name: 'app',
@@ -31,8 +30,11 @@ export default {
       return this.test + this.count
     }
   },
-  components: {
-    HelloWorld
+  methods: {
+    ... mapMutations(['decrement']),
+    increment(number) {
+      this.$store.commit('increment', {number});
+    }
   }
 }
 </script>
