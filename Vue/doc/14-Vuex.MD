@@ -131,4 +131,21 @@ export default {
 </script>
 ```
 
-Tenemos un problema, para poder añadir nuevos computed, que no sea dentro del mapState tendremos que añadir un plugin para usar el split operation
+Para poder añadir custom computeds tendremos que usar `spread operators` de esta forma:
+
+```js
+export default {
+  name: 'app',
+  data() {
+    return {
+      test: 'test'
+    }
+  },
+  computed: {
+    ... mapState(['count']),
+    stringTest() {
+      return this.test + this.count
+    }
+  }
+}
+```
