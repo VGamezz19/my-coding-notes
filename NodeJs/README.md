@@ -72,3 +72,6 @@ El mas comun entre cliente y servidor, peticion y respuestam, un canal *Unidirec
 ### Real Time
 
 Crearemos un canal de comunicacion entre ambas partes, y las dos estaran conectadas y comunicadas *Bidireccionalmente* (Canal persistente)
+
+
+# [CLI && REPL]()
