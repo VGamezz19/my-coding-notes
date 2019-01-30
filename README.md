@@ -70,6 +70,10 @@
  
  - [^^/^^/2018 - (📄) JavaScript - Clean Code JS](https://github.com/ryanmcdermott/clean-code-javascript)
 
+ - [^^/^^/2018 - (📄) JavaScript - 33 js concepts](https://github.com/leonardomso/33-js-concepts)
+
+
+
 ## ES6
 
  - [12/06/2018 - (📄) ES6 - Hipster Hack - Spread Operator](https://hackernoon.com/javascript-hacks-for-es6-hipsters-67d633ce8ace)
