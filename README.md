@@ -10,7 +10,7 @@
 
 ## [WebPack](https://github.com/VGamezz19/platzi-course-notes/tree/master/WebPack)
 
-## [VueJS](https://github.com/VGamezz19/platzi-course-notes/tree/master/Vue)
+## [VueJS](https://github.com/VGamezz19/platzi-course-notes/tree/master/Vue)  [✔︎]
 
 ## [Jenkins](https://github.com/VGamezz19/platzi-course-notes/tree/master/Jenkins)
 
