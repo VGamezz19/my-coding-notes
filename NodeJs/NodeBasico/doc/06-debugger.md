@@ -1,4 +1,4 @@
-# debugger
+# [← |](https://github.com/VGamezz19/platzi-course-notes/tree/master/NodeJs) Debugger
 
 podemos debuggear nuestro codigo js ejecutando node con `node inspect <nombre fichero>`.
 

@@ -73,5 +73,20 @@ El mas comun entre cliente y servidor, peticion y respuestam, un canal *Unidirec
 
 Crearemos un canal de comunicacion entre ambas partes, y las dos estaran conectadas y comunicadas *Bidireccionalmente* (Canal persistente)
 
+- ### [CLI && REPL](https://github.com/VGamezz19/platzi-course-notes/blob/master/NodeJs/NodeBasico/doc/01-CLI&&REPL.md)
 
-# [CLI && REPL]()
+- ### [Async](https://github.com/VGamezz19/platzi-course-notes/blob/master/NodeJs/NodeBasico/doc/02-async.md)
+
+- ### [ReadFile-CallBacks](https://github.com/VGamezz19/platzi-course-notes/blob/master/NodeJs/NodeBasico/doc/03-ReadFile-CallBacks.md)
+
+- ### Readline (in folder example)
+
+- ### Child Process exec (in folder example)
+
+- ### [Debugger](https://github.com/VGamezz19/platzi-course-notes/blob/master/NodeJs/NodeBasico/doc/06-debugger.md)
+
+- ### [Errors](https://github.com/VGamezz19/platzi-course-notes/blob/master/NodeJs/NodeBasico/doc/07-Errors.md)
+
+- ### Events (in folder example)
+
+- ### [HTTP - Protocolo](https://github.com/VGamezz19/platzi-course-notes/blob/master/NodeJs/NodeBasico/doc/09-HTTP.md)
