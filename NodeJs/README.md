@@ -73,4 +73,4 @@ El mas comun entre cliente y servidor, peticion y respuestam, un canal *Unidirec
 
 Crearemos un canal de comunicacion entre ambas partes, y las dos estaran conectadas y comunicadas *Bidireccionalmente* (Canal persistente)
 
-## [Conocimientos basicos y necesatios (Haz Click) 👈🏻 ](https://github.com/VGamezz19/platzi-course-notes/blob/master/NodeJs/NodeBasico/)
+## [Conocimientos basicos y necesarios (Haz Click) 👈🏻 ](https://github.com/VGamezz19/platzi-course-notes/blob/master/NodeJs/NodeBasico/)
