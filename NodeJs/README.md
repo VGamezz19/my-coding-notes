@@ -36,7 +36,7 @@ Mejor manejo de módulos
 
 NodeJs trabaja con el motros de google chrome V8. En el año 2009 era el mejor y el más rapido. Esta escrito en C++.
 
-[Imgur](https://i.imgur.com/dDPqkSx.png)
+![Imgur](https://i.imgur.com/dDPqkSx.png)
 
 - Primera: nodejs
 - Segunda: Es una capa estandar que usa nodeJS para poder comunicar el codigo que hemos escrito a la capa de "bindings"
@@ -45,14 +45,14 @@ NodeJs trabaja con el motros de google chrome V8. En el año 2009 era el mejor y
 
 ## Sistema
 
-[Imgur](https://i.imgur.com/5wZALl9.png)
+![Imgur](https://i.imgur.com/5wZALl9.png)
 
 Libuv es una de las librerias de C++ encargado de efectuar el famoso Event loop.
 Como vemos en la image, el motor V8 sera el encargado de ir administrando el codigo que hemos escrito en la plataforma de Node a los bindings estandarizados de node. estos bindings lo "compilara" (por decirlo de una manera, porque realmente JS no se compila, se transforma) a comportamiento de C++.
 
 ## Event loop
 
-[Imgur](https://i.imgur.com/XcohGQk.png)
+![Imgur](https://i.imgur.com/XcohGQk.png)
 
 - Timers: Toda la familia de timers, setTimeout, etc.
 - panding callbacks: Algun callback que tengamos pendiente
