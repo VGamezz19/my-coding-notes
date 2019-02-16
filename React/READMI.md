@@ -45,3 +45,4 @@ export default function Todo ({text}) {
 
 Destructuramos las variables `name, setName`, donde *name* sera el valor actual del estado name `this.state.name`. la funcion *setName* sera la forma de modificar este espacion en memoria del estado, como si puera un `setState({})` pero más especifico.
 
+Cuando llamamos el metodo que setea la propiedad, es cuando le decimos a React que necesitamos Renderizar el componente.
