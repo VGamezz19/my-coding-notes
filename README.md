@@ -6,6 +6,8 @@
 
 ## [NodeJS](https://github.com/VGamezz19/platzi-course-notes/tree/master/NodeJs)
 
+## [React](https://github.com/VGamezz19/platzi-course-notes/tree/master/React) [✔︎]
+
 ## [ReactNative](https://github.com/VGamezz19/platzi-course-notes/tree/master/ReactNative) [✔︎]
 
 ## [WebPack](https://github.com/VGamezz19/platzi-course-notes/tree/master/WebPack)
@@ -68,7 +70,7 @@
 
  - [^^/^^/2018 - (📄) JavaScript - Object Composition](https://medium.com/code-monkey/object-composition-in-javascript-2f9b9077b5e6)
  
- - [10/02/2019 - (📄) JavaScript - Clean Code JS](https://github.com/ryanmcdermott/clean-code-javascript)
+ - [^^/^^/2018 - (📄) JavaScript - Clean Code JS](https://github.com/ryanmcdermott/clean-code-javascript)
 
  - [^^/^^/2018 - (📄) JavaScript - 33 js concepts](https://github.com/leonardomso/33-js-concepts)
 
