@@ -268,8 +268,11 @@ RUN npm install
 EXPOSE 3000
 
 # Cual es el comando por defecto que va a correr el contenedor por defecto, el COMMAND
-CMD ["node", "index.js"]
-
+CMD ["npx","nodemon", "index.js"]
+# ejecuta el comando node index.js el cual levanta el servidor de express
+# npx es una herramienta de cli que nos permite ejecutar paquetes de npm de forma mucho más sencilla
+# nodemon es el paquete que nos va apermitir bajr y subir el server de manera automatica apenas exita un cambio en los archivos
+# index.js es el archivo que levanta el servidor de express
 ```
 
 ahora que tenemos el dockerfile configurado, vamos a generar una nueva imagen.
@@ -281,3 +284,41 @@ Una veaz creada la imagen, tenemos que crear el contenedor. Como dato nuevo, pod
 `docker run --rm --name platziapp -p 3000:3000 platziapp`
 
 lo exponemos en el puerto `3000`
+
+## Cache Layers
+
+Cuando nosotros volvamos a crear una imagen, se no hemos modificado el codigo, la imagen (las layers) estan cacheadas, y como ve que no hay ninguna modificacion, cogera la misma layer que ya hemos creado.
+
+El problema es que si cambiamos cualquier BYTE  de nuestro codigo, volvera a ejecutar todos los comandos.
+
+Hay una formade poder evitar dicho problema.
+
+Si separamos los comandos de copy, por un lado la dependencia y por otro el codigo, la imagen tardara mucho menos en montarse. Porque no necesariamente siempre hemos de estar cambiando las dependencias  de nuestro proyecto:
+
+```dockerfile
+FROM node:lts
+
+COPY ["package.json", "package-lock.json", "/usr/src/"]
+
+WORKDIR /usr/src
+
+RUN npm install
+
+COPY [".", "/usr/src/"]
+
+EXPOSE 3000
+
+CMD ["npx", "nodemon", "index.js"]
+# ejecuta el comando node index.js el cual levanta el servidor de express
+# npx es una herramienta de cli que nos permite ejecutar paquetes de npm de forma mucho más sencilla
+# nodemon es el paquete que nos va apermitir bajr y subir el server de manera automatica apenas exita un cambio en los archivos
+# index.js es el archivo que levanta el servidor de express
+```
+
+a la primera vez que creemos la imagen, ejecutara todos los comandos, pero, cuando solo modifique el codigo, pasara esto: 
+
+![Imgur](https://i.imgur.com/c0jf7kM.png)
+
+usara la cache.
+
+Para no tener que estar todo el rato creando una imagen cadavez que modificamos el codigo, podemos usar la aherramienta `nodemon` y dejar el proceso "watcheando" para ir bien el codigo y que no sea tan tedioso.

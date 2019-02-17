@@ -7,12 +7,12 @@ const MongoClient = require('mongodb').MongoClient
 // Connection URL
 const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost:27017/test';
 
-console.log("Hola que tal Testing Debuging with Docker");
+console.log("Hola que tal Testing Debuging with Docker yepa");
 
 app.get('/', (req, res) => {
   MongoClient.connect(mongoUrl, { useNewUrlParser: true }, (err, db) => {
     if (err) {
-      res.status(500).send('💥 BOOM 💥: ' + err);
+      res.status(500).send('💥 BOOM Yep 💥: ' + err);
     } else {
       res.send('Me conecté a la DB! 😎');
       db.close();
