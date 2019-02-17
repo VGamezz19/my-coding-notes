@@ -190,3 +190,59 @@ Usando el flag `--mount`
 en `src` podremos el nombre del volum, y en `dst` pondremos el destino de nuestros datos, que para mongo ha de ser `/data/db`
 
 aunque eliminemos y volvamos a crear el contenedor, cuando volvamos a acceder al contenedor com `docker exec -it db bash` y `mongo` cuando accedamos a la tabla, veremos que persistne los datos
+
+## Imagenes
+
+Son plantillas con las que vamos a generar contenedores.
+
+`docker pull` nos descarga una imagen, no crea nada.
+
+Una imagen esta contruida por un conjunto de capas, por eso, cuando nos descargamos una, empiza a descargarse diversos "paquetes" (capas)
+
+Cada capa es inmutable, no se pueden hackear. funcionan como el sistema de GIT, cada comit es la diferencia del anterior, pues lo mismo con las imagenes.
+
+`docker image ls` listar imagenes
+
+Docker Hub es como un GitHub pero de imagenes configuradas.
+
+## Crear nuestra imagen de Docker
+
+- Crear el archivo Dockerfile (receta)
+- El dockerfile siempre debe empezar con el FROM le indicamos cual va a ser nuestra imagen base para empezar (Ubuntu por ejemplo)
+- RUN para correr un comando
+
+>DockerFile
+
+```dockerfile
+FROM ubuntu
+
+RUN touch /usr/src/hola-platzi
+```
+
+execute `docker build -t <imagen>:<tag de la imagen> <path de donde vamos a obtener el contexto build, para este caso .>`
+
+`docker build -t ubuntu:platzi .`
+
+- **-t** es el nombre del tag de la imagen
+
+![img](https://cdn-images-1.medium.com/max/2600/1*p8k1b2DZTQEW_yf0hYniXw.png)
+
+Docker construyo un nuevo layer a la imagen base ubuntu
+
+para poder publicarlo en DockerHub tenemos que lanzar el comando:
+
+`docker pull ubuntu:platzi`
+
+nos dara un error, porque no tenemos acceso para publicar dentro del repositorio de `ubuntu`, asique tendremos que asignarnos la imagen a nuestro perfil:
+
+`docker tag abuntu:platzi dockergamez/ubuntu:platzi`
+
+esto creara este esquema en las imagenes:
+
+![Imgur](https://i.imgur.com/sqaZsBL.png)
+
+las dos imagenes realmente ejecutaran el mismo comando.
+
+y ya podriamos publicarlo en nuestro repositorio de DockerHub
+
+`docker push dockervgamez/upuntu:platzi`
