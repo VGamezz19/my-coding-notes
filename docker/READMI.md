@@ -121,3 +121,30 @@ en Ubuntu, si ejecutamos `ps -fea` podemos ver todos los procesos que estan corr
 Una de las formas de poder para esste proceso infinito, seria matando (`kill`) el proceso 1 y automaticamente se pararia el contenedor, o ejecutando el siguiente comando
 
 `docker kill dreamy_lumiere` <-- container_name
+
+Hay dos formas de parar un contenedor Docker
+
+- un error en la ejecucion root
+- terminar el proceso principal.
+
+## Exponer nuestros Contenedores a cliente
+
+Primero, para ver este tema, usaremos un servicio muy comun llamado `nginx` que permite levantar un servidor y almacenar datos.
+
+`docker run -d --name server nginx`
+
+el flag `-d` significa que no nos atacharemos a la consola de ese contenedor `--desatach`
+
+Un contenedor no sabe nada sobre la red de donde esta corriendo, hemos de asignarle un puerto de salida para poder comunicarnos con el. Si a este comando, la añadimos el flag `-p` le estaremos asignando un puesto de nuestra maquina a ese contenedor.
+
+`docker run -d --name server -p 8081:80 nginx`
+
+el `8081` sera el puerto por donde podremos acceder a el, y el `80` sera el puerto por donde el contenedor tiene publica la entrada. De esta forma crearemos un puente entre nuestro Local y el contendor, pudiendo acceder desde un browser por ejemplo:
+
+`localhost:8081`
+
+Si nosotros volvemnos a crear o asignar el mismo puerto (8081) a otro contenedor, nos dara un error, ese puerto es unico, ya estara siendo usado.
+
+```sh
+2a53d87a33f1   nginx  "nginx -g 'daemon of…" 28 seconds ago   Up 27 seconds    0.0.0.0:8081->80/tcp server
+```
