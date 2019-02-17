@@ -97,3 +97,27 @@ El significado de las flags -it:
 
 - -t: Asignar un pseudo-tty (Terminal).
 - -i: mantén STDIN abierto incluso si no está conectado.
+
+## Ciclo de vida de un contenedor
+
+Podemos ejecutar un contenedor que ya existe, añadiendole un commando diferente al pordefecto.
+
+`docker run ubuntu tail -f /dev/null`
+
+> tail, es un comando de Linux, que nos permitira listar el archivos
+
+> -f significa que se mantenga la execucion, esperando nuevos archivos (nuevos cambios
+
+> /dev/null, es una carpeta pelucioar de Linux, donde nunca hay ficheros, esta completamente vacia.
+
+Una vez ejecutado el contenedo, si hacemos `docker ps` veremos esto:
+
+![Imgur](https://i.imgur.com/Yx2ECFH.png)
+
+como podemos ver, en `Command` ya podemos ver el comando que hemos ejecutado.
+
+en Ubuntu, si ejecutamos `ps -fea` podemos ver todos los procesos que estan corriendo en el sistema. Por defecto, Docker siempre poner el commando de entrada en primer lugar, `PID 1` y cuando ese proceso termina, el contenedor se para.
+
+Una de las formas de poder para esste proceso infinito, seria matando (`kill`) el proceso 1 y automaticamente se pararia el contenedor, o ejecutando el siguiente comando
+
+`docker kill dreamy_lumiere` <-- container_name
