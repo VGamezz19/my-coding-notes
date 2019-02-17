@@ -246,3 +246,38 @@ las dos imagenes realmente ejecutaran el mismo comando.
 y ya podriamos publicarlo en nuestro repositorio de DockerHub
 
 `docker push dockervgamez/upuntu:platzi`
+
+## Docker for developers
+
+>Dockerfile
+
+```Dockerfile
+# usaremos un node-v8
+FROM node:8
+
+#le estamos especificando, que todo lo que encuentre aqui, lo copie en la carpeta `/usr/src/` del contenedor.
+COPY [".", "/usr/src/"]
+
+# positionate en el /usr/src para ejecutar el RUN
+WORKDIR /usr/src
+
+#Ejecuta NPM INSTALL en el WORKDIR
+RUN npm install
+
+# Expone el puerto del contenedor. Para luego poder abrir un puente entre mi puerto local y el del contenedor
+EXPOSE 3000
+
+# Cual es el comando por defecto que va a correr el contenedor por defecto, el COMMAND
+CMD ["node", "index.js"]
+
+```
+
+ahora que tenemos el dockerfile configurado, vamos a generar una nueva imagen.
+
+`docker build -t platziapp .`
+
+Una veaz creada la imagen, tenemos que crear el contenedor. Como dato nuevo, podemos añadir el flag `--rm`, que eliminara el contenedor cuando termine la ejecucion de dicho contenedor.
+
+`docker run --rm --name platziapp -p 3000:3000 platziapp`
+
+lo exponemos en el puerto `3000`
