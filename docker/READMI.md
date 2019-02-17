@@ -25,7 +25,7 @@ Problemas al **Ejecutar**:
 *Docker permite*:
 **Construir, distribuir y correr tu código en cualquier lado**
 
-## Qué es Docker?
+## Qué es Docker
 
 Docker Permite resolver problemas de construir, distribuir y ejecutar software en diferentes plataformas.
 
@@ -56,3 +56,25 @@ Docker Permite resolver problemas de construir, distribuir y ejecutar software e
 
 - Lentas:
   - Correr nuestro código en una VM implica no solo arrancar aplicaciones, sino también esperar el boot de la VM en sí.
+
+### Que es un contenedor
+Un contenedor es una agrupacion de procesos. y ejecuta los procesos de forma nativa (no como en una maquina virtual).
+
+Los procesos que se ejecutan dentro de los contenedores, solo veran el contexto que esta dentro del contenedor. No puede ir fuera de ese contexto.
+
+> Como la pelicula del show de truman.
+
+Docker esta escrito en Go.
+
+### Comandos basicos
+
+cada docker run crea un contenedor nuevo, pero que comparten la infomacion.
+
+- `docker ps` --> lista los contenedores
+- `docker ps -a` --> lista contenedores a detalles
+- `docker ps -aq` --> lista solo los ID de los contenedores (la q significa quiet, tranquilo o silencioso)
+- `docker inspect id_contenedor` --> detalles internos del contenedor
+- `docker inspect nombre_contenedor` --> lo mismo que el anterior
+- `docker inspect -f {{ josn <\propertie>}} nombre_contenedor` --> filtra una variable especifico del contenedor
+- `docker rm $(ps -aq)` --> borra TODOS los contenedores
+- `docker rm nombre_contenedor` --> elimina un contenedor
