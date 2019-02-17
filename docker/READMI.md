@@ -164,3 +164,9 @@ Hay una cosa a tener en cuenta, si nosotros añadimos algo desde fuera del conte
 Hemos creado un puente entre el dico local y el contenedor.
 
 Asi podremos persistir los datos, y podremos eliminar y crear tantasveces que queramos el contenedor, que siempre mantendran los mismos datos.
+
+> YEP!
+
+Si añadimos el flar `-p 8080:27017` nos podremos contenctar a al contenedor y directametne al Mongo, metieante la herramienta `RoboMongo!`
+
+`docker run -d --name mongo-db -v /Volumes/Victor/platzi-course-notes/docker/mongodata:/dCata/db -p 8082:27017 mongo`
