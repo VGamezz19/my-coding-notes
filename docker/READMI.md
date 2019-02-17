@@ -170,3 +170,23 @@ Asi podremos persistir los datos, y podremos eliminar y crear tantasveces que qu
 Si añadimos el flar `-p 8080:27017` nos podremos contenctar a al contenedor y directametne al Mongo, metieante la herramienta `RoboMongo!`
 
 `docker run -d --name mongo-db -v /Volumes/Victor/platzi-course-notes/docker/mongodata:/dCata/db -p 8082:27017 mongo`
+
+## Docker Volumens
+
+Ultimamente docker ha añadido una nueva funcionalidad que son los `Volumen`. Aqui podremos almacenar toda la data de los contenedores.
+
+si ejecutamos `docker volume ls` veremos el listado de todos los volumenes que ha ido creando nuestros contenedores.
+
+`docker volume prune` eliminara los volumenes de los contenedores que ahora mismo no se estan ejecutando
+
+`docker volume create <nombre-del-volume>` nos creara un volumen
+
+Esto lo podemos usar para persistir nuestros datos de la BBDD Mongo.
+
+Usando el flag `--mount` 
+
+`docker run -d --name db --mount src=dbdata,dst=/data/db -p 8082:27017 mongo`
+
+en `src` podremos el nombre del volum, y en `dst` pondremos el destino de nuestros datos, que para mongo ha de ser `/data/db`
+
+aunque eliminemos y volvamos a crear el contenedor, cuando volvamos a acceder al contenedor com `docker exec -it db bash` y `mongo` cuando accedamos a la tabla, veremos que persistne los datos
