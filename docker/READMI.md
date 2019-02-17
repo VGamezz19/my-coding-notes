@@ -57,7 +57,7 @@ Docker Permite resolver problemas de construir, distribuir y ejecutar software e
 - Lentas:
   - Correr nuestro código en una VM implica no solo arrancar aplicaciones, sino también esperar el boot de la VM en sí.
 
-### Que es un contenedor
+## Que es un contenedor
 Un contenedor es una agrupacion de procesos. y ejecuta los procesos de forma nativa (no como en una maquina virtual).
 
 Los procesos que se ejecutan dentro de los contenedores, solo veran el contexto que esta dentro del contenedor. No puede ir fuera de ese contexto.
@@ -66,7 +66,7 @@ Los procesos que se ejecutan dentro de los contenedores, solo veran el contexto 
 
 Docker esta escrito en Go.
 
-### Comandos basicos
+## Comandos basicos
 
 cada docker run crea un contenedor nuevo, pero que comparten la infomacion.
 
@@ -78,3 +78,22 @@ cada docker run crea un contenedor nuevo, pero que comparten la infomacion.
 - `docker inspect -f {{ josn <\propertie>}} nombre_contenedor` --> filtra una variable especifico del contenedor
 - `docker rm $(ps -aq)` --> borra TODOS los contenedores
 - `docker rm nombre_contenedor` --> elimina un contenedor
+
+### docker run ubuntu
+
+cuando ejecutamos `docker run ubuntu`, generamos un contenedor con la especificacion de la ultima version de ubuntu.
+
+Cuando hacemos un `docker ps -a`, veremos que se nos ha creado un nuevo contenedor, y en la pestaña `Command` veremos esto: `"/bin/bash"`.
+
+Esto significa, que cuando corramos el contenedor, va a ejecutar el comando bin/bash, que en ubuntu es la ejecucion de su consola.
+
+El problema esque nosotros tenemos una cosnola diferente, y si no queremos atachar a esta consola, tendremos que subscribirnos a ella. como? Con el flag `-it`
+
+`docker run -it ubuntu`
+
+nos atacharemos a la consola de la imagen que cree.
+
+El significado de las flags -it:
+
+- -t: Asignar un pseudo-tty (Terminal).
+- -i: mantén STDIN abierto incluso si no está conectado.
