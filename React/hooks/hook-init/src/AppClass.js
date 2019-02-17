@@ -1,5 +1,4 @@
 import React, { Component }  from 'react';
-import './App.css'
 
 function Todo({ todo }) {
   return (
@@ -34,13 +33,13 @@ class TodoForm extends Component {
   render() {
     return (
       <form onSubmit={this.handlerSubmit}>
-        <input type="text" value={this.state.text} onChange={this.handlerChange}></input>
+        <input type="text" placeholder="add todo" value={this.state.text} onChange={this.handlerChange}></input>
       </form>
     );
   }
 }
 
-class App extends Component {
+class AppClass extends Component {
   constructor(props) {
     super(props);
 
@@ -58,10 +57,32 @@ class App extends Component {
           text: 'Build really cool todo appt',
           isCompleted: false,
         }
-      ]
+      ],
+
+      width: window.innerWidth
     }
 
     this.addTodo = this.addTodo.bind(this);
+    this.handlerResize = this.handlerResize.bind(this)
+  }
+
+  componentDidMount() {
+    document.title = `there are ${this.state.todos.length} todos`;
+    window.addEventListener('resize', this.handlerResize);
+  }
+
+  componentDidUpdate() {
+    document.title = `there are ${this.state.todos.length} todos`;
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handlerResize);
+  }
+
+  handlerResize() {
+    this.setState({
+      width: window.innerWidth
+    })
   }
 
   addTodo(text) {
@@ -81,9 +102,11 @@ class App extends Component {
           <Todo key={index} index={index} todo={todo}/>
         ))}
         <TodoForm addTodo={this.addTodo}/>
+
+        <div>{this.state.width}</div>
       </div>
     );
   }
 }
 
-export default App;
+export default AppClass;
