@@ -148,3 +148,19 @@ Si nosotros volvemnos a crear o asignar el mismo puerto (8081) a otro contenedor
 ```sh
 2a53d87a33f1   nginx  "nginx -g 'daemon of…" 28 seconds ago   Up 27 seconds    0.0.0.0:8081->80/tcp server
 ```
+
+## Datos en Docker
+
+Vamos a crear un contenedor con `MongoDB` pero vamos a añadir un nuevo flag `-v`, con este flag podemos especificarle que espacio en memoria de nuestro local podra usar el contenedor para alamacenar los datos de Mongo.
+
+Si no especificaramos una ruta para almacenar los datos, cuando nosotros eliminaramos el contenedor, la data desapareceria.
+
+`docker run --name db -d -v <local-path>:<container-path> mongo`
+
+`docker run --name db -d -v /Volumes/Victor/platzi-course-notes/docker/mongodata:/data/db mongo`
+
+Hay una cosa a tener en cuenta, si nosotros añadimos algo desde fuera del contenedor en la carpeta `/Volumes/Victor/platzi-course-notes/docker/mongodata` esto se vera rapidamente reflejado en el contenedor.
+
+Hemos creado un puente entre el dico local y el contenedor.
+
+Asi podremos persistir los datos, y podremos eliminar y crear tantasveces que queramos el contenedor, que siempre mantendran los mismos datos.
