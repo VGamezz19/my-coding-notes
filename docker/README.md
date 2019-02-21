@@ -322,3 +322,79 @@ a la primera vez que creemos la imagen, ejecutara todos los comandos, pero, cuan
 usara la cache.
 
 Para no tener que estar todo el rato creando una imagen cadavez que modificamos el codigo, podemos usar la aherramienta `nodemon` y dejar el proceso "watcheando" para ir bien el codigo y que no sea tan tedioso.
+
+## Network Dokcer conectar contenedores
+
+### Pasos a seguir
+
+Para poder crear una conexion entre dos contenedores, la primera norma esque esten dentro de la misma red, y la segunda esque esten enlazados con un netword. Para crear un network tendremos que seguir estas instruccioned:
+
+- `docker network create --attachable platzinet`;
+
+hemos creado una network con el nombre `platzinet` y con la propiedad `attachable` para que otros conetenedores se puedan conectar.
+
+Despues crearemos el contenedor con la BBDD de mongo, y attacharemos el contendor a la red.
+
+- `docker run -d --name db docker`
+
+una vez creado el contenedor, lo conectaremos a `platzinet`
+
+- `docker network connect platzinet db`
+
+Si inspenccionamos el network creado, veremos que nuestro contenedor se a attachado correctamente.
+
+- `docker network inspect platzinet`
+
+Despues creamos el contenedor con la imagen de nuestro codigo, pero pasando la variable de entorno donde esta alocado el host de nuestro contenedor de la BBDD
+
+- `docker run -d --name app -p 3000:3000 --env MONGO_URL=mongodb://db:27017/test platziapp`
+
+estaremos creando un contenedor con el nombre `app` alojado en el puerto `3000` y con la variable de esntorno definida `MONGO_URL=mongodb://db:27017/test`
+
+Lo bueno de las networks, es que cuando enlazamos un contenedor, y queremos acceder al IP virtual que se ha generado automaticamente, para poder acceder a el, simplemente  tendremos que poner el nombre del contenedor que esta corriendo
+
+Por ultimo tendremos que contectar nuestro contenedor de app al network, para que se cree un puente entre ambos y se puedan comunicar.
+
+- `docker network connect platzinet app`
+
+### Borrar una redes en docker
+
+`docker network rm <nombre de la red>`
+Ej: docker network rm platzinet
+
+### Crear una redes en docker
+
+`docker network create --attachable <nombre de la red>``
+
+—attachable es para que otros contenedores se puedan unir a esta red
+
+Ej: docker network create --attachable platzinet
+
+### Ver redes disponibles docker
+
+`docker network ls`
+
+- bridge red por defecto y se conectan con un keyword link esta en desuso, compatibilidad (deprecated)
+- host simula la red del computador que corre docker (no usar)
+- none hacer que tenga el network desabilitado
+
+### Ver contenedores en un red
+
+`docker network inspect <nombre de la red>``
+
+Ej: docker network inspect platzinet
+Detallar la busqueda
+docker network inspect -f '{{.Containers}}' platzinet
+
+### Unir un contenedor a la red creada
+
+`docker network connect <nombre de la red> <nombre del contenedor>`
+
+Ej: docker network connect platzinet db
+
+docker run -d --name app -p 3000:3000 --env MONGO_URL=mongodb://db:27017/test platziapp
+
+### Variable de entorno
+
+-env variable de entorno
+db es el nombre del contenedor sin necesidad de pasar la ip del contenedor para la conexión
