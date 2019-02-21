@@ -602,3 +602,78 @@ services:
   db:
     image: mongo
 ```
+
+## Dokcer produccion
+
+>build/development.Dockerfile
+
+```dockerfile
+FROM node:10
+
+COPY ["package.json", "package-lock.json", "/usr/src/"]
+
+WORKDIR /usr/src
+
+RUN npm install --only=production
+
+COPY [".", "/usr/src/"]
+
+RUN npm install --only=development
+
+EXPOSE 3000
+
+CMD ["npx", "nodemon", "index.js"]
+```
+
+Esta imagen la correremos cuando tengamos que crear la imagen para el desarollo.
+
+- `npm install --only=production` solo instalara las depencendias  de produccion
+- `npm install --only=development` solo instalara las dependencias de desarrollo 
+
+>build/production.Dockerfile
+
+```dockerfile
+FROM node:10 as builder
+
+COPY ["package.json", "package-lock.json", "/usr/src/"]
+
+WORKDIR /usr/src
+
+RUN npm install --only=production
+
+COPY [".", "/usr/src/"]
+
+RUN npm install --only=development
+
+RUN npm run test
+
+
+# Productive image
+FROM node:10
+
+COPY ["package.json", "package-lock.json", "/usr/src/"]
+
+WORKDIR /usr/src
+
+RUN npm install --only=production
+
+COPY --from=builder ["/usr/src/index.js", "/usr/src/"]
+
+EXPOSE 3000
+
+CMD ["node", "index.js"]
+```
+
+En este caso, estamos creando un dockerfile para produccion, creando 2 especificaciones. La primera, creara una imagen con las dependencias de produccion y desarrollo, y tirara los tests.
+
+`as builder` es un alias, que luego podremos usar, en la segunda especificacion de dockerfile
+
+si  todos los test han pasado correctamente, entonces generaremos la imagen definitiba para produccion. Sino, petara el docker build.
+
+solo tiraremos las dependencias de produccion, y copiaremos los archivos productivos, solo aquellos que tiren mi aplicacion.
+
+`COPY --from=builder ["/usr/src/index.js", "/usr/src/"]`
+
+--from=builder se refiere a la primera imagen creada.
+
+lo bueno esque usara cache del primero!
