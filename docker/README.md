@@ -485,3 +485,31 @@ e6c2fee97c76        bridge                    bridge              local
 766cbb33d2d6        host                      host                local
 a7ada91cdcb7        none                      null                local
 ```
+
+## More about DockerCompose
+
+### Detener contenedores en docker-compose
+
+`docker-compose down``
+
+Para los contenedores y los borra incluyendo el network
+
+### Entrar a un contenedor montado con docker-compose
+
+`docker-compose exec <nombre del servicio> bash`
+
+Ej: docker-compose exec app bash
+
+### Ver logs de los contenedores montados con docker-compose
+
+`docker-compose logs <nombre-del-servicio`
+
+### Ver el status de docker-compose
+
+`docker-compose ps`
+
+### Ejecutar contenedores en segundo plano docker-compose
+
+`docker-compose up -d``
+
+- -d = —detach Corre en segundo plano (No muestra el output)
