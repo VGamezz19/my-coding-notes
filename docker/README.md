@@ -398,3 +398,90 @@ docker run -d --name app -p 3000:3000 --env MONGO_URL=mongodb://db:27017/test pl
 
 -env variable de entorno
 db es el nombre del contenedor sin necesidad de pasar la ip del contenedor para la conexión
+
+## Docker Composer
+
+utilziar el compose fil, que utiliza la extendial YML, para describir como queremos que sea nuestra aplicacion,
+
+```yml
+# La version del docker compose. Se recomienda usar de la 2 para arriba.
+version: "3"
+
+#Cuando hablamos de nuestra aplicacion, hablamos de servicios, no de contendores.
+# La diferencia entre un servicio y un contenedor, esque un servicio puede tener más de un contenedor. Como podemos ver en esta especificacion.
+services:
+  app:
+    image: platziapp
+    environment:
+      MONGO_URL: "mongodb://db:27017/test" # la variable de entorno del contenedor, con la IP virtualizada del contenedor `db`
+    # la dependencia de nuestro contenedor
+    depends_on:
+      - db
+    ports:
+      - "3000:3000"
+
+  db:
+    image: mongo
+```
+
+ejecutamos el comando donde este el fichero Dockercompose.yml
+
+`docker-compose up`
+
+```sh
+Creating network "docker-platzijs_default" with the default driver
+Creating docker-platzijs_db_1 ... done
+Creating docker-platzijs_app_1 ... done
+Attaching to docker-platzijs_db_1, docker-platzijs_app_1
+db_1   | 2019-02-21T14:35:13.906+0000 I CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+db_1   | 2019-02-21T14:35:13.909+0000 I CONTROL  [initandlisten] MongoDB starting : pid=1 port=27017 dbpath=/data/db 64-bit host=7d263ca5d710
+db_1   | 2019-02-21T14:35:13.910+0000 I CONTROL  [initandlisten] db version v4.0.6
+db_1   | 2019-02-21T14:35:13.910+0000 I CONTROL  [initandlisten] git version: caa42a1f75a56c7643d0b68d3880444375ec42e3
+db_1   | 2019-02-21T14:35:13.910+0000 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.2g  1 Mar 2016
+db_1   | 2019-02-21T14:35:13.910+0000 I CONTROL  [initandlisten] allocator: tcmalloc
+db_1   | 2019-02-21T14:35:13.911+0000 I CONTROL  [initandlisten] modules: none
+db_1   | 2019-02-21T14:35:13.911+0000 I CONTROL  [initandlisten] build environment:
+db_1   | 2019-02-21T14:35:13.911+0000 I CONTROL  [initandlisten]     distmod: ubuntu1604
+db_1   | 2019-02-21T14:35:13.911+0000 I CONTROL  [initandlisten]     distarch: x86_64
+db_1   | 2019-02-21T14:35:13.911+0000 I CONTROL  [initandlisten]     target_arch: x86_64
+db_1   | 2019-02-21T14:35:13.911+0000 I CONTROL  [initandlisten] options: { net: { bindIpAll: true } }
+db_1   | 2019-02-21T14:35:13.912+0000 I STORAGE  [initandlisten] 
+db_1   | 2019-02-21T14:35:13.912+0000 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+db_1   | 2019-02-21T14:35:13.912+0000 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+db_1   | 2019-02-21T14:35:13.913+0000 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=487M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+db_1   | 2019-02-21T14:35:14.635+0000 I STORAGE  [initandlisten] WiredTiger message [1550759714:635705][1:0x7fb95f667a40], txn-recover: Set global recovery timestamp: 0
+db_1   | 2019-02-21T14:35:14.647+0000 I RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+db_1   | 2019-02-21T14:35:14.663+0000 I CONTROL  [initandlisten] 
+db_1   | 2019-02-21T14:35:14.663+0000 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+db_1   | 2019-02-21T14:35:14.663+0000 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+db_1   | 2019-02-21T14:35:14.663+0000 I CONTROL  [initandlisten] 
+db_1   | 2019-02-21T14:35:14.664+0000 I STORAGE  [initandlisten] createCollection: admin.system.version with provided UUID: 14b9386f-97b6-4d94-9148-c52a0ec9246b
+db_1   | 2019-02-21T14:35:14.678+0000 I COMMAND  [initandlisten] setting featureCompatibilityVersion to 4.0
+db_1   | 2019-02-21T14:35:14.693+0000 I STORAGE  [initandlisten] createCollection: local.startup_log with generated UUID: 0dda3d51-8c21-44f4-9240-d7fb2ccfbef4
+db_1   | 2019-02-21T14:35:14.712+0000 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/db/diagnostic.data'
+db_1   | 2019-02-21T14:35:14.714+0000 I NETWORK  [initandlisten] waiting for connections on port 27017
+db_1   | 2019-02-21T14:35:14.722+0000 I STORAGE  [LogicalSessionCacheRefresh] createCollection: config.system.sessions with generated UUID: 3541311d-f387-48c4-98e8-567a346080ba
+db_1   | 2019-02-21T14:35:14.743+0000 I INDEX    [LogicalSessionCacheRefresh] build index on: config.system.sessions properties: { v: 2, key: { lastUse: 1 }, name: "lsidTTLIndex", ns: "config.system.sessions", expireAfterSeconds: 1800 }
+db_1   | 2019-02-21T14:35:14.744+0000 I INDEX    [LogicalSessionCacheRefresh] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+db_1   | 2019-02-21T14:35:14.745+0000 I INDEX    [LogicalSessionCacheRefresh] build index done.  scanned 0 total records. 0 secs
+app_1  | [nodemon] 1.18.7
+app_1  | [nodemon] to restart at any time, enter `rs`
+app_1  | [nodemon] watching: *.*
+app_1  | [nodemon] starting `node index.js`
+app_1  | Hola que tal Testing Debuging with Docker yepa
+app_1  | Server listening on port 3000!
+```
+
+y vemos que se ha creado primero el contendor `db` y despus `app`
+
+Con esto, me he ahorrado tener que crearmo un network, enlazarlos y contectarlos. lo hace automaticamente.
+
+`docker network ls`
+
+```sh
+NETWORK ID          NAME                      DRIVER              SCOPE
+e6c2fee97c76        bridge                    bridge              local
+2f2e37aaf807        docker-platzijs_default   bridge              local
+766cbb33d2d6        host                      host                local
+a7ada91cdcb7        none                      null                local
+```
