@@ -12,9 +12,9 @@ console.log("Hola que tal Testing Debuging with Docker yepa");
 app.get('/', (req, res) => {
   MongoClient.connect(mongoUrl, { useNewUrlParser: true }, (err, db) => {
     if (err) {
-      res.status(500).send('💥 BOOM Yep 💥: ' + err);
+      res.status(500).send('💥 BOOOOOM 💥: ' + err);
     } else {
-      res.send('Me conecté a la DB! 😎');
+      res.send('Me se refresca el codigo a la DB! 😎');
       db.close();
     }
   });

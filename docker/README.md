@@ -490,7 +490,7 @@ a7ada91cdcb7        none                      null                local
 
 ### Detener contenedores en docker-compose
 
-`docker-compose down``
+`docker-compose down`
 
 Para los contenedores y los borra incluyendo el network
 
@@ -513,3 +513,92 @@ Ej: docker-compose exec app bash
 `docker-compose up -d``
 
 - -d = —detach Corre en segundo plano (No muestra el output)
+
+## DockerCompose for Developers
+
+```yml
+version: "3"
+
+services:
+  app:
+    # image: platziapp
+    build: .
+    environment:
+      MONGO_URL: "mongodb://db:27017/test"
+    depends_on:
+      - db
+    ports:
+      - "3000:3000"
+
+  db:
+    image: mongo
+```
+
+Si estamos desarrollando, tenemos que estar todo el rato montando la imagen, y despues levantando el codigo con `docker-compose up`, pero hay una forma más rapida de solucionar esto:
+
+si substituimos el parametro de `image` por `build`, docker-compose sera lo suficientement listo como para saber que ha de montar la imagen. (le hemos de poner el path, en este caso `.`)
+
+para ejecutar esto, tendremos que lanzar 
+
+`docker-compose build`
+
+esto nos creara por defecto una imagen, que se llamara: `<nombre-del-fichero>_<nombre-del-servicio>`
+
+```sh
+db uses an image, skipping
+Building app
+Step 1/7 : FROM node:lts
+ ---> 8fc2110c6978
+Step 2/7 : COPY ["package.json", "package-lock.json", "/usr/src/"]
+ ---> Using cache
+ ---> 56a1a434fe7c
+Step 3/7 : WORKDIR /usr/src
+ ---> Using cache
+ ---> 62299117f1b3
+Step 4/7 : RUN npm install
+ ---> Using cache
+ ---> 91b170c31b5e
+Step 5/7 : COPY [".", "/usr/src/"]
+ ---> Using cache
+ ---> 84bd7441d090
+Step 6/7 : EXPOSE 3000
+ ---> Using cache
+ ---> 5b2a0337ae14
+Step 7/7 : CMD ["npx","nodemon", "index.js"]
+ ---> Using cache
+ ---> 61af9bcfaf6e
+Successfully built 61af9bcfaf6e
+Successfully tagged docker-platzijs_app:latest
+```
+
+Otro problema que teneos es que, cuando modificamos el codigo, tenemos que estar todo el rato haciendo docke-compose up -d
+
+y existe una forma de que el codigo se refresque solo:
+
+>docker-compose.yml
+
+```yml
+version: "3"
+
+services:
+  app:
+    build: .
+    environment:
+      MONGO_URL: "mongodb://db:27017/test"
+    depends_on:
+      - db
+    ports:
+    #Le especificamos el rando de puertos en los que se pueden levantar
+    #Usando docker-compose scale app=4 (una vez exo docker-compose up -d)
+    #Levantara 4 contenedores del servicio app entre los puertos 3000-3010 
+      - "3000-3010:3000"
+    volumes:
+    #Bindeamos el volumen de nuestro directorio `.` a la carpeta donde esta el codigo de nuestro contenedor
+    # Con esto, todo lo que se modifique en mi directorio, se vera reflejado en el contenedor. pero hay un problema. 
+      - .:/usr/src
+    #En nuestra carpeta no existe un noda_module, solo existe en el contenedor, y si no se lo marcamos al dockerCompose, lo va a eliminar. por eso añadimos esto:
+      - /usr/src/node_modules #Esta carpeta no la sobrescribas
+
+  db:
+    image: mongo
+```

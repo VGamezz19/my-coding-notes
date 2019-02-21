@@ -2,13 +2,16 @@ version: "3"
 
 services:
   app:
-    image: platziapp
+    build: .
     environment:
       MONGO_URL: "mongodb://db:27017/test"
     depends_on:
       - db
     ports:
-      - "3000:3000"
+      - "3000-3010:3000"
+    volumes:
+      - .:/usr/src
+      - /usr/src/node_modules #Esta carpeta no la sobrescribas
 
   db:
     image: mongo
