@@ -11,7 +11,7 @@ import React, { Component } from 'react';
 import { Text } from 'react-native';
 import Home from './src/screens/containers/home';
 import Header from './src/sections/components/header';
-
+import SuggestionList from './src/videos/containers/suggestion-list';
 // const instructions = Platform.select({
 //   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
 //   android:
@@ -29,6 +29,7 @@ export default class App extends Component<Props> {
         <Text>Buscador</Text>
         <Text>Categorias</Text>
         <Text>Sugerencias</Text>
+        <SuggestionList />
       </Home>      
     );
   }
