@@ -12,6 +12,7 @@ import { Text } from 'react-native';
 import Home from './src/screens/containers/home';
 import Header from './src/sections/components/header';
 import SuggestionList from './src/videos/containers/suggestion-list';
+import API from './src/api';
 // const instructions = Platform.select({
 //   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
 //   android:
@@ -21,6 +22,16 @@ import SuggestionList from './src/videos/containers/suggestion-list';
 
 type Props = {};
 export default class App extends Component<Props> {
+  state = {
+    suggestionList: []
+  }
+  async componentDidMount() {
+    const movies = await API.getSuggestion(1);
+    this.setState({
+      suggestionList: movies
+    })
+  }
+
   render() {
     return (
       <Home>
@@ -29,7 +40,8 @@ export default class App extends Component<Props> {
         <Text>Buscador</Text>
         <Text>Categorias</Text>
         <Text>Sugerencias</Text>
-        <SuggestionList />
+        <SuggestionList 
+          list={this.state.suggestionList}/>
       </Home>      
     );
   }
