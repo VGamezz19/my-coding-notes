@@ -34,3 +34,11 @@ Hot/live reloading
 Depuración de Javascript
 Network inspector
 Stack Trace
+
+## Frameworks Styles
+
+Para proyectos que no requieran de estilos totalmente personalizados podemos utilizar algunos de estos paquetes para potenciar la velocidad de nuestro desarrollo cuanto estilos:
+
+- Native Base en lo personal mi favorita ya que trae una gran variedad de componentes que pueden ver aquí
+- React Native Material UI, basada en el estándar Material de Google, pueden ver los componentes que trae aquí
+- React Native Easy Grid Este es un paquete desarrollado por los autores de Native Base, y sirve para hacer layouts bastante complejos de una manera bastante intuitiva.
