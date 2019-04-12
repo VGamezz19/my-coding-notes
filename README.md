@@ -53,6 +53,12 @@
  - [^^/^^/2018 - (📄) Plain - Docker-NetCore](https://github.com/PlainConcepts/NetCore-Docker-Workshop)
  
  - [17/01/2019 - (📄) API - Best practices RESTUL API]( https://blog.mwaysolutions.com/2014/06/05/10-best-practices-for-better-restful-api/)
+ 
+## C#
+
+- [^^/^^/20^^ - (📄) C# - Delegates](http://www.leomicheloni.com/post/2019/01/13/Delegate-predicate-Action-Func-metodos-anonimos-explicados-para-mortales)
+
+- [^^/^^/20^^ - (📄) C# - Extension Methods](https://docs.microsoft.com/es-es/dotnet/csharp/programming-guide/classes-and-structs/extension-methods)
 
 ## JavaScript
 
