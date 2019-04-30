@@ -54,6 +54,10 @@
  
  - [17/01/2019 - (📄) API - Best practices RESTUL API]( https://blog.mwaysolutions.com/2014/06/05/10-best-practices-for-better-restful-api/)
  
+  - 30/04/2019 - (📄) NODE - NPX between NPM](https://stackoverflow.com/questions/50605219/difference-between-npx-and-npm)
+ 
+ https://stackoverflow.com/questions/50605219/difference-between-npx-and-npm
+ 
 ## C#
 
 - [^^/^^/20^^ - (📄) C# - Delegates](http://www.leomicheloni.com/post/2019/01/13/Delegate-predicate-Action-Func-metodos-anonimos-explicados-para-mortales)
@@ -81,8 +85,6 @@
  - [^^/^^/2018 - (📄) JavaScript - Clean Code JS](https://github.com/ryanmcdermott/clean-code-javascript)
 
  - [^^/^^/2018 - (📄) JavaScript - 33 js concepts](https://github.com/leonardomso/33-js-concepts)
-
-
 
 ## ES6
 
