@@ -54,9 +54,7 @@
  
  - [17/01/2019 - (📄) API - Best practices RESTUL API]( https://blog.mwaysolutions.com/2014/06/05/10-best-practices-for-better-restful-api/)
  
-  - 30/04/2019 - (📄) NODE - NPX between NPM](https://stackoverflow.com/questions/50605219/difference-between-npx-and-npm)
- 
- https://stackoverflow.com/questions/50605219/difference-between-npx-and-npm
+ - [30/04/2019 - (📄) NODE - NPX between NPM](https://stackoverflow.com/questions/50605219/difference-between-npx-and-npm)
  
 ## C#
 
