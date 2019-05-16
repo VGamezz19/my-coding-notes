@@ -26,7 +26,7 @@ export default class App extends Component<Props> {
     suggestionList: []
   }
   async componentDidMount() {
-    const movies = await API.getSuggestion(1);
+    const movies = await API.getSuggestion(10);
     this.setState({
       suggestionList: movies
     })
