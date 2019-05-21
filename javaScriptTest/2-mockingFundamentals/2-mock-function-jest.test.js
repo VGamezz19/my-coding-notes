@@ -34,8 +34,11 @@ it("Mocking function JEST", () => {
 
     expect(winner).toBe("Victor");
     expect(utils.getWinner).toHaveBeenCalledTimes(2)
-    expect(utils.getWinner).toBeCalledWith("Victor", "Pepe")
-
+    expect(utils.getWinner).toBeCalledWith('Victor', 'Pepe')
+    //First call, ensure the paramnetters
+    expect(utils.getWinner).toHaveBeenNthCalledWith(1, 'Victor', 'Pepe')
+    //Second call, ensure the parameters
+    expect(utils.getWinner).toHaveBeenNthCalledWith(2, 'Victor', 'Pepe')
     //clean
     utils.getWinner = originalGetWinner
 })
