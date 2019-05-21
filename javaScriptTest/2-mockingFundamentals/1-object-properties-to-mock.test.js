@@ -36,6 +36,7 @@ it("moking Get Winner", () =>
     expect(winner).toBe("Victor")
 )
 
+// clean up
 //at the end, we restore the method getWinner
 utils.getWinner = originalGetWinner
 

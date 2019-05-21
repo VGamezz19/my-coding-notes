@@ -24,18 +24,20 @@ function thumbWar(player1, player2) {
     return player1Wins > player2Wins ? player1 : player2;
 }
 
-// No framework (JEST)
-// utils.getWinner, provide us a random winner, and we can not test as a properly
-//Moking utils:
-const originalGetWinner = utils.getWinner;
+it("Mocking function JEST", () => {
+    const originalGetWinner = utils.getWinner;
+    // Nos interesa mockear la funcion, ya que podemos estar mokeandola, pero que este mal implementada en el codigo.
+    // Por ejemplo, que estemos mokeando cons 2 parametros, pero en la implementacion, solo estemos usando 1.
+    utils.getWinner = jest.fn((p1, p2) => p1);
 
-utils.getWinner = (p1, p2) => p1;
+    const winner = thumbWar("Victor", "Pepe")
 
-const winner = thumbWar("Victor", "Pepe")
-it("moking Get Winner", () => 
-    expect(winner).toBe("Victor")
-)
+    expect(winner).toBe("Victor");
+    expect(utils.getWinner).toHaveBeenCalledTimes(2)
+    expect(utils.getWinner).toBeCalledWith("Victor", "Pepe")
 
-//at the end, we restore the method getWinner
-utils.getWinner = originalGetWinner
+    //clean
+    utils.getWinner = originalGetWinner
+})
+
 
