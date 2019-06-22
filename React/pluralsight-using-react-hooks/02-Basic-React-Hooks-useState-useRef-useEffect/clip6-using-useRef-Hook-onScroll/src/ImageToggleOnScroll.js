@@ -1,10 +1,9 @@
 import React, {useRef, useEffect, useState} from "react";
 
 const ImageTogglerOnScroll = ({ primaryImg, secondaryImg }) => {
-
+    debugger
     const imageRef = useRef(null);
     const [isLoading,setIsLoading] = useState(true);
-
     useEffect(() => {
         window.addEventListener("scroll", scrollHandler);
         setInView(isInView());
