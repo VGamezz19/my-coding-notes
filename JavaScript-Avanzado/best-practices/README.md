@@ -48,3 +48,77 @@ obj.readOnly = 'I Wrote this';
 console.log(obj.readOnly) // This var is read only
 
 ```
+
+## This
+
+```js
+var obj = function() {
+    this.hello = 'hello';
+
+    this.greet = function() {
+        console.log(this.hello);
+    }
+
+    this.delayGreeting = function() {
+        setTimeout(this.greet, 1000)
+    }
+}
+
+var greeter = new obj();
+
+greeter.hello // hello
+greeter.greet() // hello
+greeter.delayGreeting() // undefined.
+
+```
+
+how to solve it
+
+```js
+var obj = function() {
+    this.hello = 'hello';
+
+    this.greet = function() {
+        console.log(this.hello);
+    }
+
+    this.delayGreeting = function() {
+        setTimeout(this.greet.bind(this), 1000)
+    }
+}
+
+var greeter = new obj();
+
+greeter.hello // hello
+greeter.greet() // hello
+greeter.delayGreeting() // hello.
+
+```
+
+or
+
+
+```js
+var obj = function() {
+    var _this = this;
+
+    _this.hello = 'hello';
+
+    _this.greet = function() {
+        console.log(_this.hello);
+    }
+
+    _this.delayGreeting = function() {
+        setTimeout(_this.greet, 1000)
+    }
+}
+
+var greeter = new obj();
+
+greeter.hello // hello
+greeter.greet() // hello
+greeter.delayGreeting() // hello.
+
+```
+
+or by using Arrow Function... best solution i think xD
