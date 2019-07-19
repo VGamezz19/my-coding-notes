@@ -6,13 +6,13 @@ Básicamente es un Framework de JS que te permite crear Single Page Applications
 
 ### Versiones de Angular
 
-__Angular 1__: Tambien conocido como `AngularJS`, versión inicial del Framework.
+**Angular 1**: Tambien conocido como `AngularJS`, versión inicial del Framework.
 
-__Angular 2__: Revisión completa del Framework. Se desecho AngularJS y se reescribió de nuevo. Esto porque AngularJS tenía errores. Literalmente era más sencillo crear un nuevo Framework que corregir el que ya se tenía.
+**Angular 2**: Revisión completa del Framework. Se desecho AngularJS y se reescribió de nuevo. Esto porque AngularJS tenía errores. Literalmente era más sencillo crear un nuevo Framework que corregir el que ya se tenía.
 
-__Angular 4__: El primer update mayor de Angular 2.
+**Angular 4**: El primer update mayor de Angular 2.
 
-¿Y __Angular 3__?
+¿Y **Angular 3**?
 
 No lo pusieron porque Igor Minar líder del equipo de Angular en Google explicó que se saltó de la versión 2 a la 4 porque el módulo de Angular Router (El que permite las SPA’S) tenía versión 3.3.0 y los demás módulos de Angular el 2.3.0. Entonces eso podría o generaba errores. Por lo cual decidieron alinearlo todo con la versión 4.
 
@@ -22,7 +22,7 @@ Es un Superset de JavaScript. Esto quiere decir que esta escrito en JavaScript.
 
 Es un agregado a JavaScript, no lo reemplaza. Habrá algunas tareas que TypeScript no pueda hacer entonces JavaScript se encargará de ello.
 
-__Agrega nuevas características como:__
+**Agrega nuevas características como:**
 
 - Tipos.
 
@@ -30,8 +30,9 @@ __Agrega nuevas características como:__
 
 - Interfaces.
 
-__TypeScript es transpilado (Lo traduce y lo compila) a Javascript.__
+**TypeScript es transpilado (Lo traduce y lo compila) a Javascript.**
 Esto es porque la mayoría de los navegadores no entiende TypeScript. Pero sí JavaScript. Por lo cual el navegador recibirá JavaScript. El transpilado se hace de forma automática.
 
 Es el lenguaje en el que programaremos para Angular 4.
 
+## Angular CLI
