@@ -1,10 +1,10 @@
 import makeMessage from './make-message.js';
 import renderToDOM from './render-to-dom.js';
 
-const waitTime = new Promise((todoOk, todoMal) => {
+const waitTime = new Promise((tooOoOk, todoMal) => {
   setTimeout(() => {
-    todoOk('Han pasado 3 segundos OMG')
-  }, 3000)
+    tooOoOk('Han pasado 3 segundos OMG');
+  }, 3000);
 });
 
 module.exports = {
@@ -13,5 +13,4 @@ module.exports = {
     const message = await waitTime;
     renderToDOM(makeMessage(message));
   }
-}
-
+};

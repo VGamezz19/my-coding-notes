@@ -1,9 +1,9 @@
 import renderToDOM from './render-to-dom.js';
 import makeMessage from './make-message.js';
 
-const waitTime = new Promise((todoOk, todoMal) => {
+const waitTime = new Promise((tooOoOk, todoMal) => {
   setTimeout(()=> {
-    todoOk('Han pasado 3 segundos, omg');
+    tooOoOk('Han pasado 3 segundos, omg');
   }, 3000)
 })
 

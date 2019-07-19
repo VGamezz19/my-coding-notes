@@ -1,20 +1,14 @@
 import React, { Component } from 'react';
 
 function Todo({ todo }) {
-  return (
-    <div>
-      {' '}
-      {todo.text}
-      {' '}
-    </div>
-  );
+  return <div> {todo.text} </div>;
 }
 
 class TodoForm extends Component {
-  constructor(props) {
+  constructor(props) {
     super(props);
     this.state = {
-      text: '',
+      text: ''
     };
 
     this.handlerChange = this.handlerChange.bind(this);
@@ -37,7 +31,12 @@ class TodoForm extends Component {
   render() {
     return (
       <form onSubmit={this.handlerSubmit}>
-        <input type="text" placeholder="add todo" value={this.state.text} onChange={this.handlerChange} />
+        <input
+          type="text"
+          placeholder="add todo"
+          value={this.state.text}
+          onChange={this.handlerChange}
+        />
       </form>
     );
   }
@@ -51,19 +50,19 @@ class AppClass extends Component {
       todos: [
         {
           text: 'Learn about react',
-          isCompleted: false,
+          isCompleted: false
         },
         {
           text: 'Meet friendfor lunch',
-          isCompleted: false,
+          isCompleted: false
         },
         {
           text: 'Build really cool todo appt',
-          isCompleted: false,
-        },
+          isCompleted: false
+        }
       ],
 
-      width: window.innerWidth,
+      width: window.innerWidth
     };
 
     this.addTodo = this.addTodo.bind(this);
@@ -85,7 +84,7 @@ class AppClass extends Component {
 
   handlerResize() {
     this.setState({
-      width: window.innerWidth,
+      width: window.innerWidth
     });
   }
 
@@ -93,7 +92,7 @@ class AppClass extends Component {
     const newTodo = { text, isCompleted: false };
 
     this.setState(state => ({
-      todos: [...state.todos, newTodo],
+      todos: [...state.todos, newTodo]
     }));
   }
 

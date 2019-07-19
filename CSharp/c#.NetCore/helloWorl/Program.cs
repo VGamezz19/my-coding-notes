@@ -8,10 +8,10 @@ namespace helloWorl
         {
             var test = new Program();
 
-            test.penis = "Penises";
-            
+            test.penis = 2.20;
+
             Console.WriteLine("Hello World!", test.penis);
-            
+
         }
 
         public double penis { get; set; }
