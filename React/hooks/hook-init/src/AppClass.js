@@ -1,8 +1,12 @@
-import React, { Component }  from 'react';
+import React, { Component } from 'react';
 
 function Todo({ todo }) {
   return (
-    <div> {todo.text} </div>
+    <div>
+      {' '}
+      {todo.text}
+      {' '}
+    </div>
   );
 }
 
@@ -10,8 +14,8 @@ class TodoForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      text: ''
-    }
+      text: '',
+    };
 
     this.handlerChange = this.handlerChange.bind(this);
     this.handlerSubmit = this.handlerSubmit.bind(this);
@@ -19,21 +23,21 @@ class TodoForm extends Component {
 
   handlerSubmit(event) {
     event.preventDefault();
-    if(!this.state.text){
+    if (!this.state.text) {
       return;
     }
     this.props.addTodo(this.state.text);
-    this.setState({text: ''});
+    this.setState({ text: '' });
   }
 
   handlerChange(event) {
-    this.setState({text: event.target.value});
+    this.setState({ text: event.target.value });
   }
 
   render() {
     return (
       <form onSubmit={this.handlerSubmit}>
-        <input type="text" placeholder="add todo" value={this.state.text} onChange={this.handlerChange}></input>
+        <input type="text" placeholder="add todo" value={this.state.text} onChange={this.handlerChange} />
       </form>
     );
   }
@@ -56,14 +60,14 @@ class AppClass extends Component {
         {
           text: 'Build really cool todo appt',
           isCompleted: false,
-        }
+        },
       ],
 
-      width: window.innerWidth
-    }
+      width: window.innerWidth,
+    };
 
     this.addTodo = this.addTodo.bind(this);
-    this.handlerResize = this.handlerResize.bind(this)
+    this.handlerResize = this.handlerResize.bind(this);
   }
 
   componentDidMount() {
@@ -81,27 +85,25 @@ class AppClass extends Component {
 
   handlerResize() {
     this.setState({
-      width: window.innerWidth
-    })
+      width: window.innerWidth,
+    });
   }
 
   addTodo(text) {
-    const newTodo = { text, isCompleted: false};
+    const newTodo = { text, isCompleted: false };
 
-    this.setState((state) => {
-      return {
-        todos: [...state.todos, newTodo]
-      }
-    });
+    this.setState(state => ({
+      todos: [...state.todos, newTodo],
+    }));
   }
 
   render() {
     return (
       <div>
         {this.state.todos.map((todo, index) => (
-          <Todo key={index} index={index} todo={todo}/>
+          <Todo key={index} index={index} todo={todo} />
         ))}
-        <TodoForm addTodo={this.addTodo}/>
+        <TodoForm addTodo={this.addTodo} />
 
         <div>{this.state.width}</div>
       </div>

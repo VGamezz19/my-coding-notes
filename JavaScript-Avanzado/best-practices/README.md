@@ -97,6 +97,7 @@ greeter.delayGreeting() // hello.
 
 or
 
+Using copy of this.
 
 ```js
 var obj = function() {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect }  from 'react';
+import React, { useState, useEffect } from 'react';
 
 function Todo({ todo }) {
   return (
@@ -25,13 +25,13 @@ function TodoForm({ addTodo }) {
 
   return (
     <form onSubmit={handlerSubmit}>
-      <input type="text" placeholder="add todo" value={text} onChange={handlerChnage}></input>
+      <input type="text" placeholder="add todo" value={text} onChange={handlerChnage} />
     </form>
-  )
+  );
 }
 
 function AppHooks() {
-  const [ todos, setTodos ] = useState([
+  const [todos, setTodos] = useState([
     {
       text: 'Learn about react',
       isCompleted: false,
@@ -43,16 +43,16 @@ function AppHooks() {
     {
       text: 'Build really cool todo appt',
       isCompleted: false,
-    }
+    },
   ]);
   const width = useWindowWidth();
 
   useEffect(() => {
     document.title = `There are ${todos.length} todos`;
-  })
+  });
 
   function addTodo(text) {
-    const newTodo = {text, isCompleted: false};
+    const newTodo = { text, isCompleted: false };
     const updatedTodos = [...todos, newTodo];
 
     setTodos(updatedTodos);
@@ -71,17 +71,17 @@ function AppHooks() {
   );
 }
 
-//custom hooks. use-
+// custom hooks. use-
 function useWindowWidth() {
   const [width, setWidth] = useState(window.innerWidth);
-  useEffect(()=> {
+  useEffect(() => {
     const handlerResize = () => setWidth(window.innerWidth);
     window.addEventListener('resize', handlerResize);
 
     return () => {
       window.removeEventListener('resize', handlerResize);
-    }
-  })
+    };
+  });
   return width;
 }
 
