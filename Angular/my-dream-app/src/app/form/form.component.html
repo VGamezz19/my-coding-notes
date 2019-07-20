@@ -1,0 +1,19 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <input type="button" value="Insert Default Profile" (click)="updateProfileGroup()">
+  <label>
+    First Name:
+    <input type="text" formControlName="firstName">
+  </label>
+
+  <label>
+    Last Name:
+    <input type="text" formControlName="lastName">
+  </label>
+
+  <label>
+    Last Name:
+    <input type="number" formControlName="age">
+  </label>
+
+  <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+</form>
