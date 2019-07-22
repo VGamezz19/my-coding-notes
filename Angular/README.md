@@ -34,5 +34,3 @@ Es un agregado a JavaScript, no lo reemplaza. Habrá algunas tareas que TypeScri
 Esto es porque la mayoría de los navegadores no entiende TypeScript. Pero sí JavaScript. Por lo cual el navegador recibirá JavaScript. El transpilado se hace de forma automática.
 
 Es el lenguaje en el que programaremos para Angular 4.
-
-## Angular CLI
