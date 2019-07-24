@@ -1,0 +1,39 @@
+<div *ngIf="(users$ | async).length > 0">
+  <ul *ngFor="let user of (users$ | async); let i = index">
+    <li>{{i}}</li>
+    <li>
+      {{user.name}}
+    </li>
+    <li>
+      {{user.lastName}}
+    </li>
+    <li>
+      {{user.age}}
+    </li>
+  </ul>
+</div>
+
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <label>
+    First Name:
+    <input type="text" formControlName="name">
+  </label>
+
+  <label>
+    Last Name:
+    <input type="text" formControlName="lastName">
+  </label>
+
+  <label>
+    Age:
+    <input type="number" formControlName="age">
+  </label>
+
+  <select *ngIf="selectCompanys.length" formControlName="companys" id="companys">
+    <option *ngFor="let company of selectCompanys; let i = index" [value]="company.id">
+      {{company.name}}
+    </option>
+  </select>
+
+  <button type="submit" [disabled]="!userForm.valid">Submit</button>
+</form>

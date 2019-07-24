@@ -1,0 +1,23 @@
+<p>company works!</p>
+<div *ngIf="(companys$ | async).length">
+  <ul *ngFor="let company of (companys$ | async); let i = index">
+    <li>
+      Name: {{company.name}}
+    </li>
+    <li>
+      Addres: {{company.addres}}
+    </li>
+    <li>
+      CIF: {{company.CIF}}
+    </li>
+    <ul *ngFor="let user of mapRelationBetweenComapnyAndUsers(company, (users$ | async))">
+      USERS <br>
+      <li>
+        NAME: {{user.name}}
+      </li>
+      <li>
+        lastName: {{user.lastName}}
+      </li>
+    </ul>
+  </ul>
+</div>
