@@ -1,8 +1,10 @@
-# platzi-course-note
+# All My Note
 
 ## [JavaScript-fundamentos](https://github.com/VGamezz19/platzi-course-notes/tree/master/JavaScript-fundamentos) [✔︎]
 
 ## [JavaScript-avanzado](https://github.com/VGamezz19/platzi-course-notes/tree/master/JavaScript-Avanzado) [✔︎]
+
+## [About test](https://github.com/VGamezz19/platzi-course-notes/blob/master/test.md)
 
 ## [NodeJS](https://github.com/VGamezz19/platzi-course-notes/tree/master/NodeJs)
 
@@ -18,73 +20,23 @@
 
 ## [Jenkins](https://github.com/VGamezz19/platzi-course-notes/tree/master/Jenkins)
 
+## [Swift](https://github.com/VGamezz19/platzi-course-notes/tree/master/Swift)
+
 ## [GIT](https://github.com/VGamezz19/platzi-course-notes/blob/master/git.md)[✔︎]
 
-## [About test](https://github.com/VGamezz19/platzi-course-notes/blob/master/test.md)
+## [VSCODE](https://github.com/VGamezz19/platzi-course-notes/blob/master/vscode.md)[✔︎]
 
-## VSCode
+---
 
-Sync Configuration:
+## About languages
 
-GitHub Token: 5ed75fa3f8f35527217e4943f51b4b0e9663c5d6
-GitHub Gist: 0b60fadc9c1afbf0491764b6fe30efeb
-GitHub Gist Type: Secret
+![img](./typeslanguages.png)
 
-### Multi cursor
+---
 
-`Ctrl + Shift + Alt + DownArrow/RightArrow`
-Select Block
+## Interesting Posts
 
-`Ctrl + Shift + L`
-Select all as same name
-
-`Ctrl + D`
-Select all as same name step by step
-
-### Pannel
-
-`Ctrl + p`
-open pannel for searching some file
-
-`Ctrl + p + p`
-open the las file you have been
-
-`Ctrl + Shift + p`
-open pannel configuration
-
-`Ctrl + ,`
-open configuration about VSCode
-
-### Develop
-
-`Ctrl + Shift + O`
-Show you all your symbols inside this file (methods, variables, class, etc)
-
-### Terminal
-
-`Ctrl + T`
-Toggle terminal
-
-`Ctrl + Shift + T`
-Create new view of Terminal (new instance)
-
-_only focusing a terminal_
-
-`Ctrl + Shift + 5`
-Create new pannel inside of Terminal
-
-`Alt + ArrowLeft/Right`
-Switch between pannel
-
-`Alt + ArrowUp/Down`
-Switch between Terminals
-
-`Ctrl + Q`
-Remove terminal
-
-# Interesting Posts
-
-# Legend
+### Legend
 
 1. Read (📄)
 1. Watch (🎥)
@@ -92,7 +44,7 @@ Remove terminal
 
 [MAX - study path](https://github.com/joebew42/study-path)
 
-## Knowledge
+### Knowledge
 
 - [^^/^^/2018 - (📄) TDD - Codurance](https://codurance.com/2018/06/17/frontend-outside-in/)
 
@@ -116,13 +68,13 @@ Remove terminal
 
 - [30/04/2019 - (📄) NODE - NPX between NPM](https://stackoverflow.com/questions/50605219/difference-between-npx-and-npm)
 
-## C
+### C
 
 - [^^/^^/20^^ - (📄) C# - Delegates](http://www.leomicheloni.com/post/2019/01/13/Delegate-predicate-Action-Func-metodos-anonimos-explicados-para-mortales)
 
 - [^^/^^/20^^ - (📄) C# - Extension Methods](https://docs.microsoft.com/es-es/dotnet/csharp/programming-guide/classes-and-structs/extension-methods)
 
-## JavaScript
+### JavaScript
 
 - [20/06/2018 - (📄) JavaScript - Console API](https://medium.freecodecamp.org/working-with-the-devtools-console-and-console-api-an-overview-13cff6dc3db4)
 
@@ -144,7 +96,7 @@ Remove terminal
 
 - [^^/^^/2018 - (📄) JavaScript - 33 js concepts](https://github.com/leonardomso/33-js-concepts)
 
-## ES6
+### ES6
 
 - [12/06/2018 - (📄) ES6 - Hipster Hack - Spread Operator](https://hackernoon.com/javascript-hacks-for-es6-hipsters-67d633ce8ace)
 
@@ -158,7 +110,7 @@ Remove terminal
 
 - [^^/^^/2018 - (📄) ES6 - Transform Class Properties not be as great as we thing](https://medium.com/@charpeni/arrow-functions-in-class-properties-might-not-be-as-great-as-we-think-3b3551c440b1)
 
-## ReactJS
+### ReactJS
 
 - [20/06/2018 - (📄) React - Container pattern](https://medium.com/@learnreact/container-components-c0e67432e005)
 
@@ -170,7 +122,7 @@ Remove terminal
 
 - [^^/^^/2018 - (📄) React - Higher order components](https://reactjs.org/docs/higher-order-components.html)
 
-## Vue
+### Vue
 
 - [18/06/2018 - (📄) Vue - Build Vue Components](https://blog.bitsrc.io/how-to-build-vue-components-like-a-pro-fd89fd4d524d)
 
@@ -178,19 +130,19 @@ Remove terminal
 
 - [^^/^^/2018 - (📄) VUEjs - Scoped Styles vs CSS Modules](https://www.netguru.co/codestories/vue.js-scoped-styles-vs-css-modules?utm_campaign=Codestories&utm_source=twitter&utm_medium=social)
 
-## NodeJS
+### NodeJS
 
 - [18/06/2018 - (📄) Node - About NodeJS](https://medium.freecodecamp.org/what-exactly-is-node-js-ae36e97449f5)
 
-## Webpack
+### Webpack
 
 - [11/06/2018 - (📄) Webpack - The Confusing Parts](https://medium.com/@rajaraodv/webpack-the-confusing-parts-58712f8fcad9)
 
-## GraphQL
+### GraphQL
 
 - [^^/^^/2018 - GraphQL - about queries](https://medium.freecodecamp.org/graphql-front-end-queries-made-easy-68e9d9ded283)
 
-## CSS Styles
+### CSS Styles
 
 - [^^/^^/2018 - (📄) BEM - Introduction](http://getbem.com/introduction/)
 
