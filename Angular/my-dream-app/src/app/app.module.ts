@@ -9,6 +9,7 @@ import { FormComponent } from './form/form.component';
 import { NestedFormComponent } from './nested-form/nested-form.component';
 import { FormBuilderComponent } from './form-builder/form-builder.component';
 import { DinamicFormComponent } from './dinamic-form/dinamic-form.component';
+import { NgTestPipePipe } from './ng-test-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DinamicFormComponent } from './dinamic-form/dinamic-form.component';
     FormComponent,
     NestedFormComponent,
     FormBuilderComponent,
-    DinamicFormComponent
+    DinamicFormComponent,
+    NgTestPipePipe
   ],
   imports: [
     BrowserModule,
