@@ -687,30 +687,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\vgamez\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/Users/victorgamez/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\platzi-course-notes\\CSharp\\c#.NetCore\\helloWorl\\helloWorl.csproj",
+      "projectUniqueName": "/Volumes/Victor/platzi-course-notes/CSharp/c#.NetCore/helloWorl/helloWorl.csproj",
       "projectName": "helloWorl",
-      "projectPath": "c:\\platzi-course-notes\\CSharp\\c#.NetCore\\helloWorl\\helloWorl.csproj",
-      "packagesPath": "C:\\Users\\vgamez\\.nuget\\packages\\",
-      "outputPath": "c:\\platzi-course-notes\\CSharp\\c#.NetCore\\helloWorl\\obj\\",
+      "projectPath": "/Volumes/Victor/platzi-course-notes/CSharp/c#.NetCore/helloWorl/helloWorl.csproj",
+      "packagesPath": "/Users/victorgamez/.nuget/packages/",
+      "outputPath": "/Volumes/Victor/platzi-course-notes/CSharp/c#.NetCore/helloWorl/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\vgamez\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/victorgamez/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
