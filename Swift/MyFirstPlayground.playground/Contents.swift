@@ -154,3 +154,44 @@ let message = "Now playing \(trackName) by \(artistName) wich is \(duration) lon
 
 print(message)
 
+
+// Func
+newChapter(title: "Functions")
+
+func showMessage(number: Int, name: String) { // Are inmutable values
+    //You can't modify the parameters
+    print("The function call worked \(number) and the string: \(name)")
+}
+
+showMessage(number: 24, name: "Douglas")
+
+func basicFunction() -> String {
+    let str = "This is a simple function."
+    return str
+}
+
+let result = basicFunction()
+
+// For ignore what the funcion is returning
+_ = basicFunction()
+
+// Avoid namin the parameter of a function, adding _
+func printUserName(_ name: String, _ lastName: String) -> Void {
+    print(name, lastName)
+}
+
+printUserName("Victor", "Gamez")
+
+// Changing the name of parameters.
+// (Int, Int) -> Int
+func difference(between firstAmount: Int, and secondAmount: Int) -> Int {
+    if firstAmount > secondAmount {
+        return firstAmount - secondAmount
+    } else {
+        return secondAmount - firstAmount
+    }
+}
+
+var res = difference(between: 2000, and: 1500)
+
+print("The difference is: \(res)")
