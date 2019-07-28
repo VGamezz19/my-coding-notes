@@ -195,3 +195,20 @@ func difference(between firstAmount: Int, and secondAmount: Int) -> Int {
 var res = difference(between: 2000, and: 1500)
 
 print("The difference is: \(res)")
+
+
+func show(message: String) -> Void {
+    print(message)
+}
+
+func show(number: Int) -> Void {
+    print(number)
+}
+
+func show(message: String, number: Int) -> Void {
+    print("\(message) \(number)")
+}
+
+show(message: "Hola que tal, show message")
+show(number: 200)
+show(message: "showing", number: 200)

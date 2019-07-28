@@ -161,3 +161,35 @@ var res = difference(between: 2000, and: 1500)
 
 print("The difference is: \(res)")
 ```
+
+## Naming functions
+
+```Swift
+// BAD NAMING
+func showMessage(message: String){ ... }
+showMessage(message: "Hola")
+
+// GOOD NAMING
+func show(message: String)
+show(message:"hola")
+
+//Native from Swift
+var hola: String
+Type(of: hola) // String
+
+func show(message: String) -> Void {
+    print(message)
+}
+
+func show(number: Int) -> Void {
+    print(number)
+}
+
+func show(message: String, number: Int) -> Void {
+    print("\(message) \(number)")
+}
+
+show(message: "Hola que tal, show message")
+show(number: 200)
+show(message: "showing", number: 200)
+```
