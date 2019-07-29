@@ -1,26 +1,26 @@
-import React, { useState, useEffect, useReducer } from "react";
-import axios from "axios";
+import React, { useState, useEffect, useReducer } from 'react';
+import axios from 'axios';
 
 const dataFetchReducer = (state, action) => {
   switch (action.type) {
-    case "FETCH_INIT":
+    case 'FETCH_INIT':
       return { ...state, isLoading: true, isError: false };
-    case "FETCH_SUCCESS":
+    case 'FETCH_SUCCESS':
       return {
         ...state,
         isLoading: false,
         hasErrored: false,
-        errorMessage: "",
+        errorMessage: '',
         data: action.payload
       };
-    case "FETCH_FAILURE":
+    case 'FETCH_FAILURE':
       return {
         ...state,
         isLoading: false,
         hasErrored: true,
-        errorMessage: "Data Retrieve Failure"
+        errorMessage: 'Data Retrieve Failure'
       };
-    case "REPLACE_DATA":
+    case 'REPLACE_DATA':
       const newData = state.data.map(rec => {
         return rec.id === action.replacerecord.id ? action.replacerecord : rec;
       });
@@ -28,7 +28,7 @@ const dataFetchReducer = (state, action) => {
         ...state,
         isLoading: false,
         hasErrored: false,
-        errorMessage: "",
+        errorMessage: '',
         data: newData
       };
     default:
@@ -42,7 +42,7 @@ const useAxiosFetch = (initialUrl, initialData) => {
   const [state, dispatch] = useReducer(dataFetchReducer, {
     isLoading: false,
     hasErrored: false,
-    errorMessage: "",
+    errorMessage: '',
     data: initialData
   });
 
@@ -55,24 +55,23 @@ const useAxiosFetch = (initialUrl, initialData) => {
     //   return response;
     // }, function (error) {
     //   // Do something with response error
-    //   debugger;
     //   return Promise.reject(error);
     // });
 
     const fetchData = async () => {
-      dispatch({ type: "FETCH_INIT" });
+      dispatch({ type: 'FETCH_INIT' });
 
       try {
         let result = null;
         result = await axios.get(url);
 
         if (!didCancel) {
-          dispatch({ type: "FETCH_SUCCESS", payload: result.data });
+          dispatch({ type: 'FETCH_SUCCESS', payload: result.data });
         }
       } catch (err) {
         // tnis err object does not work well, see interceptor above but no luck with that.
         if (!didCancel) {
-          dispatch({ type: "FETCH_FAILURE" });
+          dispatch({ type: 'FETCH_FAILURE' });
         }
       }
     };
@@ -85,7 +84,6 @@ const useAxiosFetch = (initialUrl, initialData) => {
   }, [url]);
 
   const updateDataRecord = record => {
-    debugger;
     // const newData = state.data.map(rec => {
     //   return rec.id === speakerRec.id ? speakerRec : rec;
     // });
@@ -96,9 +94,9 @@ const useAxiosFetch = (initialUrl, initialData) => {
 
     // record must have "id"
     dispatch({
-      type: "REPLACE_DATA",
+      type: 'REPLACE_DATA',
       replacerecord: record
-    })
+    });
   };
 
   return { ...state, updateDataRecord };
