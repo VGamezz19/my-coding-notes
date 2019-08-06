@@ -358,3 +358,45 @@ var nameSortedBookWell = allBooks.sorted { $0.authorName >= $1.authorName }// Vi
 
 print(nameSortedBookWell)
 ```
+
+## Class
+
+```Swift
+newChapter(title: "Class")
+
+class Appliance {
+    var manufacture: String;
+    var model: String;
+    var voltage: Int;
+    var capacity: Int?;
+
+    init(initVoltage: Int) {
+        self.voltage = initVoltage;
+        self.manufacture = "Default value"
+        self.model = "Default value"
+    }
+
+    deinit {
+        // Deinisialazion of the class...
+        // On for classe, not alow for structs
+        /*
+         It's not required that you implement that method,
+         but you can use it if you need to do some action
+         or cleanup before deallocating the object.
+         */
+    }
+
+    func getDetails() -> String {
+        var message = "This is hte \(self.model) from \(self.manufacture)"
+        if (self.voltage >= 200) {
+            message += " This model is for Europeans usage"
+        }
+
+        return message
+    }
+}
+
+var kettle = Appliance(initVoltage: 230)
+
+print(kettle.getDetails())
+```
