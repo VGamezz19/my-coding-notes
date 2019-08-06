@@ -483,3 +483,48 @@ mutableClass1.mutable = "yes! sure"
 
 print(mutableClass1.mutable) // yes! sure
 print(mutableClass2.mutable) // yes! sure
+
+
+newChapter(title: "inheritance")
+
+enum AnimalType {
+    case mamifero
+    case oviparo
+    case alien
+}
+
+// SUPER CLASS
+class Animal {
+    var type: AnimalType;
+    var name: String;
+    var limbs: Int?;
+    
+    init(type: AnimalType, name: String) {
+        self.type = type
+        self.name = name
+    }
+    
+    // This COULD NOT be overritend
+    final func getDetails() -> String {
+        return "This animal is type of \(self.type) and specimen \(self.name)"
+    }
+}
+
+// SUB CLASS
+class Cat: Animal {
+    var sound: String;
+    
+    init() {
+        self.sound = "MEEEWW"
+        super.init(type: AnimalType.mamifero, name: "Cat")
+    }
+    
+    func soundAction() -> String{
+        return "The \(super.name) sounds like: \(self.sound)"
+    }
+}
+
+var myCat = Cat()
+
+print(myCat.soundAction()) // he Cat sounds like: MEEEWW
+print(myCat.getDetails()) //  This animal is type of mamifero and specimen Cat
