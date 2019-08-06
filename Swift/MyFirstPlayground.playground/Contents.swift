@@ -427,3 +427,59 @@ var kettle = Appliance(initVoltage: 230)
 
 print(kettle.getDetails())
 
+newChapter(title: "Differents between class and struct")
+
+// STRUCT ------
+struct MessageStruct{
+    var text = "Initial Message"
+}
+
+var instOfMessageStruct1 = MessageStruct()
+instOfMessageStruct1.text = "Clossing Message Struct" // Works
+
+let instOfMessageStruct2 = MessageStruct()
+//instOfMessageStruct2.text = "Closing Message Struct" // Fails
+
+// Because, we instanciate de struct as a constant (let)
+// and you are not able to modify it
+
+// CLASS -----
+class MessageClass{
+    var text = "Initial Message Class"
+}
+
+var instOfMessageClass1 = MessageClass()
+instOfMessageClass1.text = "Clossing Message Class" // Works
+
+let instOfMessageClass2 = MessageClass()
+instOfMessageClass2.text = "Classing Message Class" // Works
+// Because, we define ms as a VAR and not as a Const (let)
+
+// STRUCTS ----
+
+struct InMutableStruct {
+    var mutable = "Could be Mutable?"
+}
+
+var inMutableStruct1 = InMutableStruct()
+var inMutableStruct2 = inMutableStruct1
+
+inMutableStruct2.mutable = "I don't think so"
+
+print(inMutableStruct1.mutable) // Could be Mutable?
+print(inMutableStruct2.mutable) // I don't think so
+
+// CLASS ----
+print("")
+
+class MutableCalss {
+    var mutable = "Could be Mutable?"
+}
+
+var mutableClass1 = MutableCalss()
+var mutableClass2 = mutableClass1
+
+mutableClass1.mutable = "yes! sure"
+
+print(mutableClass1.mutable) // yes! sure
+print(mutableClass2.mutable) // yes! sure
