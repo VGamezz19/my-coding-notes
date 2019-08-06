@@ -305,8 +305,9 @@ var airlines = ["SWA": "Southwest Airlines",
 // var airlines:[String: String]
 
 print(airlines)
-var air = airlines["SWA"]
-print(air)
+if let air = airlines["SWA"] {
+    print(air)
+}
 
 // All the values in a dictionari are optional, because, could be that the key dosen't exist in the dictionary...
 
@@ -326,7 +327,7 @@ print(airlines)
 // loops
 // (key, value)
 for (code, airline) in airlines {
-    print(airline)
+    print(airline, code)
 }
 
 // Tuples
@@ -351,3 +352,38 @@ print(rAlbum.albumDuration)
 let (titAlbum, dudAlbum) = randomAlbum()
 
 print("\(titAlbum) \(dudAlbum)")
+
+
+newChapter(title: "Clousures")
+
+struct Book {
+    var title: String;
+    var authorName: String;
+    var readingAge: Int;
+    var pageCount: Int;
+}
+
+var book1 = Book.init(title: "foo", authorName: "Victor", readingAge: 16, pageCount: 200)
+var book2 = Book.init(title: "baar", authorName: "And", readingAge: 8, pageCount: 234)
+var book3 = Book.init(title: "ble", authorName: "Ju", readingAge: 5, pageCount: 433)
+
+var allBooks = [book1, book2, book3];
+
+//func orderName(book1: Book, book2: Book) -> Bool {
+//    return book1.authorName >= book2.authorName;
+//}
+//
+//print(allBooks.sorted(by: orderName)); // Vic, Ju, And
+
+var nameSortedBooks = allBooks.sorted(by: {
+    (firstBook: Book, secondBook: Book) -> Bool
+    in
+    return firstBook.authorName >= secondBook.authorName
+})
+
+print(nameSortedBooks) // Vic, Ju, And
+
+
+var nameSortedBookWell = allBooks.sorted { $0.authorName >= $1.authorName }// Vic, Ju, And
+
+print(nameSortedBookWell)
