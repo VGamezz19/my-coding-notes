@@ -1,8 +1,6 @@
-import {useContext} from 'react';
-import ImageToggleOnScroll from "./ImageToggleOnScroll";
-import { ConfigContext } from "./App";
-
-
+import { useContext } from 'react';
+import ImageToggleOnScroll from './ImageToggleOnScroll';
+import { ConfigContext } from './App';
 
 const SpeakerDetail = React.memo(
   ({
@@ -42,9 +40,8 @@ const SpeakerDetail = React.memo(
             {context.loggedInUserEmail ? (
               <button
                 data-sessionid={id}
-                className={favorite ? "heartredbutton" : "heartdarkbutton"}
+                className={favorite ? 'heartredbutton' : 'heartdarkbutton'}
                 onClick={e => {
-                  debugger;
                   onHeartFavoriteHandler(e, speakerRec);
                 }}
               />

@@ -28,7 +28,6 @@ export class CompanyComponent implements OnInit {
 
       const company = this.generateInitualDummyCompany(users[0].id);
       this.store.dispatch(addCompany({ company }));
-      debugger;
     });
   }
 
