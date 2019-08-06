@@ -304,7 +304,7 @@ newChapter(title: "Tuples")
 func randomAlbum() -> (albumTitle: String, albumDuration: Int) {
     let title = "Lord of the rings"
     let duration = 2546
-    
+
     return (title, duration)
 }
 

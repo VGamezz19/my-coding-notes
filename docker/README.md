@@ -1,5 +1,46 @@
 # Docker
 
+## Docker - How to cleanup (unused) resources
+
+Once in a while, you may need to cleanup resources (containers, volumes, images, networks) ...
+
+### delete volumes
+
+    // see: https://github.com/chadoe/docker-cleanup-volumes
+
+    `$ docker volume rm $(docker volume ls -qf dangling=true)`
+    `$ docker volume ls -qf dangling=true | xargs -r docker volume rm`
+
+### delete networks
+
+    `$ docker network ls`
+    `$ docker network ls | grep "bridge"`
+    `$ docker network rm $(docker network ls | grep "bridge" | awk '/ / { print $1 }')`
+
+### remove docker images
+
+    // see: http://stackoverflow.com/questions/32723111/how-to-remove-old-and-unused-docker-images
+
+    `$ docker images`
+    `$ docker rmi $(docker images --filter "dangling=true" -q --no-trunc)`
+
+    `$ docker images | grep "none"`
+    `$ docker rmi $(docker images | grep "none" | awk '/ / { print $3 }')`
+
+### remove docker containers
+
+    // see: http://stackoverflow.com/questions/32723111/how-to-remove-old-and-unused-docker-images
+
+    `$ docker ps`
+    `$ docker ps -a`
+    `$ docker rm $(docker ps -qa --no-trunc --filter "status=exited")`
+
+### Resize disk space for docker vm
+
+    `$ docker-machine create --driver virtualbox --virtualbox-disk-size "40000" default`
+
+## Bases
+
 Problemas al **Construir**:
 
 - Dependencias de desarrollo
@@ -22,7 +63,7 @@ Problemas al **Ejecutar**:
 - Disponibilidad de servicios externos
 - Recursos de hardware
 
-*Docker permite*:
+_Docker permite_:
 **Construir, distribuir y correr tu código en cualquier lado**
 
 ## Qué es Docker
@@ -32,11 +73,13 @@ Docker Permite resolver problemas de construir, distribuir y ejecutar software e
 **Containarization**: un estándar para llevar algo dentro. Agrupadores de procesos.
 
 - Versátiles:
+
   - En el orden de los MB
   - Tienen todas las dependencias que necesitan para funcionar correctamente.
   - Funcionan igual en todos lados.
 
 - Eficientes:
+
   - Comparten archivos simultáneos con otros contenedores.
   - Solo se ejecutan procesos, no un SS.OO completo.
 
@@ -47,10 +90,12 @@ Docker Permite resolver problemas de construir, distribuir y ejecutar software e
 **Virtualization**: es una imagen o archivo que contiene información dentro. Por lo general son pesadas de administración costosa y son lentas.
 
 - Pesadas:
+
   - En el orden de los GB
   - Muchas VMs en el mismo host suelen repetirse en lo que contienen
 
 - Administración costosa:
+
   - Una VM tiene que ser administrada como cualquier otra computadora: patching, update, etc
   - Hay que administrar la seguridad interna entre apps
 
@@ -105,9 +150,7 @@ Podemos ejecutar un contenedor que ya existe, añadiendole un commando diferente
 `docker run ubuntu tail -f /dev/null`
 
 > tail, es un comando de Linux, que nos permitira listar el archivos
-
 > -f significa que se mantenga la execucion, esperando nuevos archivos (nuevos cambios
-
 > /dev/null, es una carpeta pelucioar de Linux, donde nunca hay ficheros, esta completamente vacia.
 
 Una vez ejecutado el contenedo, si hacemos `docker ps` veremos esto:
@@ -183,7 +226,7 @@ si ejecutamos `docker volume ls` veremos el listado de todos los volumenes que h
 
 Esto lo podemos usar para persistir nuestros datos de la BBDD Mongo.
 
-Usando el flag `--mount` 
+Usando el flag `--mount`
 
 `docker run -d --name db --mount src=dbdata,dst=/data/db -p 8082:27017 mongo`
 
@@ -211,7 +254,7 @@ Docker Hub es como un GitHub pero de imagenes configuradas.
 - El dockerfile siempre debe empezar con el FROM le indicamos cual va a ser nuestra imagen base para empezar (Ubuntu por ejemplo)
 - RUN para correr un comando
 
->DockerFile
+> DockerFile
 
 ```dockerfile
 FROM ubuntu
@@ -249,7 +292,7 @@ y ya podriamos publicarlo en nuestro repositorio de DockerHub
 
 ## Docker for developers
 
->Dockerfile
+> Dockerfile
 
 ```Dockerfile
 # usaremos un node-v8
@@ -289,11 +332,11 @@ lo exponemos en el puerto `3000`
 
 Cuando nosotros volvamos a crear una imagen, se no hemos modificado el codigo, la imagen (las layers) estan cacheadas, y como ve que no hay ninguna modificacion, cogera la misma layer que ya hemos creado.
 
-El problema es que si cambiamos cualquier BYTE  de nuestro codigo, volvera a ejecutar todos los comandos.
+El problema es que si cambiamos cualquier BYTE de nuestro codigo, volvera a ejecutar todos los comandos.
 
 Hay una formade poder evitar dicho problema.
 
-Si separamos los comandos de copy, por un lado la dependencia y por otro el codigo, la imagen tardara mucho menos en montarse. Porque no necesariamente siempre hemos de estar cambiando las dependencias  de nuestro proyecto:
+Si separamos los comandos de copy, por un lado la dependencia y por otro el codigo, la imagen tardara mucho menos en montarse. Porque no necesariamente siempre hemos de estar cambiando las dependencias de nuestro proyecto:
 
 ```dockerfile
 FROM node:lts
@@ -315,7 +358,7 @@ CMD ["npx", "nodemon", "index.js"]
 # index.js es el archivo que levanta el servidor de express
 ```
 
-a la primera vez que creemos la imagen, ejecutara todos los comandos, pero, cuando solo modifique el codigo, pasara esto: 
+a la primera vez que creemos la imagen, ejecutara todos los comandos, pero, cuando solo modifique el codigo, pasara esto:
 
 ![Imgur](https://i.imgur.com/c0jf7kM.png)
 
@@ -351,7 +394,7 @@ Despues creamos el contenedor con la imagen de nuestro codigo, pero pasando la v
 
 estaremos creando un contenedor con el nombre `app` alojado en el puerto `3000` y con la variable de esntorno definida `MONGO_URL=mongodb://db:27017/test`
 
-Lo bueno de las networks, es que cuando enlazamos un contenedor, y queremos acceder al IP virtual que se ha generado automaticamente, para poder acceder a el, simplemente  tendremos que poner el nombre del contenedor que esta corriendo
+Lo bueno de las networks, es que cuando enlazamos un contenedor, y queremos acceder al IP virtual que se ha generado automaticamente, para poder acceder a el, simplemente tendremos que poner el nombre del contenedor que esta corriendo
 
 Por ultimo tendremos que contectar nuestro contenedor de app al network, para que se cree un puente entre ambos y se puedan comunicar.
 
@@ -405,7 +448,7 @@ utilziar el compose fil, que utiliza la extendial YML, para describir como quere
 
 ```yml
 # La version del docker compose. Se recomienda usar de la 2 para arriba.
-version: "3"
+version: '3'
 
 #Cuando hablamos de nuestra aplicacion, hablamos de servicios, no de contendores.
 # La diferencia entre un servicio y un contenedor, esque un servicio puede tener más de un contenedor. Como podemos ver en esta especificacion.
@@ -413,12 +456,12 @@ services:
   app:
     image: platziapp
     environment:
-      MONGO_URL: "mongodb://db:27017/test" # la variable de entorno del contenedor, con la IP virtualizada del contenedor `db`
+      MONGO_URL: 'mongodb://db:27017/test' # la variable de entorno del contenedor, con la IP virtualizada del contenedor `db`
     # la dependencia de nuestro contenedor
     depends_on:
       - db
     ports:
-      - "3000:3000"
+      - '3000:3000'
 
   db:
     image: mongo
@@ -445,16 +488,16 @@ db_1   | 2019-02-21T14:35:13.911+0000 I CONTROL  [initandlisten]     distmod: ub
 db_1   | 2019-02-21T14:35:13.911+0000 I CONTROL  [initandlisten]     distarch: x86_64
 db_1   | 2019-02-21T14:35:13.911+0000 I CONTROL  [initandlisten]     target_arch: x86_64
 db_1   | 2019-02-21T14:35:13.911+0000 I CONTROL  [initandlisten] options: { net: { bindIpAll: true } }
-db_1   | 2019-02-21T14:35:13.912+0000 I STORAGE  [initandlisten] 
+db_1   | 2019-02-21T14:35:13.912+0000 I STORAGE  [initandlisten]
 db_1   | 2019-02-21T14:35:13.912+0000 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
 db_1   | 2019-02-21T14:35:13.912+0000 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
 db_1   | 2019-02-21T14:35:13.913+0000 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=487M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
 db_1   | 2019-02-21T14:35:14.635+0000 I STORAGE  [initandlisten] WiredTiger message [1550759714:635705][1:0x7fb95f667a40], txn-recover: Set global recovery timestamp: 0
 db_1   | 2019-02-21T14:35:14.647+0000 I RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
-db_1   | 2019-02-21T14:35:14.663+0000 I CONTROL  [initandlisten] 
+db_1   | 2019-02-21T14:35:14.663+0000 I CONTROL  [initandlisten]
 db_1   | 2019-02-21T14:35:14.663+0000 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
 db_1   | 2019-02-21T14:35:14.663+0000 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
-db_1   | 2019-02-21T14:35:14.663+0000 I CONTROL  [initandlisten] 
+db_1   | 2019-02-21T14:35:14.663+0000 I CONTROL  [initandlisten]
 db_1   | 2019-02-21T14:35:14.664+0000 I STORAGE  [initandlisten] createCollection: admin.system.version with provided UUID: 14b9386f-97b6-4d94-9148-c52a0ec9246b
 db_1   | 2019-02-21T14:35:14.678+0000 I COMMAND  [initandlisten] setting featureCompatibilityVersion to 4.0
 db_1   | 2019-02-21T14:35:14.693+0000 I STORAGE  [initandlisten] createCollection: local.startup_log with generated UUID: 0dda3d51-8c21-44f4-9240-d7fb2ccfbef4
@@ -517,18 +560,18 @@ Ej: docker-compose exec app bash
 ## DockerCompose for Developers
 
 ```yml
-version: "3"
+version: '3'
 
 services:
   app:
     # image: platziapp
     build: .
     environment:
-      MONGO_URL: "mongodb://db:27017/test"
+      MONGO_URL: 'mongodb://db:27017/test'
     depends_on:
       - db
     ports:
-      - "3000:3000"
+      - '3000:3000'
 
   db:
     image: mongo
@@ -538,7 +581,7 @@ Si estamos desarrollando, tenemos que estar todo el rato montando la imagen, y d
 
 si substituimos el parametro de `image` por `build`, docker-compose sera lo suficientement listo como para saber que ha de montar la imagen. (le hemos de poner el path, en este caso `.`)
 
-para ejecutar esto, tendremos que lanzar 
+para ejecutar esto, tendremos que lanzar
 
 `docker-compose build`
 
@@ -575,28 +618,28 @@ Otro problema que teneos es que, cuando modificamos el codigo, tenemos que estar
 
 y existe una forma de que el codigo se refresque solo:
 
->docker-compose.yml
+> docker-compose.yml
 
 ```yml
-version: "3"
+version: '3'
 
 services:
   app:
     build: .
     environment:
-      MONGO_URL: "mongodb://db:27017/test"
+      MONGO_URL: 'mongodb://db:27017/test'
     depends_on:
       - db
     ports:
-    #Le especificamos el rando de puertos en los que se pueden levantar
-    #Usando docker-compose scale app=4 (una vez exo docker-compose up -d)
-    #Levantara 4 contenedores del servicio app entre los puertos 3000-3010 
-      - "3000-3010:3000"
+      #Le especificamos el rando de puertos en los que se pueden levantar
+      #Usando docker-compose scale app=4 (una vez exo docker-compose up -d)
+      #Levantara 4 contenedores del servicio app entre los puertos 3000-3010
+      - '3000-3010:3000'
     volumes:
-    #Bindeamos el volumen de nuestro directorio `.` a la carpeta donde esta el codigo de nuestro contenedor
-    # Con esto, todo lo que se modifique en mi directorio, se vera reflejado en el contenedor. pero hay un problema. 
+      #Bindeamos el volumen de nuestro directorio `.` a la carpeta donde esta el codigo de nuestro contenedor
+      # Con esto, todo lo que se modifique en mi directorio, se vera reflejado en el contenedor. pero hay un problema.
       - .:/usr/src
-    #En nuestra carpeta no existe un noda_module, solo existe en el contenedor, y si no se lo marcamos al dockerCompose, lo va a eliminar. por eso añadimos esto:
+      #En nuestra carpeta no existe un noda_module, solo existe en el contenedor, y si no se lo marcamos al dockerCompose, lo va a eliminar. por eso añadimos esto:
       - /usr/src/node_modules #Esta carpeta no la sobrescribas
 
   db:
@@ -605,7 +648,7 @@ services:
 
 ## Dokcer produccion
 
->build/development.Dockerfile
+> build/development.Dockerfile
 
 ```dockerfile
 FROM node:10
@@ -627,10 +670,10 @@ CMD ["npx", "nodemon", "index.js"]
 
 Esta imagen la correremos cuando tengamos que crear la imagen para el desarollo.
 
-- `npm install --only=production` solo instalara las depencendias  de produccion
-- `npm install --only=development` solo instalara las dependencias de desarrollo 
+- `npm install --only=production` solo instalara las depencendias de produccion
+- `npm install --only=development` solo instalara las dependencias de desarrollo
 
->build/production.Dockerfile
+> build/production.Dockerfile
 
 ```dockerfile
 FROM node:10 as builder
@@ -668,7 +711,7 @@ En este caso, estamos creando un dockerfile para produccion, creando 2 especific
 
 `as builder` es un alias, que luego podremos usar, en la segunda especificacion de dockerfile
 
-si  todos los test han pasado correctamente, entonces generaremos la imagen definitiba para produccion. Sino, petara el docker build.
+si todos los test han pasado correctamente, entonces generaremos la imagen definitiba para produccion. Sino, petara el docker build.
 
 solo tiraremos las dependencias de produccion, y copiaremos los archivos productivos, solo aquellos que tiren mi aplicacion.
 
