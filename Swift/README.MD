@@ -462,7 +462,7 @@ print(mutableClass1.mutable) // yes! sure
 print(mutableClass2.mutable) // yes! sure
 ```
 
-## inheritance
+## Inheritance
 
 ```Swift
 newChapter(title: "inheritance")
@@ -508,4 +508,59 @@ var myCat = Cat()
 
 print(myCat.soundAction()) // he Cat sounds like: MEEEWW
 print(myCat.getDetails()) //  This animal is type of mamifero and specimen Cat
+```
+
+## Extension
+
+```Swift
+newChapter(title: "Extension")
+
+extension String {
+    func without(rule: Character) -> String {
+        return self.filter { $0 != rule }
+    }
+}
+
+var completName = "Victor Gamez Royo"
+print(completName)
+print(completName.without(rule: " ")) // "VictorGamezRoyo"
+
+```
+
+## Computed Values
+
+```Swift
+newChapter(title: "Computed values")
+
+class Player {
+    var name: String
+    var livesRemaining: Int
+    var enemiesDestroyed: Int
+    var penalty: Int
+    var bonus: Int
+
+//    var score: Int {
+//        get {
+//            return (enemiesDestroyed * 1000) + bonus + (livesRemaining * 5000) - penalty
+//        }
+//    }
+    // OR
+    // This Computed properti will be only ReadOnly. we don't defined a SET method.
+    // Computed properties are not abailables as a constant. That is, becouse
+    // the value will be in constantly changing.
+    var score: Int {
+        return (enemiesDestroyed * 1000) + bonus + (livesRemaining * 5000) - penalty
+    }
+
+    init(name: String) {
+        self.name = name
+        self.livesRemaining = 3
+        self.enemiesDestroyed = 0
+        self.penalty = 0
+        self.bonus = 0
+    }
+}
+
+let newPlayer = Player(name: "VGamez")
+print(newPlayer.score)
 ```

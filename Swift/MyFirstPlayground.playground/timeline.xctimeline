@@ -3,7 +3,12 @@
    version = "3.0">
    <TimelineItems>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Volumes/Victor/platzi-course-notes/Swift/MyFirstPlayground.playground#CharacterRangeLen=4&amp;CharacterRangeLoc=3600&amp;EndingColumnNumber=1&amp;EndingLineNumber=194&amp;StartingColumnNumber=0&amp;StartingLineNumber=192&amp;Timestamp=586809182.480008"
+         documentLocation = "file:///Volumes/Victor/platzi-course-notes/Swift/MyFirstPlayground.playground#CharacterRangeLen=4&amp;CharacterRangeLoc=3600&amp;EndingColumnNumber=1&amp;EndingLineNumber=194&amp;StartingColumnNumber=0&amp;StartingLineNumber=192&amp;Timestamp=586893343.241286"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Volumes/Victor/platzi-course-notes/Swift/MyFirstPlayground.playground#CharacterRangeLen=51&amp;CharacterRangeLoc=11113&amp;EndingColumnNumber=0&amp;EndingLineNumber=539&amp;StartingColumnNumber=45&amp;StartingLineNumber=535&amp;Timestamp=586893343.241515"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
