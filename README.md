@@ -1,30 +1,34 @@
 # All My Note
 
-## [JavaScript-fundamentos](https://github.com/VGamezz19/platzi-course-notes/tree/master/JavaScript-fundamentos) [✔︎]
+## [Java](https://github.com/VGamezz19/my-coding-notes/tree/master/Java)
 
-## [JavaScript-avanzado](https://github.com/VGamezz19/platzi-course-notes/tree/master/JavaScript-Avanzado) [✔︎]
+## [JavaScript-fundamentos](https://github.com/VGamezz19/my-coding-notes/tree/master/JavaScript-fundamentos) [✔︎]
 
-## [About test](https://github.com/VGamezz19/platzi-course-notes/blob/master/test.md)
+## [JavaScript-avanzado](https://github.com/VGamezz19/my-coding-notes/tree/master/JavaScript-Avanzado) [✔︎]
 
-## [NodeJS](https://github.com/VGamezz19/platzi-course-notes/tree/master/NodeJs)
+## [About test](https://github.com/VGamezz19/my-coding-notes/blob/master/test.md)
 
-## [React](https://github.com/VGamezz19/platzi-course-notes/tree/master/React) [✔︎]
+## [NodeJS](https://github.com/VGamezz19/my-coding-notes/tree/master/NodeJs)
 
-## [ReactNative](https://github.com/VGamezz19/platzi-course-notes/tree/master/ReactNative) [✔︎]
+## [React](https://github.com/VGamezz19/my-coding-notes/tree/master/React) [✔︎]
 
-## [WebPack](https://github.com/VGamezz19/platzi-course-notes/tree/master/WebPack)
+## [ReactNative](https://github.com/VGamezz19/my-coding-notes/tree/master/ReactNative) [✔︎]
 
-## [VueJS](https://github.com/VGamezz19/platzi-course-notes/tree/master/Vue) [✔︎]
+## [WebPack](https://github.com/VGamezz19/my-coding-notes/tree/master/WebPack)
 
-## [Dokcer](https://github.com/VGamezz19/platzi-course-notes/tree/master/docker) [✔︎]
+## [VueJS](https://github.com/VGamezz19/my-coding-notes/tree/master/Vue) [✔︎]
 
-## [Jenkins](https://github.com/VGamezz19/platzi-course-notes/tree/master/Jenkins)
+## [Flex](https://github.com/VGamezz19/my-coding-notes/tree/master/flex)
 
-## [Swift](https://github.com/VGamezz19/platzi-course-notes/tree/master/Swift)
+## [Dokcer](https://github.com/VGamezz19/my-coding-notes/tree/master/docker) [✔︎]
 
-## [GIT](https://github.com/VGamezz19/platzi-course-notes/blob/master/git.md)[✔︎]
+## [Jenkins](https://github.com/VGamezz19/my-coding-notes/tree/master/Jenkins)
 
-## [VSCODE](https://github.com/VGamezz19/platzi-course-notes/blob/master/vscode.md)[✔︎]
+## [Swift](https://github.com/VGamezz19/my-coding-notes/tree/master/Swift)
+
+## [GIT](https://github.com/VGamezz19/my-coding-notes/blob/master/git.md)[✔︎]
+
+## [VSCODE](https://github.com/VGamezz19/my-coding-notes/blob/master/vscode.md)[✔︎]
 
 ---
 
