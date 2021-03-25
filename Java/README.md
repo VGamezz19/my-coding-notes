@@ -46,3 +46,15 @@ JEE (Java Enterprice Edition) - para ejecutar servidor, tiene JRE y mas cosas, m
 JRE (Java Runetime Edition) - ejecutar codigo a nivel cliente
 
 Swing components - para crear una vista en Java
+
+## Build System
+
+.jar => pacquetes
+
+Maven y Grandle son Build systems, encargados de añadirte paquetes a tu proyecto, los cuales podras usar
+
+### Classpath
+
+La forma mas pura de añadir paquetes. Modificando el destino de las classes que quieres usar?
+
+[example here](https://stackoverflow.com/questions/19330832/setting-up-junit-with-intellij-idea)
