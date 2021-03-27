@@ -16,6 +16,7 @@ const App = () => {
 		<div className='app'>
 			<h1>Waaassaaaaaaaaaappppppppp</h1>
 			<img src={'./wassup.jpg'} />
+			<img src={'./penis.PNG'} />
 		</div>
 	);
 };
