@@ -64,3 +64,42 @@ This is an example of how to allow-list hosts/urls:
 > deno run --allow-net=github.com,deno.land fetch.ts
 
 If fetch.ts tries to establish network connections to any other domain, the process will fail.
+
+Allow net calls to any host/url:
+
+> deno run --allow-net fetch.ts
+
+#### Debugging
+
+To activate debugging capabilities run Deno with the `--inspect` or `--inspect-brk flags`.
+
+The `--inspect` flag allows attaching the debugger at any point in time, while `-`-inspect-brk` will wait for the debugger to attach and will pause execution on the first line of code.
+
+Example:
+
+> deno run --inspect-brk --allow-read --allow-net https://deno.land/std@0.91.0/http/file_server.ts
+
+Open `chrome://inspect` and click `Inspect` next to target.
+
+#### VSCode Debugging
+
+create `launch.json`
+
+```json
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Deno",
+			"type": "pwa-node",
+			"request": "launch",
+			"cwd": "${workspaceFolder}",
+			"runtimeExecutable": "deno",
+			"runtimeArgs": ["run", "--inspect-brk", "-A", "${file}"],
+			"attachSimplePort": 9229
+		}
+	]
+}
+```
+
+## Managing dependencies
