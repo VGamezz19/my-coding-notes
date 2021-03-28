@@ -124,3 +124,26 @@ buildNumber.properties
 # https://github.com/takari/maven-wrapper#usage-without-binary-jar
 .mvn/wrapper/maven-wrapper.jar
 ```
+
+#### POM.xml - Maven
+
+By default, if you want to execute compilation, the directory structure must be:
+
+`src/main/java` as a source folder.
+
+`src/test/java` as a test folder.
+
+could be change it by this conf.
+
+```xml
+
+<project>
+    ...
+    <build>
+        <sourceDirectory>src</sourceDirectory>
+        <testSourceDirectory>test</testSourceDirectory>
+    </build>
+    ...
+</project>
+
+```
