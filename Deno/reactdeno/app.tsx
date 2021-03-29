@@ -15,8 +15,8 @@ const App = () => {
 	return (
 		<div className='app'>
 			<h1>Waaassaaaaaaaaaappppppppp</h1>
-			<img src={'./wassup.jpg'} />
-			<img src={'./penis.PNG'} />
+			<img src={'./wassup2.jpg'} />
+			<img src={'./penis2.PNG'} />
 		</div>
 	);
 };
