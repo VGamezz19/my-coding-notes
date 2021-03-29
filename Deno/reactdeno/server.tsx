@@ -11,7 +11,7 @@ const html = `<html><head><script type="module" src="${browserBundlePath}"></scr
 	<App />
 )}</body></html>`;
 
-app.use(serveStatic('public'));
+app.use(serveStatic('./public'));
 
 // server our app's code so we can hydrate the React application on the client
 app.use(browserBundlePath, (req, res, next) => {
