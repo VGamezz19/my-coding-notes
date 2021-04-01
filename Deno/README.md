@@ -8,13 +8,7 @@ It's built on V8, Rust, and Tokio.
 
 > Deno aims to be a productive and secure **scripting** environment for the modern programmer.
 
-Por defecto Deno es seguro, y pedira que confirmes algunas de las acciones que se dan por hecho.
-
-incluso si queremos hacer el fetch de una pagina web, tendremos que darle los permisos para poder leerla.
-
-como en este ejemplo:
-
-El ejecutar este comando
+example
 
 > deno run https://deno.land/std@0.91.0/examples/curl.ts https://example.com
 
