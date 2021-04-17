@@ -178,3 +178,7 @@ just type this configuration on your pom.xml inside `<plugins></plugins>` tag
         </executions>
       </plugin>
 ```
+
+## Variables
+
+Find all you need to know in `./1-JAVA-START/VariablesEnJava`
