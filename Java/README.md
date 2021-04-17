@@ -2,6 +2,8 @@
 
 Tenemos el JDK y el Compiler, vease en java -version y javac -version
 
+JDK - JAVA DEVELOPMENT KIT (la api de java)
+
 Java es un lenguaje tipado, y todo su codigo y fundamentos parten de las clases. El programa se arrancara mediante una clase
 y ejecutara el metodo `main`.
 
