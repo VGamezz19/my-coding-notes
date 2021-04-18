@@ -1,5 +1,39 @@
+/**
+ * The type Hola mundo.
+ */
+
 public class HolaMundo {
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     */
     public static void main(String[] args) {
+        breakLine("Variables");
+        variables();
+        breakLine("Concat");
+        concat();
+    }
+
+    public static void breakLine(String title) {
+        System.out.println("----------------------------------");
+        System.out.println(title);
+        System.out.println("----------------------------------");
+    }
+
+    private static void concat() {
+        var user = "Victor";
+        var title = "Ingenier";
+
+        var join = title + " " + user;
+
+        System.out.println("join = " + join);
+
+        
+    }
+
+
+    public static void variables() {
         System.out.println("HolaMundo.main");
 
         // int -- integer

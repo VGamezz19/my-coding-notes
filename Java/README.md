@@ -182,3 +182,13 @@ just type this configuration on your pom.xml inside `<plugins></plugins>` tag
 ## Variables
 
 Find all you need to know in `./1-JAVA-START/VariablesEnJava`
+
+En java se evalua el codigo de izquirda a derecha, digamos que:
+
+` 4 + 5 + "Victor"` --> 9Victor
+
+y
+
+`"Victor" + 4 + 5` --> Victor45
+
+se le conoce como `contexto cadena`
