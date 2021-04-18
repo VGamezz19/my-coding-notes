@@ -29,7 +29,22 @@ public class HolaMundo {
 
         System.out.println("join = " + join);
 
-        
+        var i = 4;
+        var j = 5;
+
+        System.out.println(i + j); // sum the numbers
+        //9
+
+        System.out.println(i + j + "Victor"); // from left to right, detect numbers, and summing it, then, concat the string
+        //9Victor
+
+        System.out.println("Victor" + i + j);// from left to right, detect string, so, concat all strings and numbers
+        //Victor45
+
+        System.out.println("Victor" + (i + j)); //we can modify the priority of our evaluation, here will sum and concat
+        //Victor9
+
+        System.out.println("Victor" + (i - j));
     }
 
 

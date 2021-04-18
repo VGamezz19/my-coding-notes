@@ -192,3 +192,7 @@ y
 `"Victor" + 4 + 5` --> Victor45
 
 se le conoce como `contexto cadena`
+
+tambien podemos añadir parentesis para modificar la prioridad de la expresion
+
+`"Victor" + (4 + 5)` --> Victor9
