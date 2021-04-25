@@ -13,12 +13,22 @@ public class HolaMundo {
         variables();
         breakLine("Concat");
         concat();
+        breakLine("Special caracters");
+        specialCharacters();
+
     }
 
     public static void breakLine(String title) {
         System.out.println("----------------------------------");
         System.out.println(title);
         System.out.println("----------------------------------");
+    }
+
+
+    private static void specialCharacters() {
+        var name = "Karl";
+
+        System.out.println("New line: \n" + name);
     }
 
     private static void concat() {
