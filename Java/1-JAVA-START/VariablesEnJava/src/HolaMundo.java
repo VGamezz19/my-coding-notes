@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * The type Hola mundo.
  */
@@ -15,7 +17,10 @@ public class HolaMundo {
         concat();
         breakLine("Special caracters");
         specialCharacters();
-
+        breakLine("Scanner");
+        scanner();
+        breakLine("Scanner");
+library();
     }
 
     public static void breakLine(String title) {
@@ -24,11 +29,34 @@ public class HolaMundo {
         System.out.println("----------------------------------");
     }
 
+    private static void library() {
+        var console = new Scanner(System.in);
+
+        System.out.println("Title book:");
+        var title = console.nextLine();
+        System.out.println("author name:");
+        var author = console.nextLine();
+
+        System.out.println(title +" was written by " + author);
+    }
+
+    private static void scanner() {
+        System.out.println("Write your name: ");
+        var console = new Scanner(System.in);
+
+        var userName = console.nextLine();
+
+        System.out.println("user = " + userName);
+
+    }
+
 
     private static void specialCharacters() {
         var name = "Karl";
 
         System.out.println("New line: \n" + name);
+        System.out.println("New tab: \t" + name);
+        System.out.println("New tab: '" + name + "'");
     }
 
     private static void concat() {
