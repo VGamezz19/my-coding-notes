@@ -198,3 +198,5 @@ tambien podemos añadir parentesis para modificar la prioridad de la expresion
 `"Victor" + (4 + 5)` --> Victor9
 
 [SDKs IntelliJ](https://www.jetbrains.com/help/idea/sdk.html#supported-sdks)
+
+`// Object.toString() --> <package-name>.<class-name>@<reference-memory-code>`

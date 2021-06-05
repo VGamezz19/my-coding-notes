@@ -1,3 +1,4 @@
+import java.util.Objects;
 import java.util.Scanner;
 
 /**
@@ -11,16 +12,26 @@ public class HolaMundo {
      * @param args the input arguments
      */
     public static void main(String[] args) {
-        breakLine("Variables");
-        variables();
-        breakLine("Concat");
-        concat();
-        breakLine("Special caracters");
-        specialCharacters();
-        breakLine("Scanner");
-        scanner();
-        breakLine("Scanner");
-library();
+        //breakLine("Variables");
+        //variables();
+        //breakLine("Concat");
+        //concat();
+        //breakLine("Special caracters");
+        //specialCharacters();
+        //breakLine("Scanner");
+        //scanner();
+        // breakLine("Objects");
+        //library();
+        var person1 = new Person();
+        person1.name= "victor";
+        person1.lastName= "gamez";
+
+        var person2 = new Person();
+        person2.name= "petter";
+        person2.lastName= "gamez";
+
+        System.out.println("obj person 1" + person1);
+        System.out.println("obj person 2" + person2);
     }
 
     public static void breakLine(String title) {
