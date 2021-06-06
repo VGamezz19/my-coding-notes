@@ -200,3 +200,28 @@ tambien podemos añadir parentesis para modificar la prioridad de la expresion
 [SDKs IntelliJ](https://www.jetbrains.com/help/idea/sdk.html#supported-sdks)
 
 `// Object.toString() --> <package-name>.<class-name>@<reference-memory-code>`
+
+Dentro de una clase estatica no podemos usar el operador `this`
+
+### Sobrecarga de constructores
+
+podemos crear multiples constructores para nuestras clases.
+
+```java
+public class Aritmetica {
+    int a;
+    int b;
+
+    public Aritmetica() {
+        System.out.println("Empty object");
+    }
+
+    public Aritmetica(int a, int b) {
+        this.a = a;
+        this.b = b;
+    }
+}
+
+```
+
+Java añadira un contructor por defecto si no definimos ningun constructor, pero si sobrecargamos el constructor por defecto, se eliminara el pordefecto
